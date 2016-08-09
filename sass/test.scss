@@ -1,0 +1,319 @@
+@charset "UTF-8";
+
+// color設定
+$base-color:#1b5688;
+$c-black:#333;
+$c-white:#fff;
+$c-gray:#eee;
+
+//max-width設定
+$max-w:1280px;
+$min-w:1280px;
+
+// mixin設定
+@mixin border($color:#1b5688) {
+  border-bottom: 1px solid $color;
+}
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+@mixin transition($transition) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+/*===========================================
+	共通設定
+=============================================*/
+
+a{
+  text-decoration: none
+}
+li{
+  list-style: none;
+}
+.videowrap{
+  width: 100%;
+  height: 680px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+    video{
+      border: none;
+      width: 100%;
+    }
+}
+.contents-wrapper{
+  width:  100%;
+  min-width: $min-w;
+  margin: 0 auto;
+	z-index: 999;
+}
+
+.sectionwrap{
+	width: 1000px;
+  max-width:$max-w;
+	margin: 0 auto;
+}
+
+.title{
+	text-align: center;
+	font-size: 32px;
+	padding-top: 60px;
+}
+
+/*===========================================
+	button設定
+=============================================*/
+.btnwrap{
+  padding: 60px 0;
+
+  .button{
+    width: 782px;
+    background-color: $base-color;
+    border: none;
+    @include border-radius(5px);
+    margin: 0 auto;
+      a{
+        display: block;
+        color: $c-white;
+        padding: 27px;
+        font-size: 24px;
+        letter-spacing: 1.4px;
+
+        &:hover{
+          opacity: 0.7;
+        }
+      }
+  }
+}
+/*===========================================
+	section設定
+=============================================*/
+section{
+  h2,h3{
+    font-weight: normal;
+  }
+}
+
+/*===========================================
+	header設定
+=============================================*/
+header{
+	width: 100%;
+	height: 76px;
+	position: fixed;
+	z-index: 999;
+
+		.sp-head-nav{
+			display: none;
+		}
+
+		.head-nav{
+			position: absolute;
+			float: left;
+			transform: translate(-50%,-50%);
+			left: 50%;
+			top: 50%;
+			box-sizing: border-box;
+
+				ul li{
+					padding: 25px;
+					float: left;
+				}
+
+				a{
+					color: $c-white;
+					&:hover{
+						@include border;
+						opacity: 0.7;
+						padding-bottom: 8px;
+						transition: all 0.3s ease-out;
+					}
+					&:hover::after{
+						opacity: 1;
+						top: 100%;
+						height: 4px;
+					}
+				}
+		}
+		.top-btn{
+			text-align: center;
+			float: right;
+			width: 200px;
+			background-color: $base-color;
+			border: none;
+			@include border-radius(3px);
+			margin: 16px 60px 0 0;
+			a{
+				display: block;
+				color: $c-white;
+				padding: 7px;
+				font-size: 14px;
+				letter-spacing: 1.4px;
+				&:hover{
+					opacity: 0.7;
+				}
+			}
+		}
+		.headmenu-logo{
+			float: left;
+			display: inline-block;
+			padding: 16px 0 0 120px;
+			display: none;
+		}
+}
+/*===========================================
+	transition設定
+=============================================*/
+#top-head,
+#top-head:after,
+#top-head .logo,
+.head-nav ul li,
+.head-nav ul li a {
+	@include transition(all 0.3s ease);
+}
+/*===========================================
+	Fixed設定
+=============================================*/
+#top-head{
+	.fixed{
+		background-color: $c-white;
+		&::after{
+			width: 100%;
+			margin-top: 20px;
+		}
+		.head-nav{
+			ul li a{
+				color: $base-color;
+			}
+		}
+		.headmenu-logo{
+			display: block;
+		}
+	}
+}
+
+/*===========================================
+	.top設定
+=============================================*/
+
+.top{
+  width: 100%;
+	text-align: center;
+	height: 680px;
+	background-color: rgba(0, 0, 0, 0.4);
+		h1 img{
+			position: absolute;
+			transform: translate(-50%,-50%);
+			left: 50%;
+			top:250px;
+	}
+
+	.playBtn{
+		position: absolute;
+		top: 470px;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		a{
+			border: 1px solid #fff;
+			color: $c-white;
+			@include border-radius(50px);
+			padding: 26px 80px;
+		}
+		&:hover{
+			opacity: 0.7;
+		}
+	}
+	.appBtn{
+		li{
+			display: inline-block;
+		}
+		.google{
+			padding-left: 44px;
+		}
+	}
+}
+
+/*===========================================
+	.news設定
+=============================================*/
+.newswrap{
+	background-color: $c-gray;
+	height: 330px;
+    .news-list-box{
+      width: 700px;
+      min-width: 800px;
+      height: 150px;
+      margin: 40px auto;
+      overflow-y: scroll;
+    }
+    .news-list{
+      .news-item{
+        a{
+          display: block;
+          padding: 15px;
+          color: $c-black;
+          font-size: 0;
+          transition: background-color 0.1s;
+
+          &:hover{
+            background-color: $c-white;
+          }
+          span{
+            width: 73%;
+            font-size: 20px;
+            padding-left: 18px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+      .date{
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+    }
+}
+
+/*===========================================
+	.service設定
+=============================================*/
+
+.service-wrap{
+  background-color: $c-white;
+    .service-left{
+      width: 50%;
+      float: left;
+        h2{
+          text-align: left;
+          color: #444;
+          padding-bottom: 46px;
+        }
+        p{
+          line-height: 2;
+          font-size: 18px;
+          color: #555;
+        }
+    }
+    .service-img{
+      padding: 60px 0;
+      float: right;
+        img:first-child{
+          padding-right: 30px;
+        }
+    }
+}
+
+/*===========================================
+	.step設定
+=============================================*/
