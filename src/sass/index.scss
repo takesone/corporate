@@ -324,7 +324,7 @@ header{
 
 .step-wrap{
   clear: both;
-  background: url(../img/step_bg.png) no-repeat center;
+  background: url('../img/step_bg.png') no-repeat center;
   color: $text-white;
     .step{
       width: 22%;
@@ -426,7 +426,7 @@ header{
 
 .blog-wrap{
   width: 100%;
-  background: url(../img/bg_blog.png) no-repeat center;
+  background: url('../img/bg_blog.png') no-repeat center;
   background-size: cover;
   h2{
     color: $text-eee;
