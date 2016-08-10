@@ -10,16 +10,10 @@ li{
 }
 .videowrap{
 	width: 100%;
-	height: 680px;
 	position: absolute;
 	right: 0;
 	bottom: 0;
 	z-index: -1;
-}
-.videowrap video{
-	border: none;
-	display: block;
-	width: 100%;
 }
 section h2,
 section h3{
@@ -29,7 +23,6 @@ section h3{
 	width:  100%;
 	min-width: 1280px;
 	margin: 0 auto;
-	z-index: 999;
 }
 .sectionwrap{
 	width: 1000px;
@@ -69,8 +62,7 @@ section h3{
 	max-width: 1280px;
 	min-width: 1280px;
 	width: 100%;
-	height: auto;
-	background-color: rgba(0, 0, 0, 0.4);
+	height: 680px;
 }
 .top h1 img{
 	position: absolute;
@@ -86,7 +78,6 @@ section h3{
 }
 .top .playBtn:hover{
 	opacity: 0.7;
-
 }
 .top .playBtn a{
 	border: 1px solid #fff;
@@ -208,30 +199,6 @@ header .headmenu-logo{
 	text-overflow:ellipsis;
 	white-space:nowrap;
 }
-/*--
-section.news dl{
-	width: 720px;
-	margin: auto;
-	padding-top: 40px;
-}
-section.news dt{
-	float: left;
-	font-size: 18px;
-	line-height: 2.6;
-	color: #555;
-}
-section.news dd{
-	font-size: 18px;
-	line-height: 2.6;
-}
-section.news dd a{
-	color: #555;
-}
-section.news dd a:hover{
-	opacity: 0.7;
-	text-decoration: underline;
-}
---*/
 /*-----serviceの設定-----*/
 
 section.service-wrap{
@@ -252,7 +219,6 @@ section.service-wrap .service-left p {
 	color: #555;
 }
 section .service-img{
-	padding: 60px 0 60px 0;
 	float: right;
 }
 section .service-img img:first-child{
@@ -263,9 +229,9 @@ section .service-img img:first-child{
 /*-----stepの設定-----*/
 
 .step-wrap{
-	color: #fff;
 	clear: both;
-	background: url(../img/camera-1125874_1920.png) center center;
+	background: url(../img/camera-1125874_1920.png) no-repeat center;
+	background-size: cover;
 }
 .step-wrap > .title{
 	color: #fff;
@@ -297,7 +263,7 @@ section .service-img img:first-child{
 
 /*-----infoの設定-----*/
 
-.ii{
+.bg-iphone{
 	display: block;
 	position: relative;
 	left: 50%;
@@ -308,50 +274,16 @@ section .service-img img:first-child{
 	background-color: #eee;
 	text-align: center;
 }
-.info-wrap > .sectionwrap{
-	width: 50%;
-}
 .info-wrap h2{
-	color: #444;
+	color: #333;
 }
 .info-wrap p{
 	font-size: 16px;
 	padding: 40px 0 60px 0;
 	line-height: 2;
-	color: #555;
+	color: #333;
 }
-.slide-show{
-	width: 100%;
-	position: relative;
-}
-/*--
-.swiper-container {
-	width: 100%;
-	height: 100%;
-}
-.swiper-wrapper,
-.swiper-pagination{
-	margin-top: -455px;
-}
-.swiper-slide {
-		text-align: center;
-			font-size: 18px;
-			/* Center slide text vertically */
-			/*
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: -webkit-flex;
-			display: flex;
-			-webkit-box-pack: center;
-			-ms-flex-pack: center;
-			-webkit-justify-content: center;
-			justify-content: center;
-			-webkit-box-align: center;
-			-ms-flex-align: center;
-			-webkit-align-items: center;
-			align-items: center;
-	}
-*/
+
 /*-----q&aの設定-----*/
 
 .qa-wrap{
@@ -381,7 +313,7 @@ section .service-img img:first-child{
 }
 .question .question-title{
 	font-size: 18px;
-	color: #444;
+	color: #333;
 	border-left: 1px solid #1b5688;
 	padding: 10px 10px 10px 20px;
 	display: table-cell;
@@ -403,7 +335,6 @@ section .service-img img:first-child{
 	background-size: cover;
 }
 .blog-wrap > .title{
-
 	color: #eee;
 }
 .blog-contents-wrap{
