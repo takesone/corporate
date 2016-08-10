@@ -2,47 +2,33 @@
 /*===========================================
 	共通設定
 =============================================*/
-/* line 36, ../sass/test.scss */
 a {
   text-decoration: none;
 }
 
-/* line 39, ../sass/test.scss */
 li {
   list-style: none;
 }
 
-/* line 42, ../sass/test.scss */
 .videowrap {
   width: 100%;
-  height: 680px;
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: -2;
 }
-/* line 49, ../sass/test.scss */
-.videowrap video {
-  border: none;
-  width: 100%;
-}
 
-/* line 54, ../sass/test.scss */
 .contents-wrapper {
   width: 100%;
-  min-width: 1280px;
   margin: 0 auto;
-  z-index: 999;
 }
 
-/* line 61, ../sass/test.scss */
 .sectionwrap {
   width: 1000px;
   max-width: 1280px;
   margin: 0 auto;
 }
 
-/* line 67, ../sass/test.scss */
 .title {
   text-align: center;
   font-size: 32px;
@@ -52,12 +38,12 @@ li {
 /*===========================================
 	button設定
 =============================================*/
-/* line 76, ../sass/test.scss */
 .btnwrap {
   padding: 60px 0;
+  clear: both;
 }
-/* line 79, ../sass/test.scss */
 .btnwrap .button {
+  display: block;
   width: 782px;
   background-color: #1b5688;
   border: none;
@@ -68,7 +54,6 @@ li {
   border-radius: 5px;
   margin: 0 auto;
 }
-/* line 85, ../sass/test.scss */
 .btnwrap .button a {
   display: block;
   color: #fff;
@@ -76,7 +61,6 @@ li {
   font-size: 24px;
   letter-spacing: 1.4px;
 }
-/* line 92, ../sass/test.scss */
 .btnwrap .button a:hover {
   opacity: 0.7;
 }
@@ -84,7 +68,6 @@ li {
 /*===========================================
 	section設定
 =============================================*/
-/* line 102, ../sass/test.scss */
 section h2, section h3 {
   font-weight: normal;
 }
@@ -92,18 +75,15 @@ section h2, section h3 {
 /*===========================================
 	header設定
 =============================================*/
-/* line 110, ../sass/test.scss */
 header {
   width: 100%;
   height: 76px;
   position: fixed;
   z-index: 999;
 }
-/* line 116, ../sass/test.scss */
 header .sp-head-nav {
   display: none;
 }
-/* line 120, ../sass/test.scss */
 header .head-nav {
   position: absolute;
   float: left;
@@ -112,29 +92,24 @@ header .head-nav {
   top: 50%;
   box-sizing: border-box;
 }
-/* line 128, ../sass/test.scss */
 header .head-nav ul li {
   padding: 25px;
   float: left;
 }
-/* line 133, ../sass/test.scss */
 header .head-nav a {
   color: #fff;
 }
-/* line 135, ../sass/test.scss */
 header .head-nav a:hover {
   border-bottom: 1px solid #1b5688;
   opacity: 0.7;
   padding-bottom: 8px;
   transition: all 0.3s ease-out;
 }
-/* line 141, ../sass/test.scss */
 header .head-nav a:hover::after {
   opacity: 1;
   top: 100%;
   height: 4px;
 }
-/* line 148, ../sass/test.scss */
 header .top-btn {
   text-align: center;
   float: right;
@@ -148,7 +123,6 @@ header .top-btn {
   border-radius: 3px;
   margin: 16px 60px 0 0;
 }
-/* line 156, ../sass/test.scss */
 header .top-btn a {
   display: block;
   color: #fff;
@@ -156,11 +130,9 @@ header .top-btn a {
   font-size: 14px;
   letter-spacing: 1.4px;
 }
-/* line 162, ../sass/test.scss */
 header .top-btn a:hover {
   opacity: 0.7;
 }
-/* line 167, ../sass/test.scss */
 header .headmenu-logo {
   float: left;
   display: inline-block;
@@ -171,7 +143,6 @@ header .headmenu-logo {
 /*===========================================
 	transition設定
 =============================================*/
-/* line 177, ../sass/test.scss */
 #top-head,
 #top-head:after,
 #top-head .logo,
@@ -187,49 +158,40 @@ header .headmenu-logo {
 /*===========================================
 	Fixed設定
 =============================================*/
-/* line 188, ../sass/test.scss */
-#top-head .fixed {
+.fixed {
   background-color: #fff;
 }
-/* line 190, ../sass/test.scss */
-#top-head .fixed::after {
+.fixed::after {
   width: 100%;
   margin-top: 20px;
 }
-/* line 195, ../sass/test.scss */
-#top-head .fixed .head-nav ul li a {
+.fixed .head-nav ul li a {
   color: #1b5688;
 }
-/* line 199, ../sass/test.scss */
-#top-head .fixed .headmenu-logo {
+.fixed .headmenu-logo {
   display: block;
 }
 
 /*===========================================
 	.top設定
 =============================================*/
-/* line 209, ../sass/test.scss */
 .top {
   width: 100%;
   text-align: center;
   height: 680px;
-  background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 214, ../sass/test.scss */
 .top h1 img {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 250px;
 }
-/* line 221, ../sass/test.scss */
 .top .playBtn {
   position: absolute;
   top: 470px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* line 226, ../sass/test.scss */
 .top .playBtn a {
   border: 1px solid #fff;
   color: #fff;
@@ -240,15 +202,18 @@ header .headmenu-logo {
   border-radius: 50px;
   padding: 26px 80px;
 }
-/* line 232, ../sass/test.scss */
-.top .playBtn:hover {
+.top .playBtn a:hover {
   opacity: 0.7;
 }
-/* line 237, ../sass/test.scss */
+.top .appBtn {
+  position: absolute;
+  top: 580px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .top .appBtn li {
   display: inline-block;
 }
-/* line 240, ../sass/test.scss */
 .top .appBtn .google {
   padding-left: 44px;
 }
@@ -256,12 +221,10 @@ header .headmenu-logo {
 /*===========================================
 	.news設定
 =============================================*/
-/* line 249, ../sass/test.scss */
 .newswrap {
   background-color: #eee;
   height: 330px;
 }
-/* line 252, ../sass/test.scss */
 .newswrap .news-list-box {
   width: 700px;
   min-width: 800px;
@@ -269,7 +232,6 @@ header .headmenu-logo {
   margin: 40px auto;
   overflow-y: scroll;
 }
-/* line 261, ../sass/test.scss */
 .newswrap .news-list .news-item a {
   display: block;
   padding: 15px;
@@ -277,11 +239,9 @@ header .headmenu-logo {
   font-size: 0;
   transition: background-color 0.1s;
 }
-/* line 268, ../sass/test.scss */
 .newswrap .news-list .news-item a:hover {
   background-color: #fff;
 }
-/* line 271, ../sass/test.scss */
 .newswrap .news-list .news-item a span {
   width: 73%;
   font-size: 20px;
@@ -290,7 +250,6 @@ header .headmenu-logo {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* line 281, ../sass/test.scss */
 .newswrap .news-list .date {
   font-size: 20px;
   letter-spacing: 1px;
@@ -299,33 +258,28 @@ header .headmenu-logo {
 /*===========================================
 	.service設定
 =============================================*/
-/* line 292, ../sass/test.scss */
 .service-wrap {
+  height: 500px;
   background-color: #fff;
 }
-/* line 294, ../sass/test.scss */
 .service-wrap .service-left {
   width: 50%;
   float: left;
 }
-/* line 297, ../sass/test.scss */
 .service-wrap .service-left h2 {
   text-align: left;
-  color: #444;
+  color: #555;
   padding-bottom: 46px;
 }
-/* line 302, ../sass/test.scss */
 .service-wrap .service-left p {
   line-height: 2;
   font-size: 18px;
   color: #555;
 }
-/* line 308, ../sass/test.scss */
 .service-wrap .service-img {
-  padding: 60px 0;
+  padding-top: 60px;
   float: right;
 }
-/* line 311, ../sass/test.scss */
 .service-wrap .service-img img:first-child {
   padding-right: 30px;
 }
@@ -333,5 +287,223 @@ header .headmenu-logo {
 /*===========================================
 	.step設定
 =============================================*/
+.step-wrap {
+  clear: both;
+  background: url(../img/step_bg.png) no-repeat center;
+  color: #fff;
+}
+.step-wrap .step {
+  width: 22%;
+  margin-right: 30px;
+  padding-top: 60px;
+  float: left;
+  text-align: center;
+  box-sizing: border-box;
+}
+.step-wrap .step h3 {
+  padding: 35px 0;
+  font-size: 22px;
+}
+.step-wrap .step p {
+  opacity: 0.9;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.8;
+}
+.step-wrap .step img {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+}
+
+/*===========================================
+	.info設定
+=============================================*/
+.info-wrap {
+  background-color: #eee;
+  text-align: center;
+}
+.info-wrap .bg-iphone {
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 10;
+}
+.info-wrap h2 {
+  color: #333;
+}
+.info-wrap p {
+  font-size: 16px;
+  padding: 40px 0 60px 0;
+  line-height: 2;
+  color: #333;
+}
+
+/*===========================================
+	q&a設定
+=============================================*/
+.qa-wrap {
+  background-color: #fff;
+}
+.qa-wrap .question {
+  margin-bottom: 20px;
+  padding: 10px 0;
+  width: 1000px;
+  border: 1px solid #1b5688;
+  box-sizing: border-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+.qa-wrap .question:first-child {
+  margin-top: 60px;
+}
+.qa-wrap .question:last-child {
+  margin-bottom: 0;
+}
+.qa-wrap .question span {
+  color: #1b5688;
+  display: table-cell;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: normal;
+}
+.qa-wrap .question .question-title {
+  font-size: 18px;
+  color: #333;
+  border-left: 1px solid #1b5688;
+  padding: 10px 10px 10px 20px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.qa-wrap .question .question-text {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.8;
+  padding: 10px 20px 0 20px;
+  border-top: 1px dotted #1b5688;
+}
+
+/*===========================================
+	blog設定
+=============================================*/
+.blog-wrap {
+  width: 100%;
+  background: url(../img/bg_blog.png) no-repeat center;
+  background-size: cover;
+}
+.blog-wrap h2 {
+  color: #eee;
+}
+.blog-wrap .blog-contents-wrap {
+  padding-top: 60px;
+}
+.blog-wrap .blog-contents-wrap .blog-content {
+  display: block;
+  background-color: #fff;
+  width: 320px;
+  overflow: hidden;
+  margin-right: 20px;
+  text-align: left;
+  float: left;
+}
+.blog-wrap .blog-contents-wrap .blog-content:last-child {
+  margin-right: 0px;
+}
+.blog-wrap .blog-contents-wrap .blog-content p {
+  width: 320px;
+  font-size: 16px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  color: #555;
+  line-height: 1.6;
+}
+.blog-wrap .blog-contents-wrap .blog-content time {
+  font-weight: bold;
+}
+.blog-wrap .blog-contents-wrap .blog-content img:hover {
+  opacity: 0.7;
+}
+
+/*===========================================
+	sns設定
+=============================================*/
+.sns-contents-wrap {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.facebook {
+  float: left;
+}
+
+.twitter {
+  float: right;
+}
+
+.p60 {
+  padding: 60px 0;
+}
+
+/*===========================================
+	footer設定
+=============================================*/
+footer {
+  clear: both;
+  background-color: #393939;
+}
+footer .sectionwrap {
+  height: 220px;
+  padding-top: 70px;
+}
+footer .sectionwrap .footer-logo {
+  float: left;
+  padding-right: 120px;
+}
+footer .sectionwrap .footer-navbox .footer-nav {
+  float: left;
+}
+footer .sectionwrap .footer-navbox .footer-nav li {
+  padding-bottom: 30px;
+  padding-right: 110px;
+}
+footer .sectionwrap .footer-navbox .footer-nav li:last-child {
+  padding-right: 0;
+}
+footer .sectionwrap .footer-navbox .footer-nav a {
+  font-size: 14px;
+  color: #fff;
+}
+footer .sectionwrap .footer-navbox .footer-nav a:hover {
+  opacity: 0.7;
+  color: #eee;
+}
+footer .sectionwrap .footer-app {
+  float: right;
+}
+footer .sectionwrap .footer-app a img:first-child {
+  padding-bottom: 10px;
+}
+footer .sectionwrap .footer-app a img:first-child:hover {
+  opacity: 0.7;
+}
+footer .copyright {
+  clear: both;
+  background-color: #212121;
+}
+footer .copyright p {
+  text-align: center;
+  padding: 26px;
+  color: #fff;
+  font-size: 14px;
+}
 
 /*# sourceMappingURL=test.css.map */
