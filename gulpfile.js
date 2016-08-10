@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var cssnext = require('gulp-cssnext');
+var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync');
 
 var paths = {
@@ -14,6 +15,12 @@ gulp.task('watch', function() {
 
 gulp.task('scss', function() {
   return gulp.src(paths.scss + '**/*.scss')
+    .pipe(plumber({
+      errorHandler: function(err) {
+        console.log(err.messageFormatted);
+        this.emit('end');
+      }
+    }))
     .pipe(sass())
     .on('error', function(err) {
       console.log(err.message);
