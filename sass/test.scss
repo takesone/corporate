@@ -2,13 +2,22 @@
 
 // color設定
 $base-color:#1b5688;
-$c-black:#333;
-$c-white:#fff;
-$c-gray:#eee;
+$text-black:#333;
+$text-white:#fff;
+$text-eee:#eee;
+$text-555:#555;
+$bg-eee:#eee;
+$bg-white:#fff;
+$bg-footer:#393939;
+$bg-copyright:#212121;
 
 //max-width設定
 $max-w:1280px;
 $min-w:1280px;
+$padding60:60px 0;
+
+//opacity設定
+$opacity:0.7;
 
 // mixin設定
 @mixin border($color:#1b5688) {
@@ -29,6 +38,7 @@ $min-w:1280px;
 	transition: $transition;
 }
 
+
 /*===========================================
 	共通設定
 =============================================*/
@@ -41,33 +51,24 @@ li{
 }
 .videowrap{
   width: 100%;
-  height: 680px;
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: -2;
-    video{
-      border: none;
-      width: 100%;
-    }
 }
 .contents-wrapper{
-  width:  100%;
-  min-width: $min-w;
+  width: 100%;
   margin: 0 auto;
-	z-index: 999;
 }
-
 .sectionwrap{
 	width: 1000px;
   max-width:$max-w;
 	margin: 0 auto;
 }
-
 .title{
 	text-align: center;
 	font-size: 32px;
-	padding-top: 60px;
+  padding-top: 60px;
 }
 
 /*===========================================
@@ -75,8 +76,9 @@ li{
 =============================================*/
 .btnwrap{
   padding: 60px 0;
-
+  clear: both;
   .button{
+    display: block;
     width: 782px;
     background-color: $base-color;
     border: none;
@@ -84,13 +86,13 @@ li{
     margin: 0 auto;
       a{
         display: block;
-        color: $c-white;
+        color: $text-white;
         padding: 27px;
         font-size: 24px;
         letter-spacing: 1.4px;
 
         &:hover{
-          opacity: 0.7;
+          opacity: $opacity;
         }
       }
   }
@@ -131,7 +133,7 @@ header{
 				}
 
 				a{
-					color: $c-white;
+					color: $text-white;
 					&:hover{
 						@include border;
 						opacity: 0.7;
@@ -155,12 +157,12 @@ header{
 			margin: 16px 60px 0 0;
 			a{
 				display: block;
-				color: $c-white;
+				color: $text-white;
 				padding: 7px;
 				font-size: 14px;
 				letter-spacing: 1.4px;
 				&:hover{
-					opacity: 0.7;
+					opacity: $opacity;
 				}
 			}
 		}
@@ -184,9 +186,8 @@ header{
 /*===========================================
 	Fixed設定
 =============================================*/
-#top-head{
 	.fixed{
-		background-color: $c-white;
+		background-color: $bg-white;
 		&::after{
 			width: 100%;
 			margin-top: 20px;
@@ -200,7 +201,6 @@ header{
 			display: block;
 		}
 	}
-}
 
 /*===========================================
 	.top設定
@@ -210,7 +210,6 @@ header{
   width: 100%;
 	text-align: center;
 	height: 680px;
-	background-color: rgba(0, 0, 0, 0.4);
 		h1 img{
 			position: absolute;
 			transform: translate(-50%,-50%);
@@ -223,18 +222,22 @@ header{
 		top: 470px;
 		left: 50%;
 		transform: translate(-50%,-50%);
-		a{
-			border: 1px solid #fff;
-			color: $c-white;
-			@include border-radius(50px);
-			padding: 26px 80px;
-		}
-		&:hover{
-			opacity: 0.7;
-		}
+  		a{
+  			border: 1px solid #fff;
+  			color: $text-white;
+  			@include border-radius(50px);
+  			padding: 26px 80px;
+        &:hover{
+          opacity: $opacity;
+        }
+  		}
 	}
 	.appBtn{
-		li{
+    position: absolute;
+    top: 580px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+		  li{
 			display: inline-block;
 		}
 		.google{
@@ -247,7 +250,7 @@ header{
 	.news設定
 =============================================*/
 .newswrap{
-	background-color: $c-gray;
+	background-color: $bg-eee;
 	height: 330px;
     .news-list-box{
       width: 700px;
@@ -261,12 +264,12 @@ header{
         a{
           display: block;
           padding: 15px;
-          color: $c-black;
+          color: $text-black;
           font-size: 0;
           transition: background-color 0.1s;
 
           &:hover{
-            background-color: $c-white;
+            background-color: $bg-white;
           }
           span{
             width: 73%;
@@ -290,13 +293,14 @@ header{
 =============================================*/
 
 .service-wrap{
-  background-color: $c-white;
+  height: 500px;
+  background-color: $bg-white;
     .service-left{
       width: 50%;
       float: left;
         h2{
           text-align: left;
-          color: #444;
+          color: $text-555;
           padding-bottom: 46px;
         }
         p{
@@ -306,7 +310,7 @@ header{
         }
     }
     .service-img{
-      padding: 60px 0;
+      padding-top: 60px;
       float: right;
         img:first-child{
           padding-right: 30px;
@@ -317,3 +321,227 @@ header{
 /*===========================================
 	.step設定
 =============================================*/
+
+.step-wrap{
+  clear: both;
+  background: url(../img/step_bg.png) no-repeat center;
+  color: $text-white;
+    .step{
+      width: 22%;
+      margin-right: 30px;
+      padding-top: 60px;
+      float: left;
+      text-align: center;
+      box-sizing: border-box;
+        h3{
+          padding: 35px 0;
+          font-size: 22px;
+        }
+        p{
+          opacity: 0.9;
+          text-align: left;
+          font-size: 18px;
+          line-height: 1.8;
+        }
+        img{
+          @include border-radius(50px)
+        }
+    }
+}
+
+/*===========================================
+	.info設定
+=============================================*/
+
+.info-wrap{
+  background-color: $bg-eee;
+  text-align: center;
+    .bg-iphone{
+      display: block;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 10;
+    }
+    h2{
+      color: $text-black;
+    }
+    p{
+      font-size: 16px;
+      padding: 40px 0 60px 0;
+      line-height: 2;
+      color: $text-black;
+    }
+}
+
+/*===========================================
+	q&a設定
+=============================================*/
+
+.qa-wrap{
+  background-color: $bg-white;
+    .question{
+      margin-bottom: 20px;
+      padding: 10px 0;
+      width: 1000px;
+      border: 1px solid $base-color;
+      box-sizing: border-box;
+      @include border-radius(3px);
+
+      &:first-child{
+        margin-top: 60px;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+      span{
+        color: $base-color;
+        display: table-cell;
+        padding: 10px 20px;
+        font-size: 30px;
+        font-weight: normal;
+      }
+      .question-title{
+        font-size: 18px;
+        color: $text-black;
+        border-left: 1px solid $base-color;
+        padding: 10px 10px 10px 20px;
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .question-text{
+        font-size: 16px;
+        color: $text-555;
+        margin-top: 10px;
+        line-height: 1.8;
+        padding: 10px 20px 0 20px;
+        border-top: 1px dotted $base-color;
+      }
+    }
+}
+
+/*===========================================
+	blog設定
+=============================================*/
+
+.blog-wrap{
+  width: 100%;
+  background: url(../img/bg_blog.png) no-repeat center;
+  background-size: cover;
+  h2{
+    color: $text-eee;
+  }
+  .blog-contents-wrap{
+    padding-top: 60px;
+      .blog-content{
+        display: block;
+        background-color: $bg-white;
+        width: 320px;
+        overflow: hidden;
+        margin-right: 20px;
+        text-align: left;
+        float: left;
+
+        &:last-child{
+          margin-right: 0px;
+        }
+          p{
+            width: 320px;
+            font-size: 16px;
+            margin: 0 auto;
+            background-color: $bg-white;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            color: $text-555;
+            line-height: 1.6;
+          }
+          time{
+            font-weight: bold;
+          }
+          img{
+            &:hover{
+              opacity: $opacity;
+            }
+          }
+      }
+  }
+}
+
+/*===========================================
+	sns設定
+=============================================*/
+
+.sns-contents-wrap{
+    width: 800px;
+    margin: 0 auto;
+  }
+.facebook{
+  float: left;
+}
+.twitter{
+  float: right;
+}
+.p60{
+  padding: $padding60;
+}
+
+/*===========================================
+	footer設定
+=============================================*/
+footer{
+  clear: both;
+  background-color:$bg-footer;
+    .sectionwrap{
+      height: 220px;
+      padding-top: 70px;
+    .footer-logo{
+      float: left;
+      padding-right: 120px;
+    }
+    .footer-navbox{
+      .footer-nav{
+        float: left;
+        li{
+          padding-bottom: 30px;
+          padding-right: 110px;
+
+          &:last-child{
+            padding-right: 0;
+          }
+        }
+        a{
+          font-size: 14px;
+          color: $text-white;
+
+          &:hover{
+            opacity: $opacity;
+            color: $text-eee;
+          }
+        }
+      }
+    }
+    .footer-app{
+      float: right;
+        a{
+          img{
+            &:first-child{
+              padding-bottom: 10px;
+            &:hover{
+              opacity: $opacity;
+            }
+            }
+          }
+        }
+    }
+  }
+  .copyright{
+    clear: both;
+    background-color: $bg-copyright;
+      p{
+        text-align: center;
+        padding: 26px;
+        color: $text-white;
+        font-size: 14px;
+      }
+  }
+}
