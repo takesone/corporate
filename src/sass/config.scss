@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+// color設定
+$base-color:#1b5688;
+$text-black:#333;
+$text-white:#fff;
+$text-eee:#eee;
+$text-555:#555;
+$bg-eee:#eee;
+$bg-white:#fff;
+$bg-footer:#393939;
+$bg-copyright:#212121;
+
+//max-width設定
+$max-w:1280px;
+$min-w:1280px;
+$padding60:60px 0;
+
+//opacity設定
+$opacity:0.7;
+
+// mixin設定
+@mixin border($color:#1b5688) {
+  border-bottom: 1px solid $color;
+}
+@mixin border-radius($radius) {
+	border-radius: $radius;
+}
+@mixin transition($transition) {
+	transition: $transition;
+}

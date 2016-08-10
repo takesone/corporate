@@ -1,76 +1,3 @@
-@charset "UTF-8";
-
-// color設定
-$base-color:#1b5688;
-$text-black:#333;
-$text-white:#fff;
-$text-eee:#eee;
-$text-555:#555;
-$bg-eee:#eee;
-$bg-white:#fff;
-$bg-footer:#393939;
-$bg-copyright:#212121;
-
-//max-width設定
-$max-w:1280px;
-$min-w:1280px;
-$padding60:60px 0;
-
-//opacity設定
-$opacity:0.7;
-
-// mixin設定
-@mixin border($color:#1b5688) {
-  border-bottom: 1px solid $color;
-}
-@mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	-ms-border-radius: $radius;
-	-o-border-radius: $radius;
-	border-radius: $radius;
-}
-@mixin transition($transition) {
-	-webkit-transition: $transition;
-	-moz-transition: $transition;
-	-ms-transition: $transition;
-	-o-transition: $transition;
-	transition: $transition;
-}
-
-
-/*===========================================
-	共通設定
-=============================================*/
-
-a{
-  text-decoration: none
-}
-li{
-  list-style: none;
-}
-.videowrap{
-  width: 100%;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -2;
-}
-.contents-wrapper{
-  width: 100%;
-  margin: 0 auto;
-}
-.sectionwrap{
-	width: 1000px;
-  max-width:$max-w;
-	margin: 0 auto;
-}
-.title{
-	text-align: center;
-	font-size: 32px;
-  padding-top: 60px;
-}
-
 /*===========================================
 	button設定
 =============================================*/
@@ -207,43 +134,56 @@ header{
 =============================================*/
 
 .top{
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
 	text-align: center;
-	height: 680px;
-		h1 img{
-			position: absolute;
-			transform: translate(-50%,-50%);
-			left: 50%;
-			top:250px;
-	}
-
-	.playBtn{
-		position: absolute;
-		top: 470px;
-		left: 50%;
-		transform: translate(-50%,-50%);
-  		a{
-  			border: 1px solid #fff;
-  			color: $text-white;
-  			@include border-radius(50px);
-  			padding: 26px 80px;
+  position: relative;
+  .video-wrap{
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    .yt-video{
+      height: 100vh;
+      width: 100vw;
+    }
+  }
+  .top-head-content{
+    width: 37vw;
+    height: calc(37vw * 0.9);
+    position: absolute; /* 3 */
+    top: 0;             /* 4 */
+    left: 0;            /* 5 */
+    right: 0;           /* 6 */
+    bottom: 0;           /* 7 */
+    margin: auto;        /* 8 */
+    .btn-play-wrap{
+      .btn-play{
+        display: inline-block;
+        border: 1px solid #fff;
+        color: $text-white;
+        @include border-radius(50px);
+        padding: 26px 80px;
         &:hover{
           opacity: $opacity;
         }
-  		}
-	}
-	.appBtn{
-    position: absolute;
-    top: 580px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-		  li{
-			display: inline-block;
-		}
-		.google{
-			padding-left: 44px;
-		}
-	}
+      }
+    }
+    .btn-app-wrap{
+      display: inline-block;
+      width: 100%;
+      .btn-app {
+        display: inline-block;
+        width: 49%;
+        max-width: calc(200px - 5%);
+        margin: 0 5%;
+      }
+      .google{
+      }
+    }
+  }
+
 }
 
 /*===========================================
