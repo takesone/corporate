@@ -25,6 +25,11 @@
         changeWidget();
     });
 
+    $(function() {
+      $('#nav-toggle').click(function(){
+          $('header').toggleClass('open-nav');
+      });
+    });
 
 
 })(jQuery);

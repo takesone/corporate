@@ -3,25 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;">
-<title>takesone</title>
 <link rel="stylesheet" type="text/css" href="dist/css/html5reset-1.6.1.css">
+<link rel="stylesheet" href="http://mplus-webfonts.sourceforge.jp/mplus_webfonts.css">
 <link rel="stylesheet" type="text/css" href="dist/css/swiper.min.css">
 <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
 <link rel="stylesheet" type="text/css" href="dist/css/style.css">
-
+<title>takesone</title>
 </head>
 
 <body>
 <!-- top -->
   <div class="top">
-
+    
     <div class="video-wrap">
       <iframe id="player" class="yt-video" type="text/html" src="http://www.youtube.com/embed/xvE7ztEbDjU?autoplay=1&showinfo=0&controls=0&loop=1&playlist=xvE7ztEbDjU" frameborder="0"></iframe>
     </div>
+
 <!-- header -->
     <header id="top-head">
 <!-- webサイトメニュー -->
       <p class="headmenu-logo"><img src="dist/img/menu_logo.png" alt="takesone" height="40"></p>
+
+      <div id="nav-toggle">
+        <div>
+         <span></span> <span></span> <span></span>
+        </div>
+      </div><!--#navToggle END-->
+
       <nav class="head-nav">
         <ul>
           <li><a href="#">ABOUT</a></li>
@@ -31,16 +39,7 @@
           <li><a href="#">BLOG</a></li>
         </ul>
       </nav>
-<!-- spメニュー -->
-      <nav class="sp-head-nav">
-        <ul>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">Q&amp;A</a></li>
-          <li><a href="#">CAMPANY</a></li>
-          <li><a href="#">NEWS</a></li>
-          <li><a href="#">BLOG</a></li>
-        </ul>
-      </nav>
+
       <button class="top-btn">
         <a href="#">
           <p>カメラ掲載はこちら</p>
@@ -52,7 +51,8 @@
       <div class="">
 
       <!-- Toplogo -->
-      <h1 class="logo"><img src="dist/img/top_logo.png" alt="takesone"></h1>
+      <h1 class="top-logo"><img src="dist/img/logo.svg" alt="takesone"></h1>
+      <!--<h1 class="logo"><img src="dist/img/top_logo.png" alt="takesone"></h1> -->
       <p>気軽に誰でも撮影機材をシェアできるサービス</p>
 
       <!-- playBtn -->
@@ -72,7 +72,7 @@
 <!-- wrapper -->
 <div class="contents-wrapper">
 
-    <section class="newswrap">
+    <section class="news-wrap">
 
       <h2 class="title">タイトルタイトルタイトル</h2>
 
@@ -113,7 +113,7 @@
     </section>
 
     <section class="service-wrap">
-      <div class="sectionwrap">
+      <div class="section-wrap">
         <div class="service-left">
           <h2 class="title">タイトルタイトルタイトル</h2>
           <p>
@@ -132,7 +132,7 @@
 
       <h2 class="title">サービスの特徴</h2>
 
-      <div class="sectionwrap">
+      <div class="section-wrap">
           <div class="step">
             <img src="dist/img/step_icon1.png" alt="" width="160" height="160">
             <h3>誰でも貸し借り可能</h3>
@@ -157,14 +157,14 @@
             <p>サービスの説明文がここに入ります。サービスの説明文がここに入ります。</p>
           </div>
       </div>
-      <div class="btnwrap">
+      <div class="btn-wrap">
         <button class="button"><a href="#">Take’s Oneについて詳しく見る</a></button>
       </div>
     </section>
 
     <section class="info-wrap">
 
-      <div class="sectionwrap">
+      <div class="section-wrap">
         <h2 class="title">タイトルタイトルタイトル</h2>
         <p>
         サービスの説明文がここに入ります。サービスの説明文がここに入ります。サービスの説明文がここに入ります。サービスの説明文がここに入ります。
@@ -189,7 +189,7 @@
 
     <section class="qa-wrap">
       <h2 class="title">Q&amp;A</h2>
-      <div class="sectionwrap">
+      <div class="section-wrap">
         <div class="question">
           <span>Q</span><p class="question-title">質問がここに書く質問がここに書く質問がここに書く</p>
           <p class="question-text">
@@ -206,14 +206,14 @@
           <span>Q</span><p class="question-title">質問がここに書く質問がここに書く質問がここに書く</p>
         </div>
       </div>
-      <div class="btnwrap">
+      <div class="btn-wrap">
         <button class="button"><a href="#">もっと詳しく</a></button>
       </div>
     </section>
 
     <section class="blog-wrap">
       <h2 class="title">タイトルタイトルタイトル</h2>
-      <div class="sectionwrap">
+      <div class="section-wrap">
         <div class="blog-contents-wrap clearfix">
           <a href="#" class="blog-content">
             <img src="dist/img/blog_img1.png" alt="" width="323" height="189">
@@ -238,13 +238,13 @@
           </a>
         </div>
       </div>
-      <div class="btnwrap">
+      <div class="btn-wrap">
         <button class="button"><a href="#">もっと詳しく</a></button>
       </div>
     </section>
 
   <div class="sns-wrpa">
-    <div class="sectionwrap">
+    <div class="section-wrap">
       <div class="sns-contents-wrap clearfix">
         <div class="facebook p60">
           <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTakes-One-530999983768461%2F&tabs=timeline&width=350&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="350" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
@@ -259,10 +259,9 @@
   </div>
 </div>
   <footer>
-    <div class="footerwrap">
-      <div class="sectionwrap">
-        <div class="">
-          <h2 class="footer-logo"><a href="index.html"><img src="dist/img/footer_logo.png" alt="tatesone" width="80" height="106"></a></h2>
+    <div class="footer-wrap">
+      <div class="section-wrap">
+        <div class="footer-navapp-box">
           <div class="footer-navbox">
             <div class="footer-nav">
               <nav>
@@ -298,6 +297,7 @@
               <li><a href="#"><img src="dist/img/google-play-badge.png" alt="" width="150" height="46"></a></li>
             </div>
           </div>
+          <h2 class="footer-logo"><a href="index.html"><img src="dist/img/footer_logo.png" alt="tatesone" width="80" height="106"></a></h2>
         </div>
         <div class="copyright">
           <p><small>Copyright (C) 2016 Take’s One Inc. All right reserved.</small></p>
