@@ -584,7 +584,37 @@ footer{
 /*===========================================
 fixed設定
 =============================================*/
+.fixed{
+  background-color: $bg-white;
+  .headmenu-logo{
+    display: block;
+  }
+  &::after{
+    width: 100%;
+    margin-top: 20px;
+  }
+  #nav-toggle{
+    span{
+      border-bottom: solid 3px $text-555;
+    }
+  }
+  .head-nav{
+    background-color: $bg-white;
+    ul{
+      li{
+        a{
+          color: $text-555;
 
+          &:hover{
+            color: $text-white;
+          }
+        }
+      }
+    }
+  }
+}
+
+  /*
   .fixed{
     background-color: $bg-white;
     &::after{
@@ -609,7 +639,7 @@ fixed設定
     .headmenu-logo{
       display: block;
     }
-  }
+  }/*
 
 /*===========================================
 open-nav設定

@@ -485,6 +485,8 @@ fixed設定
 =============================================*/
   .fixed {
     background-color: #fff; }
+    .fixed .headmenu-logo {
+      display: block; }
     .fixed::after {
       width: 100%;
       margin-top: 20px; }
@@ -496,9 +498,34 @@ fixed設定
         color: #555; }
         .fixed .head-nav ul li a:hover {
           color: #fff; }
-    .fixed .headmenu-logo {
-      display: block; }
-  /*===========================================
+  /*
+  .fixed{
+    background-color: $bg-white;
+    &::after{
+      width: 100%;
+      margin-top: 20px;
+    }
+    #nav-toggle{
+      span{
+        border-bottom:solid 3px $text-555;
+      }
+    }
+    .head-nav{
+      background-color: $bg-white;
+      ul li a{
+        color: $text-555;
+
+        &:hover{
+          color: $text-white;
+        }
+      }
+    }
+    .headmenu-logo{
+      display: block;
+    }
+  }/*
+
+/*===========================================
 open-nav設定
 =============================================*/
   .open-nav nav {
