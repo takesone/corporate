@@ -26,7 +26,7 @@ img {
   margin: 0 auto; }
 
 .section-wrap {
-  width: 1000px;
+  width: 960px;
   height: auto;
   max-width: 100vw;
   margin: 0 auto; }
@@ -72,8 +72,6 @@ header {
   height: 80px;
   position: fixed;
   z-index: 999; }
-  header .sp-head-nav {
-    display: none; }
   header .head-nav {
     position: absolute;
     float: left;
@@ -94,17 +92,19 @@ header {
         opacity: 1;
         top: 100%;
         height: 4px; }
+    header .head-nav .pc-none {
+      display: none; }
   header .top-btn {
     text-align: center;
     float: right;
-    margin: 16px 30px 20px 20px;
+    margin: 16px 90px 20px 20px;
     width: 200px;
-    background-color: #1b5688;
+    background-color: #fff;
     border: none;
     border-radius: 3px; }
     header .top-btn a {
       display: block;
-      color: #fff;
+      color: #1b5688;
       padding: 10px;
       font-size: 14px;
       letter-spacing: 1.4px; }
@@ -113,7 +113,7 @@ header {
   header .headmenu-logo {
     display: inline-block;
     float: left;
-    margin: 16px 0 0 30px;
+    margin: 16px 0 0 90px;
     display: none; }
 
 /*===========================================
@@ -139,6 +139,10 @@ header {
     color: #555; }
     .fixed .head-nav ul li a:hover {
       color: #1b5688; }
+  .fixed .top-btn {
+    background-color: #1b5688; }
+    .fixed .top-btn a {
+      color: #fff; }
   .fixed .headmenu-logo {
     display: block; }
 
@@ -147,8 +151,9 @@ header {
   =============================================*/
 #nav-toggle {
   display: none;
-  float: right;
-  margin: 26px 30px 0 0;
+  position: absolute;
+  top: 26px;
+  right: 30px;
   width: 30px;
   height: 25px;
   cursor: pointer; }
@@ -162,11 +167,11 @@ header {
     -webkit-transition: .35s ease-in-out;
             transition: .35s ease-in-out; }
     #nav-toggle span:nth-child(1) {
-      top: 0; }
+      top: 2px; }
     #nav-toggle span:nth-child(2) {
       top: 11px; }
     #nav-toggle span:nth-child(3) {
-      top: 22px; }
+      top: 20px; }
 
 /*===========================================
 	.top設定
@@ -284,7 +289,7 @@ header {
 =============================================*/
 .step-wrap {
   clear: both;
-  background: url("../img/step_bg.png") no-repeat center;
+  background: url("../img/bg_step.png") no-repeat center;
   color: #fff; }
   .step-wrap .step {
     display: table-cell;
@@ -373,7 +378,7 @@ header {
     padding-top: 60px; }
     .blog-wrap .blog-contents-wrap .blog-content {
       display: block;
-      width: 320px;
+      width: 300px;
       overflow: hidden;
       margin-right: 20px;
       text-align: left;
@@ -423,27 +428,29 @@ footer {
       float: right; }
     footer .section-wrap .footer-logo {
       float: left; }
-    footer .section-wrap .footer-navbox {
+    footer .section-wrap .footer-nav-box {
       float: left; }
-      footer .section-wrap .footer-navbox .footer-nav {
+      footer .section-wrap .footer-nav-box .footer-nav {
         float: left; }
-        footer .section-wrap .footer-navbox .footer-nav li {
+        footer .section-wrap .footer-nav-box .footer-nav li {
           padding-bottom: 30px;
           padding-right: 110px; }
-          footer .section-wrap .footer-navbox .footer-nav li:last-child {
+          footer .section-wrap .footer-nav-box .footer-nav li:last-child {
             padding-right: 0; }
-        footer .section-wrap .footer-navbox .footer-nav a {
+        footer .section-wrap .footer-nav-box .footer-nav a {
           font-size: 14px;
           color: #fff; }
-          footer .section-wrap .footer-navbox .footer-nav a:hover {
+          footer .section-wrap .footer-nav-box .footer-nav a:hover {
             opacity: 0.7;
             color: #eee; }
     footer .section-wrap .footer-app {
       float: right; }
-      footer .section-wrap .footer-app a img:first-child {
-        padding-bottom: 10px; }
-        footer .section-wrap .footer-app a img:first-child:hover {
-          opacity: 0.7; }
+      footer .section-wrap .footer-app a {
+        display: block; }
+        footer .section-wrap .footer-app a img:first-child {
+          padding-bottom: 10px; }
+          footer .section-wrap .footer-app a img:first-child:hover {
+            opacity: 0.7; }
   footer .copyright {
     clear: both;
     background-color: #212121; }
@@ -454,9 +461,9 @@ footer {
       font-size: 14px; }
 
 /*===========================================
-レスポンシブ(@media max-width:1000px)設定
+ レスポンシブ(@media max-width:960px)設定
 =============================================*/
-@media (max-width: 1000px) {
+@media (max-width: 960px) {
   /*===========================================
 	button設定
 =============================================*/
@@ -474,14 +481,14 @@ footer {
       border-bottom: 1px solid #1b5688; }
     header .head-nav a {
       color: #333; }
-  header .top-btn {
-    right: 12%; }
   .top {
     background-image: url(../../dist/img/bg_sp_top.png); }
     .top .top-head-content {
       height: 60vh; }
+    .top .headmenu-logo {
+      margin-left: 30px; }
   /*===========================================
-fixed設定
+ fixed設定
 =============================================*/
   .fixed {
     background-color: #fff; }
@@ -498,35 +505,8 @@ fixed設定
         color: #555; }
         .fixed .head-nav ul li a:hover {
           color: #fff; }
-  /*
-  .fixed{
-    background-color: $bg-white;
-    &::after{
-      width: 100%;
-      margin-top: 20px;
-    }
-    #nav-toggle{
-      span{
-        border-bottom:solid 3px $text-555;
-      }
-    }
-    .head-nav{
-      background-color: $bg-white;
-      ul li a{
-        color: $text-555;
-
-        &:hover{
-          color: $text-white;
-        }
-      }
-    }
-    .headmenu-logo{
-      display: block;
-    }
-  }/*
-
-/*===========================================
-open-nav設定
+  /*===========================================
+ open-nav設定
 =============================================*/
   .open-nav nav {
     text-align: left;
@@ -555,10 +535,11 @@ open-nav設定
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg); }
   /*===========================================
-	.news設定
-=============================================*/
+	 .news設定
+  =============================================*/
   .news-wrap .news-list-box {
-    width: 70vw;
+    width: 60vw;
+    margin: 40px auto 0 auto;
     min-width: 0; }
   .news-wrap .news-list .news-item a {
     text-align: left;
@@ -571,80 +552,49 @@ open-nav設定
   /*===========================================
 	.service設定
 =============================================*/
-  .service-wrap {
-    height: auto;
-    background-color: #fff; }
-    .service-wrap .service-left {
-      width: 90vw;
-      float: none;
-      margin: 0 auto; }
-      .service-wrap .service-left .title {
-        text-align: center; }
-    .service-wrap .service-img {
-      text-align: center;
-      margin-right: 0;
-      padding: 60px 0;
-      float: none; }
-      .service-wrap .service-img img:first-child {
-        padding-right: 30px; }
+  .service-wrap .service-left {
+    width: 90vw;
+    float: none;
+    margin: 0 auto; }
+    .service-wrap .service-left .title {
+      text-align: center; }
+  .service-wrap .service-img {
+    text-align: center;
+    margin-right: 0;
+    padding: 60px 0;
+    float: none; }
+    .service-wrap .service-img img:first-child {
+      padding-right: 30px; }
+  /*===========================================
+ q&a設定
+=============================================*/
+  .info-wrap .section-wrap {
+    width: 90vw;
+    margin: 0 auto; }
   /*===========================================
   q&a設定
 =============================================*/
-  .qa-wrap {
-    background-color: #fff; }
-    .qa-wrap .question {
-      margin: 0 auto 20px auto;
-      padding: 10px 0;
-      width: 90vw;
-      border: 1px solid #1b5688;
-      box-sizing: border-box;
-      border-radius: 3px; }
-      .qa-wrap .question:first-child {
-        margin-top: 60px; }
-      .qa-wrap .question:last-child {
-        margin-bottom: 0; }
-      .qa-wrap .question span {
-        color: #1b5688;
-        display: table-cell;
-        padding: 10px 20px;
-        font-size: 30px;
-        font-weight: normal; }
-      .qa-wrap .question .question-title {
-        font-size: 18px;
-        color: #333;
-        border-left: 1px solid #1b5688;
-        padding: 10px 10px 10px 20px;
-        display: table-cell;
-        vertical-align: middle; }
-      .qa-wrap .question .question-text {
-        font-size: 16px;
-        color: #555;
-        margin-top: 10px;
-        line-height: 1.8;
-        padding: 10px 20px 0 20px;
-        border-top: 1px dotted #1b5688; }
+  .qa-wrap .question {
+    margin: 0 auto 20px auto;
+    width: 90vw; }
   /*===========================================
     blog設定
   =============================================*/
-  .blog-wrap {
-    width: 100%;
-    background: url("../img/bg_blog.png") no-repeat center;
-    background-size: cover; }
-    .blog-wrap h2 {
-      color: #eee; }
-    .blog-wrap .blog-contents-wrap .blog-content {
-      margin-bottom: 40px;
-      width: 100%; }
-      .blog-wrap .blog-contents-wrap .blog-content a {
-        float: none; }
-      .blog-wrap .blog-contents-wrap .blog-content:last-child {
-        margin-bottom: 0; }
-      .blog-wrap .blog-contents-wrap .blog-content p {
-        width: 500px; }
-      .blog-wrap .blog-contents-wrap .blog-content img {
-        width: 500px;
-        display: block;
-        margin: 0 auto; }
+  .blog-wrap .blog-contents-wrap .blog-content {
+    margin-bottom: 40px;
+    width: 100%; }
+    .blog-wrap .blog-contents-wrap .blog-content a {
+      float: none; }
+    .blog-wrap .blog-contents-wrap .blog-content:last-child {
+      margin-bottom: 0; }
+    .blog-wrap .blog-contents-wrap .blog-content p {
+      width: 500px;
+      height: auto; }
+    .blog-wrap .blog-contents-wrap .blog-content img {
+      width: 500px;
+      height: auto;
+      display: block;
+      margin: 0 auto; }
   /*===========================================
  sns設定
 =============================================*/
@@ -663,5 +613,157 @@ open-nav設定
 =============================================*/
   footer .section-wrap {
     width: 90vw; }
-    footer .section-wrap .footer-navbox .footer-nav li {
+    footer .section-wrap .footer-nav-box .footer-nav li {
       padding-right: 100px; } }
+
+/*===========================================
+ レスポンシブ(@media max-width:600px)設定
+=============================================*/
+@media (max-width: 600px) {
+  /*===========================================
+ 共通設定
+=============================================*/
+  .title {
+    font-size: 26px; }
+  /*===========================================
+ button設定
+=============================================*/
+  .btn-wrap .button a {
+    padding: 12px;
+    font-size: 12px; }
+  .btn-wrap .button .btn-more {
+    font-size: 16px; }
+  /*===========================================
+ header設定
+=============================================*/
+  header .head-nav .pc-none {
+    display: block; }
+  header .head-nav a {
+    font-size: 12px; }
+  header .top-btn {
+    margin: 22px 90px 20px 20px;
+    width: 130px;
+    background-color: #fff; }
+    header .top-btn a {
+      padding: 5px;
+      font-size: 12px;
+      letter-spacing: 0;
+      color: #1b5688; }
+  header #nav-toggle {
+    width: 26px; }
+  .top {
+    height: 100vh;
+    text-align: center; }
+    .top .top-head-content {
+      width: 60vw;
+      height: 70vh; }
+      .top .top-head-content p {
+        font-size: 18px; }
+  /*===========================================
+   fixed設定
+  =============================================*/
+  .fixed .top-btn {
+    display: none; }
+  /*===========================================
+   .open-nav設定
+  =============================================*/
+  .open-nav nav {
+    width: 40%;
+    left: 60%; }
+  /*===========================================
+  	.news設定
+  =============================================*/
+  .news-wrap .news-list-box {
+    width: 90vw;
+    margin: 40px auto 0 auto;
+    min-width: 0; }
+  .news-wrap .news-list .news-item a {
+    text-align: left;
+    line-height: 1.6; }
+    .news-wrap .news-list .news-item a span {
+      font-size: 18px;
+      padding-left: 0; }
+  .news-wrap .news-list .date {
+    font-size: 18px; }
+  /*===========================================
+  	.service設定
+  =============================================*/
+  .service-wrap .service-left {
+    width: 90vw;
+    margin: 0 auto; }
+    .service-wrap .service-left .title {
+      text-align: center; }
+    .service-wrap .service-left p {
+      text-align: justify; }
+  .service-wrap .service-img img {
+    width: 125px;
+    height: 255px; }
+  /*===========================================
+  	.step設定
+  =============================================*/
+  .step-wrap {
+    height: auto;
+    background: url("../img/bg_sp_step.png") no-repeat;
+    background-size: cover; }
+    .step-wrap .section-wrap {
+      width: 90vw;
+      margin: 0 auto; }
+    .step-wrap .step {
+      float: left; }
+      .step-wrap .step h3 {
+        font-size: 20px; }
+      .step-wrap .step p {
+        text-align: center; }
+  /*===========================================
+  	.info設定
+  =============================================*/
+  .info-wrap .section-wrap {
+    width: 90vw;
+    margin: 0 auto; }
+  /*===========================================
+    blog設定
+  =============================================*/
+  .blog-wrap .blog-contents-wrap .blog-content p {
+    width: 400px;
+    font-size: 14px; }
+  .blog-wrap .blog-contents-wrap .blog-content img {
+    width: 400px; }
+  /*===========================================
+  footer設定
+=============================================*/
+  footer .section-wrap {
+    width: 80vw;
+    height: auto; }
+    footer .section-wrap .footer-navapp-box {
+      float: none; }
+      footer .section-wrap .footer-navapp-box .footer-nav-box {
+        width: 100%; }
+        footer .section-wrap .footer-navapp-box .footer-nav-box .footer-nav {
+          width: 33%; }
+          footer .section-wrap .footer-navapp-box .footer-nav-box .footer-nav a {
+            font-size: 13px; }
+          footer .section-wrap .footer-navapp-box .footer-nav-box .footer-nav li {
+            padding-right: 0; }
+      footer .section-wrap .footer-navapp-box .footer-app {
+        text-align: center;
+        display: inline-block;
+        width: 100%; }
+        footer .section-wrap .footer-navapp-box .footer-app .btn-app-footer {
+          display: inline-block;
+          width: 39%;
+          max-width: calc(200px - 5%);
+          margin: 5% 1%; }
+          footer .section-wrap .footer-navapp-box .footer-app .btn-app-footer img {
+            width: 141px;
+            height: 42px; }
+    footer .section-wrap .footer-logo {
+      width: 40%;
+      margin: 5% 0 10% 40%;
+      clear: both; }
+      footer .section-wrap .footer-logo img {
+        width: 80px;
+        height: 106px; } }
+
+/*===========================================
+ レスポンシブ(@media max-width:413px)設定
+=============================================*/
