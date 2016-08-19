@@ -177,7 +177,7 @@ header{
 =============================================*/
 
 .top{
-  //background-image: url(../../dist/img/bg_sp_top.png);
+  background-image: url(../../dist/img/bg_sp_top.png);
   height: 100vh;
 	text-align: center;
   position: relative;
@@ -206,7 +206,7 @@ header{
     }
     p{
       color: $text-white;
-      font-size: 22px;
+      font-size: 20px;
     }
     .btn-play-wrap{
       .btn-play{
@@ -329,7 +329,6 @@ header{
           font-size: 22px;
         }
         p{
-          opacity: 0.9;
           text-align: left;
           font-size: 18px;
           line-height: 1.8;
@@ -482,33 +481,31 @@ footer{
   clear: both;
   background-color:$bg-footer;
     .section-wrap{
-      height: 220px;
-      padding-top: 70px;
+      height: 26vh;
+      padding: 60px 0;
       .footer-navapp-box{
+        width: 80%;
         float: right;
-      }
-    .footer-logo{
-      float: left;
-    }
-    .footer-nav-box{
-      float: left;
       .footer-nav{
+        width: 20%;
         float: left;
-        li{
-          padding-bottom: 30px;
-          padding-right: 110px;
+        nav{
+          ul{
+            li{
+              padding-bottom: 30px;
+              &:nth-last-child(1){
+                padding-bottom: 0;
+              }
+              a{
+                  font-size: 14px;
+                  color: $text-white;
 
-          &:last-child{
-            padding-right: 0;
-          }
-        }
-        a{
-          font-size: 14px;
-          color: $text-white;
-
-          &:hover{
-            opacity: $opacity;
-            color: $text-eee;
+                  &:hover{
+                  opacity: $opacity;
+                  color: $text-eee;
+                }
+              }
+            }
           }
         }
       }
@@ -523,10 +520,13 @@ footer{
             &:hover{
               opacity: $opacity;
             }
-            }
           }
         }
+      }
     }
+  }
+  .footer-logo{
+    display: table;
   }
   .copyright{
     clear: both;
@@ -789,10 +789,13 @@ footer{
   footer{
       .section-wrap{
         width: 90vw;
-      .footer-nav-box{
+      .footer-navapp-box{
+        width: 80%;
+        margin: 0 auto;
         .footer-nav{
+          width: 20%;
           li{
-            padding-right: 100px;
+            padding-right: 0;
           }
         }
       }
@@ -991,12 +994,10 @@ footer{
 =============================================*/
       footer{
           .section-wrap{
-            width: 80vw;
+            width: 90vw;
             height: auto;
           .footer-navapp-box{
             float: none;
-          .footer-nav-box{
-            width: 100%;
             .footer-nav{
               width: 33%;
               a{
@@ -1006,11 +1007,18 @@ footer{
                 padding-right: 0;
               }
             }
-          }
           .footer-app{
             text-align: center;
             display: inline-block;
             width: 100%;
+            margin: 50px auto;
+            a{
+              img{
+                &:first-child{
+                  padding-bottom: 0;
+                }
+              }
+            }
           .btn-app-footer{
               display: inline-block;
               width: 39%;
@@ -1024,8 +1032,7 @@ footer{
           }
         }
         .footer-logo{
-          width: 40%;
-          margin: 5% 0 10% 40%;
+          margin: 0 auto;
           clear: both;
           img{
             width: 80px;

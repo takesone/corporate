@@ -2,15 +2,11 @@
 /*===========================================
 	共通設定
 =============================================*/
-@font-face {
-  font-family: 'M+ 1c thin';
-  src: url("../fonts/mplus-1c-thin-sub.eot");
-  src: url("../fonts/mplus-1c-thin-sub.eot?#iefix") format("embedded-opentype"), url("../fonts/mplus-1c-thin-sub.woff") format("woff"), url("../fonts/mplus-1c-thin-sub.ttf") format("truetype"); }
-
 body {
-  font-family: 'M+ 1c thin'; }
+  font-family: 'M+ C Type-1 (basic latin) Thin', 'M+ Type-1 (general-j) Thin', sans-serif; }
 
 a {
+  font-family: 'M+ C Type-1 (basic latin) Light', 'M+ Type-1 (general-j) Light', sans-serif;
   text-decoration: none; }
 
 li {
@@ -18,6 +14,12 @@ li {
 
 img {
   max-width: 100%; }
+
+.font-L {
+  font-family: 'M+ C Type-1 (basic latin) Light', 'M+ Type-1 (general-j) Light', sans-serif; }
+
+.font-T {
+  font-family: 'M+ C Type-1 (basic latin) Thin', 'M+ Type-1 (general-j) Thin', sans-serif; }
 
 .contents-wrapper {
   width: 100%;
@@ -32,6 +34,7 @@ img {
   margin: 0 auto; }
 
 .title {
+  font-family: 'M+ C Type-1 (basic latin) Light', 'M+ Type-1 (general-j) Light', sans-serif;
   text-align: center;
   font-size: 32px;
   padding-top: 60px; }
@@ -177,6 +180,7 @@ header {
 	.top設定
 =============================================*/
 .top {
+  background-image: url(../../dist/img/bg_sp_top.png);
   height: 100vh;
   text-align: center;
   position: relative; }
@@ -208,7 +212,7 @@ header {
       margin-bottom: 20px; }
     .top .top-head-content p {
       color: #fff;
-      font-size: 22px; }
+      font-size: 20px; }
     .top .top-head-content .btn-play-wrap .btn-play {
       display: inline-block;
       border: 1px solid #fff;
@@ -300,7 +304,6 @@ header {
       padding: 35px 0;
       font-size: 22px; }
     .step-wrap .step p {
-      opacity: 0.9;
       text-align: left;
       font-size: 18px;
       line-height: 1.8; }
@@ -422,27 +425,24 @@ footer {
   clear: both;
   background-color: #393939; }
   footer .section-wrap {
-    height: 220px;
-    padding-top: 70px; }
+    height: 26vh;
+    padding: 60px 0; }
     footer .section-wrap .footer-navapp-box {
+      width: 80%;
       float: right; }
-    footer .section-wrap .footer-logo {
-      float: left; }
-    footer .section-wrap .footer-nav-box {
-      float: left; }
-      footer .section-wrap .footer-nav-box .footer-nav {
+      footer .section-wrap .footer-navapp-box .footer-nav {
+        width: 20%;
         float: left; }
-        footer .section-wrap .footer-nav-box .footer-nav li {
-          padding-bottom: 30px;
-          padding-right: 110px; }
-          footer .section-wrap .footer-nav-box .footer-nav li:last-child {
-            padding-right: 0; }
-        footer .section-wrap .footer-nav-box .footer-nav a {
-          font-size: 14px;
-          color: #fff; }
-          footer .section-wrap .footer-nav-box .footer-nav a:hover {
-            opacity: 0.7;
-            color: #eee; }
+        footer .section-wrap .footer-navapp-box .footer-nav nav ul li {
+          padding-bottom: 30px; }
+          footer .section-wrap .footer-navapp-box .footer-nav nav ul li:nth-last-child(1) {
+            padding-bottom: 0; }
+          footer .section-wrap .footer-navapp-box .footer-nav nav ul li a {
+            font-size: 14px;
+            color: #fff; }
+            footer .section-wrap .footer-navapp-box .footer-nav nav ul li a:hover {
+              opacity: 0.7;
+              color: #eee; }
     footer .section-wrap .footer-app {
       float: right; }
       footer .section-wrap .footer-app a {
@@ -451,6 +451,8 @@ footer {
           padding-bottom: 10px; }
           footer .section-wrap .footer-app a img:first-child:hover {
             opacity: 0.7; }
+  footer .footer-logo {
+    display: table; }
   footer .copyright {
     clear: both;
     background-color: #212121; }
@@ -613,8 +615,13 @@ footer {
 =============================================*/
   footer .section-wrap {
     width: 90vw; }
-    footer .section-wrap .footer-nav-box .footer-nav li {
-      padding-right: 100px; } }
+    footer .section-wrap .footer-navapp-box {
+      width: 80%;
+      margin: 0 auto; }
+      footer .section-wrap .footer-navapp-box .footer-nav {
+        width: 20%; }
+        footer .section-wrap .footer-navapp-box .footer-nav li {
+          padding-right: 0; } }
 
 /*===========================================
  レスポンシブ(@media max-width:600px)設定
@@ -732,22 +739,23 @@ footer {
   footer設定
 =============================================*/
   footer .section-wrap {
-    width: 80vw;
+    width: 90vw;
     height: auto; }
     footer .section-wrap .footer-navapp-box {
       float: none; }
-      footer .section-wrap .footer-navapp-box .footer-nav-box {
-        width: 100%; }
-        footer .section-wrap .footer-navapp-box .footer-nav-box .footer-nav {
-          width: 33%; }
-          footer .section-wrap .footer-navapp-box .footer-nav-box .footer-nav a {
-            font-size: 13px; }
-          footer .section-wrap .footer-navapp-box .footer-nav-box .footer-nav li {
-            padding-right: 0; }
+      footer .section-wrap .footer-navapp-box .footer-nav {
+        width: 33%; }
+        footer .section-wrap .footer-navapp-box .footer-nav a {
+          font-size: 13px; }
+        footer .section-wrap .footer-navapp-box .footer-nav li {
+          padding-right: 0; }
       footer .section-wrap .footer-navapp-box .footer-app {
         text-align: center;
         display: inline-block;
-        width: 100%; }
+        width: 100%;
+        margin: 50px auto; }
+        footer .section-wrap .footer-navapp-box .footer-app a img:first-child {
+          padding-bottom: 0; }
         footer .section-wrap .footer-navapp-box .footer-app .btn-app-footer {
           display: inline-block;
           width: 39%;
@@ -757,8 +765,7 @@ footer {
             width: 141px;
             height: 42px; }
     footer .section-wrap .footer-logo {
-      width: 40%;
-      margin: 5% 0 10% 40%;
+      margin: 0 auto;
       clear: both; }
       footer .section-wrap .footer-logo img {
         width: 80px;
