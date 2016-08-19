@@ -23,7 +23,6 @@ img {
 
 .contents-wrapper {
   width: 100%;
-  max-width: 1280px;
   height: auto;
   margin: 0 auto; }
 
@@ -293,7 +292,8 @@ header {
 =============================================*/
 .step-wrap {
   clear: both;
-  background: url("../img/bg_step.png") no-repeat center;
+  background: url("../img/bg_step.png");
+  background-size: cover;
   color: #fff; }
   .step-wrap .step {
     display: table-cell;
@@ -339,7 +339,7 @@ header {
   .qa-wrap .question {
     margin-bottom: 20px;
     padding: 10px 0;
-    width: 1000px;
+    width: 960px;
     border: 1px solid #1b5688;
     box-sizing: border-box;
     border-radius: 3px; }
@@ -373,7 +373,7 @@ header {
 =============================================*/
 .blog-wrap {
   width: 100%;
-  background: url("../img/bg_blog.png") no-repeat center;
+  background: url("../img/bg_blog.png");
   background-size: cover; }
   .blog-wrap h2 {
     color: #eee; }
@@ -425,7 +425,7 @@ footer {
   clear: both;
   background-color: #393939; }
   footer .section-wrap {
-    height: 26vh;
+    height: 154px;
     padding: 60px 0; }
     footer .section-wrap .footer-navapp-box {
       width: 80%;
