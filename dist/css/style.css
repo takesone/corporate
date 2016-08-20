@@ -295,19 +295,19 @@ header {
   background: url("../img/bg_step.png");
   background-size: cover;
   color: #fff; }
-  .step-wrap .step {
+  .step-wrap .step-content-wrap .step {
     display: table-cell;
     padding: 60px 20px 0 20px;
     text-align: center;
     box-sizing: border-box; }
-    .step-wrap .step h3 {
+    .step-wrap .step-content-wrap .step h3 {
       padding: 35px 0;
-      font-size: 22px; }
-    .step-wrap .step p {
-      text-align: left;
+      font-size: 20px; }
+    .step-wrap .step-content-wrap .step p {
+      text-align: justify;
       font-size: 18px;
       line-height: 1.8; }
-    .step-wrap .step img {
+    .step-wrap .step-content-wrap .step img {
       border-radius: 50px; }
 
 /*===========================================
@@ -378,12 +378,15 @@ header {
   .blog-wrap h2 {
     color: #eee; }
   .blog-wrap .blog-contents-wrap {
+    width: 100%;
+    margin: 0 auto;
+    height: 311px;
     padding-top: 60px; }
     .blog-wrap .blog-contents-wrap .blog-content {
       display: block;
       width: 300px;
       overflow: hidden;
-      margin-right: 20px;
+      margin-right: 30px;
       text-align: left;
       float: left; }
       .blog-wrap .blog-contents-wrap .blog-content:last-child {
@@ -471,7 +474,7 @@ footer {
 =============================================*/
   .btn-wrap .button a {
     padding: 20px;
-    font-size: 22px; }
+    font-size: 20px; }
   /*===========================================
   top設定
 =============================================*/
@@ -582,21 +585,25 @@ footer {
   /*===========================================
     blog設定
   =============================================*/
-  .blog-wrap .blog-contents-wrap .blog-content {
-    margin-bottom: 40px;
-    width: 100%; }
-    .blog-wrap .blog-contents-wrap .blog-content a {
-      float: none; }
-    .blog-wrap .blog-contents-wrap .blog-content:last-child {
-      margin-bottom: 0; }
-    .blog-wrap .blog-contents-wrap .blog-content p {
-      width: 500px;
-      height: auto; }
-    .blog-wrap .blog-contents-wrap .blog-content img {
-      width: 500px;
-      height: auto;
-      display: block;
-      margin: 0 auto; }
+  .blog-wrap .blog-contents-wrap {
+    width: 80vw;
+    margin: 0 auto; }
+    .blog-wrap .blog-contents-wrap .blog-content {
+      margin-right: 0;
+      margin-bottom: 40px;
+      width: 100%; }
+      .blog-wrap .blog-contents-wrap .blog-content a {
+        float: none; }
+      .blog-wrap .blog-contents-wrap .blog-content:last-child {
+        margin-bottom: 0; }
+      .blog-wrap .blog-contents-wrap .blog-content p {
+        width: 100%;
+        height: auto; }
+      .blog-wrap .blog-contents-wrap .blog-content img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto; }
   /*===========================================
  sns設定
 =============================================*/
@@ -637,9 +644,7 @@ footer {
 =============================================*/
   .btn-wrap .button a {
     padding: 12px;
-    font-size: 12px; }
-  .btn-wrap .button .btn-more {
-    font-size: 16px; }
+    font-size: 14px; }
   /*===========================================
  header設定
 =============================================*/
@@ -715,12 +720,12 @@ footer {
     .step-wrap .section-wrap {
       width: 90vw;
       margin: 0 auto; }
-    .step-wrap .step {
-      float: left; }
-      .step-wrap .step h3 {
-        font-size: 20px; }
-      .step-wrap .step p {
-        text-align: center; }
+      .step-wrap .section-wrap .step-content-wrap .step {
+        float: left; }
+        .step-wrap .section-wrap .step-content-wrap .step h3 {
+          font-size: 20px; }
+        .step-wrap .section-wrap .step-content-wrap .step p {
+          text-align: center; }
   /*===========================================
   	.info設定
   =============================================*/
@@ -730,11 +735,15 @@ footer {
   /*===========================================
     blog設定
   =============================================*/
-  .blog-wrap .blog-contents-wrap .blog-content p {
-    width: 400px;
+  .qa-wrap .question .question-text {
     font-size: 14px; }
-  .blog-wrap .blog-contents-wrap .blog-content img {
-    width: 400px; }
+  .qa-wrap .question .question-title {
+    font-size: 16px; }
+  /*===========================================
+    blog設定
+  =============================================*/
+  .blog-wrap .blog-contents-wrap .blog-content p {
+    font-size: 14px; }
   /*===========================================
   footer設定
 =============================================*/
@@ -772,5 +781,72 @@ footer {
         height: 106px; } }
 
 /*===========================================
- レスポンシブ(@media max-width:413px)設定
+ レスポンシブ(@media max-width:414px)設定
 =============================================*/
+@media (max-width: 414px) {
+  /*===========================================
+ 共通設定
+=============================================*/
+  .title {
+    font-size: 22px; }
+  /*===========================================
+	button設定
+=============================================*/
+  .btn-wrap .btn-more a {
+    font-size: 11px !important; }
+  .btn-wrap .button {
+    width: 70%; }
+    .btn-wrap .button a {
+      padding: 12px;
+      font-size: 14px; }
+  /*===========================================
+    top設定
+  =============================================*/
+  .top header .headmenu-logo {
+    margin-left: 10px !important;
+    margin-top: 22px; }
+    .top header .headmenu-logo img {
+      height: 30px; }
+  .top .top-head-content {
+    width: 90vw;
+    height: 70vh; }
+    .top .top-head-content p {
+      font-size: 16px; }
+  /*===========================================
+   .news設定
+  =============================================*/
+  .news-wrap .news-list .news-item a span {
+    font-size: 16px; }
+  .news-wrap .news-list .news-item a .date {
+    font-size: 16px; }
+  /*===========================================
+    .service設定
+  =============================================*/
+  .service-wrap .service-left p {
+    font-size: 16px; }
+  /*===========================================
+    step設定
+  =============================================*/
+  .step-wrap .step p {
+    font-size: 16px; }
+  /*===========================================
+      footer設定
+    =============================================*/
+  footer .section-wrap .footer-navapp-box .footer-app .btn-app-footer {
+    width: 45%;
+    margin: 5% 2%; }
+  footer .copyright p small {
+    font-size: 12px; } }
+
+/*===========================================
+ レスポンシブ(@media max-width:360px)設定
+=============================================*/
+@media (max-width: 360px) {
+  /*===========================================
+    footer設定
+  =============================================*/
+  footer .section-wrap .footer-navapp-box .footer-app .btn-app-footer {
+    width: 44%;
+    margin: 5% 2%; }
+  footer .copyright p small {
+    font-size: 12px; } }
