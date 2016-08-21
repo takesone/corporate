@@ -179,7 +179,6 @@ header {
 	.top設定
 =============================================*/
 .top {
-  background-image: url(../../dist/img/bg_sp_top.png);
   height: 100vh;
   text-align: center;
   position: relative; }
@@ -412,7 +411,8 @@ header {
   width: 800px;
   margin: 0 auto; }
 
-.facebook {
+.fb-page {
+  width: 350px;
   float: left; }
 
 .twitter {
@@ -468,7 +468,7 @@ footer {
 /*===========================================
  レスポンシブ(@media max-width:960px)設定
 =============================================*/
-@media (max-width: 960px) {
+@media screen and (max-width: 960px) {
   /*===========================================
 	button設定
 =============================================*/
@@ -583,8 +583,8 @@ footer {
     margin: 0 auto 20px auto;
     width: 90vw; }
   /*===========================================
-    blog設定
-  =============================================*/
+  blog設定
+=============================================*/
   .blog-wrap .blog-contents-wrap {
     width: 80vw;
     margin: 0 auto; }
@@ -605,19 +605,6 @@ footer {
         display: block;
         margin: 0 auto; }
   /*===========================================
- sns設定
-=============================================*/
-  .sns-contents-wrap {
-    width: 800px;
-    max-width: 90vw;
-    margin: 0 auto; }
-  .facebook {
-    float: left; }
-  .twitter {
-    float: right; }
-  .p60 {
-    padding: 60px 0; }
-  /*===========================================
 	footer設定
 =============================================*/
   footer .section-wrap {
@@ -633,7 +620,7 @@ footer {
 /*===========================================
  レスポンシブ(@media max-width:600px)設定
 =============================================*/
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   /*===========================================
  共通設定
 =============================================*/
@@ -745,6 +732,29 @@ footer {
   .blog-wrap .blog-contents-wrap .blog-content p {
     font-size: 14px; }
   /*===========================================
+   sns設定
+  =============================================*/
+  .sns-wrpa {
+    width: 80vw;
+    margin: 0 auto; }
+    .sns-wrpa .section-wrap {
+      width: 100%; }
+      .sns-wrpa .section-wrap .sns-contents-wrap {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center; }
+        .sns-wrpa .section-wrap .sns-contents-wrap .fb-page {
+          float: none;
+          width: 350px;
+          display: block;
+          margin: 0 auto; }
+        .sns-wrpa .section-wrap .sns-contents-wrap .twitter {
+          float: none;
+          width: 100%;
+          margin: 0  auto; }
+          .sns-wrpa .section-wrap .sns-contents-wrap .twitter .p60 {
+            padding: 60px 0; }
+  /*===========================================
   footer設定
 =============================================*/
   footer .section-wrap {
@@ -783,7 +793,7 @@ footer {
 /*===========================================
  レスポンシブ(@media max-width:414px)設定
 =============================================*/
-@media (max-width: 414px) {
+@media screen and (max-width: 414px) {
   /*===========================================
  共通設定
 =============================================*/
@@ -830,8 +840,32 @@ footer {
   .step-wrap .step p {
     font-size: 16px; }
   /*===========================================
-      footer設定
-    =============================================*/
+   sns設定
+  =============================================*/
+  .sns-wrpa {
+    width: 80vw;
+    margin: 0 auto; }
+    .sns-wrpa .section-wrap {
+      width: 100%; }
+      .sns-wrpa .section-wrap .sns-contents-wrap {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center; }
+        .sns-wrpa .section-wrap .sns-contents-wrap .fb-page {
+          width: 100%;
+          display: block;
+          margin: 0 auto; }
+          .sns-wrpa .section-wrap .sns-contents-wrap .fb-page iframe {
+            width: 100%; }
+        .sns-wrpa .section-wrap .sns-contents-wrap .twitter {
+          float: none;
+          width: 100%;
+          margin: 0  auto; }
+          .sns-wrpa .section-wrap .sns-contents-wrap .twitter .p60 {
+            padding: 60px 0; }
+  /*===========================================
+    footer設定
+  =============================================*/
   footer .section-wrap .footer-navapp-box .footer-app .btn-app-footer {
     width: 45%;
     margin: 5% 2%; }
@@ -841,10 +875,10 @@ footer {
 /*===========================================
  レスポンシブ(@media max-width:360px)設定
 =============================================*/
-@media (max-width: 360px) {
+@media screen and (max-width: 360px) {
   /*===========================================
-    footer設定
-  =============================================*/
+  footer設定
+=============================================*/
   footer .section-wrap .footer-navapp-box .footer-app .btn-app-footer {
     width: 44%;
     margin: 5% 2%; }
