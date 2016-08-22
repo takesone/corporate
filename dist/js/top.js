@@ -11,6 +11,7 @@
         });
     });
 
+    /*
     $(window).load(function() {
         function changeWidget() {
             var twFrame = $('iframe.twitter-timeline');
@@ -24,6 +25,7 @@
         }
         changeWidget();
     });
+    */
 
     $(function() {
       $('#nav-toggle').click(function(){
