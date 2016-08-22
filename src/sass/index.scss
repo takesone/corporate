@@ -11,17 +11,16 @@
     border: none;
     @include border-radius(5px);
     margin: 0 auto;
-      a{
-        display: block;
-        color: $text-white;
-        padding: 27px;
-        font-size: 24px;
-        letter-spacing: 1.4px;
-
-        &:hover{
-          opacity: $opacity;
-        }
+    a{
+      display: block;
+      color: $text-white;
+      padding: 27px;
+      font-size: 24px;
+      letter-spacing: 1.4px;
+      &:hover{
+        opacity: $opacity;
       }
+    }
   }
 }
 /*===========================================
@@ -41,61 +40,75 @@ header{
 	height: 80px;
 	position: fixed;
 	z-index: 999;
-		.head-nav{
-			position: absolute;
-			float: left;
-			transform: translate(-50%,-50%);
-			left: 50%;
-			top: 50%;
-			box-sizing: border-box;
-				ul li{
-					float: left;
-				}
-				a{
-          display: block;
-          padding: 25px;
-					color: $text-white;
-					&:hover{
-						opacity: 0.7;
-            //@include border;
-						//padding-bottom: 8px;
-						//transition: all 0.3s ease-out;
-					}
-					&:hover::after{
-						opacity: 1;
-						top: 100%;
-						height: 4px;
-					}
-				}
-        .pc-none{
-          display: none;
-        }
-		  }
-		  .top-btn{
-			text-align: center;
-      float: right;
-      margin: 16px 90px 20px 20px;
-			width: 200px;
-			background-color: $bg-white;
-			border: none;
-			@include border-radius(3px);
+	.head-nav{
+		position: absolute;
+		float: left;
+		transform: translate(-50%,-50%);
+		left: 50%;
+		top: 50%;
+		box-sizing: border-box;
+			ul li{
+				float: left;
+			}
 			a{
-				display: block;
-				color: $base-color;
-				padding: 10px;
-				font-size: 14px;
-				letter-spacing: 1.4px;
+        display: block;
+        padding: 25px;
+				color: $text-white;
 				&:hover{
-					opacity: $opacity;
+					opacity: 0.7;
+          //@include border;
+					//padding-bottom: 8px;
+					//transition: all 0.3s ease-out;
+				}
+				&:hover::after{
+					opacity: 1;
+					top: 100%;
+					height: 4px;
 				}
 			}
+      .pc-none{
+        display: none;
+      }
 		}
-		.headmenu-logo{
-			display: inline-block;
-      float: left;
-      margin: 16px 0 0 90px;
-			display: none;
+		.top-btn{
+		text-align: center;
+    float: right;
+    margin: 20px 90px 20px 20px;
+    /*
+		width: 200px;
+		background-color: $bg-white;
+		border: none;
+		@include border-radius(3px);
+    */
+    .btn-blue{
+      display: none;
+    }
+    .btn-white{
+      display: block;
+    }
+    img{
+      width: 200px;
+      &:hover{
+        opacity: $opacity;
+      }
+    }
+		a{
+			display: block;
+			color: $base-color;
+			padding: 10px;
+			font-size: 14px;
+			letter-spacing: 1.4px;
+			&:hover{
+				opacity: $opacity;
+			}
 		}
+	}
+	.headmenu-logo{
+		display: inline-block;
+    float: left;
+    margin: 16px 0 0 90px;
+		display: none;
+	}
 }
 /*===========================================
 	transition設定
@@ -126,9 +139,16 @@ header{
 			}
 		}
     .top-btn{
-      background-color: $base-color;
+      /*background-color: $base-color;
       a{
         color: $text-white;
+      }
+      */
+      .btn-white{
+        display: none;
+      }
+      .btn-blue{
+        display: block;
       }
     }
 		.headmenu-logo{
@@ -136,9 +156,9 @@ header{
 		}
 	}
 
-  /*===========================================
-  	navToggle設定
-  =============================================*/
+/*===========================================
+  navToggle設定
+=============================================*/
   #nav-toggle{
     display: none;
     //float: right;
@@ -156,7 +176,7 @@ header{
       display: block;
       position: absolute;
       width: 100%;
-      border-bottom:solid 3px $text-white;
+      border-bottom:solid 2px $text-white;
       transition: .35s ease-in-out;
 
       &:nth-child(1){
@@ -171,13 +191,11 @@ header{
     }
   }
 
-
 /*===========================================
 	.top設定
 =============================================*/
-
 .top{
-  //background-image: url(../../dist/img/bg_sp_top.png);
+  background-image: url(../../dist/img/bg_sp_top.png);
   height: 100vh;
 	text-align: center;
   position: relative;
@@ -243,78 +261,75 @@ header{
 .news-wrap{
 	background-color: $bg-eee;
 	height: 330px;
-    .news-list-box{
-      text-align: center;
-      width: 700px;
-      min-width: 800px;
-      height: 150px;
-      margin: 40px auto;
-      overflow-y: scroll;
-    }
-    .news-list{
-      .news-item{
-        a{
-          display: block;
-          padding: 15px;
-          color: $text-black;
-          font-size: 0;
-          transition: background-color 0.1s;
-
-          &:hover{
-            background-color: $bg-white;
-          }
-          span{
-            font-size: 20px;
-            padding-left: 18px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
+  .news-list-box{
+    text-align: center;
+    width: 700px;
+    min-width: 800px;
+    height: 150px;
+    margin: 40px auto;
+    overflow-y: scroll;
+  }
+  .news-list{
+    .news-item{
+      a{
+        display: block;
+        padding: 15px;
+        color: $text-black;
+        font-size: 0;
+        transition: background-color 0.1s;
+        &:hover{
+          background-color: $bg-white;
+        }
+        span{
+          font-size: 20px;
+          padding-left: 18px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
       }
-      .date{
-        font-size: 20px;
-        letter-spacing: 1px;
-      }
     }
+    .date{
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+  }
 }
 
 /*===========================================
 	.service設定
 =============================================*/
-
 .service-wrap{
   height: auto;
   background-color: $bg-white;
-    .service-left{
-      width: 50%;
-      float: left;
-      margin-left: 20px;
-        .title{
-          text-align: left;
-          color: $text-555;
-          padding-bottom: 46px;
-        }
-        p{
-          line-height: 2;
-          font-size: 18px;
-          color: #555;
-        }
+  .service-left{
+    width: 50%;
+    float: left;
+    margin-left: 20px;
+      .title{
+        text-align: left;
+        color: $text-555;
+        padding-bottom: 46px;
+      }
+      p{
+        line-height: 2;
+        font-size: 18px;
+        color: $text-555;
+      }
     }
     .service-img{
       margin-right: 20px;
       padding: 60px 0;
       float: right;
-        img:first-child{
-          padding-right: 30px;
-        }
+      img:first-child{
+        padding-right: 30px;
+      }
     }
-}
+  }
 
 /*===========================================
 	.step設定
 =============================================*/
-
 .step-wrap{
   clear: both;
   background: url('../img/bg_step.png');
@@ -326,18 +341,18 @@ header{
       padding: 60px 20px 0 20px;
       text-align: center;
       box-sizing: border-box;
-        h3{
-          padding: 35px 0;
-          font-size: 20px;
-        }
-        p{
-          text-align: justify;
-          font-size: 18px;
-          line-height: 1.8;
-        }
-        img{
-          @include border-radius(50px)
-        }
+      h3{
+        padding: 35px 0;
+        font-size: 20px;
+      }
+      p{
+        text-align: justify;
+        font-size: 18px;
+        line-height: 1.8;
+      }
+      img{
+        @include border-radius(50px)
+      }
     }
   }
 }
@@ -345,48 +360,45 @@ header{
 /*===========================================
 	.info設定
 =============================================*/
-
 .info-wrap{
   background-color: $bg-eee;
   text-align: center;
-    .bg-iphone{
-      display: block;
-      position: relative;
-      left: 50%;
-      transform: translate(-50%);
-      z-index: 10;
-    }
-    .title{
-      color: $text-black;
-    }
-    p{
-      font-size: 16px;
-      padding: 40px 0 60px 0;
-      line-height: 2;
-      color: $text-black;
-    }
+  .bg-iphone{
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10;
+  }
+  .title{
+    color: $text-black;
+  }
+  p{
+    font-size: 16px;
+    padding: 40px 0 60px 0;
+    line-height: 2;
+    color: $text-black;
+  }
 }
 
 /*===========================================
 	q&a設定
 =============================================*/
-
 .qa-wrap{
   background-color: $bg-white;
-    .question{
-      margin-bottom: 20px;
-      padding: 10px 0;
-      width: 960px;
-      border: 1px solid $base-color;
-      box-sizing: border-box;
-      @include border-radius(3px);
-
-      &:first-child{
-        margin-top: 60px;
-      }
-      &:last-child{
-        margin-bottom: 0;
-      }
+  .question{
+    margin-bottom: 20px;
+    padding: 10px 0;
+    width: 960px;
+    border: 1px solid $base-color;
+    box-sizing: border-box;
+    @include border-radius(3px);
+    &:first-child{
+      margin-top: 60px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
       span{
         color: $base-color;
         display: table-cell;
@@ -403,20 +415,19 @@ header{
         vertical-align: middle;
       }
       .question-text{
-        font-size: 16px;
-        color: $text-555;
-        margin-top: 10px;
-        line-height: 1.8;
-        padding: 10px 20px 0 20px;
-        border-top: 1px dotted $base-color;
-      }
+      font-size: 16px;
+      color: $text-555;
+      margin-top: 10px;
+      line-height: 1.8;
+      padding: 10px 20px 0 20px;
+      border-top: 1px dotted $base-color;
     }
+  }
 }
 
 /*===========================================
 	blog設定
 =============================================*/
-
 .blog-wrap{
   width: 100%;
   background: url('../img/bg_blog.png');
@@ -465,7 +476,6 @@ header{
 /*===========================================
 	sns設定
 =============================================*/
-
 .sns-contents-wrap{
     width: 800px;
     margin: 0 auto;
@@ -538,12 +548,12 @@ footer{
   .copyright{
     clear: both;
     background-color: $bg-copyright;
-      p{
-        text-align: center;
-        padding: 26px;
-        color: $text-white;
-        font-size: 14px;
-      }
+    p{
+      text-align: center;
+      padding: 26px;
+      color: $text-white;
+      font-size: 14px;
+    }
   }
 }
 
@@ -611,7 +621,7 @@ footer{
   }
   #nav-toggle{
     span{
-      border-bottom: solid 3px $text-555;
+      border-bottom: solid 2px $text-555;
     }
   }
   .head-nav{
@@ -673,18 +683,18 @@ footer{
     }
   }
 
-  /*===========================================
-	 .news設定
-  =============================================*/
-  .news-wrap{
-      .news-list-box{
-        width: 60vw;
-        margin: 40px auto 0 auto;
-        min-width: 0;
-      }
-      .news-list{
-        .news-item{
-          a{
+/*===========================================
+ .news設定
+=============================================*/
+.news-wrap{
+    .news-list-box{
+      width: 60vw;
+      margin: 40px auto 0 auto;
+      min-width: 0;
+    }
+    .news-list{
+      .news-item{
+        a{
           text-align: left;
           line-height: 1.6;
           span{
@@ -702,7 +712,6 @@ footer{
 /*===========================================
 	.service設定
 =============================================*/
-
   .service-wrap{
     .service-left{
       width: 90vw;
@@ -724,7 +733,7 @@ footer{
     }
 
 /*===========================================
- q&a設定
+  info設定
 =============================================*/
   .info-wrap{
   .section-wrap{
@@ -736,7 +745,6 @@ footer{
 /*===========================================
   q&a設定
 =============================================*/
-
 .qa-wrap{
     .question{
       margin: 0 auto 20px auto;
@@ -824,30 +832,6 @@ footer{
 /*===========================================
  header設定
 =============================================*/
-  header{
-    .head-nav{
-      .pc-none{
-        display: block;
-      }
-      a{
-        font-size: 12px;
-      }
-    }
-    .top-btn{
-      margin: 22px 90px 20px 20px;
-      width: 130px;
-      background-color: $bg-white;
-      a{
-        padding: 5px;
-        font-size: 12px;
-        letter-spacing: 0;
-        color: $base-color;
-      }
-    }
-    #nav-toggle{
-      width: 26px;
-    }
-  }
   .top{
     height: 100vh;
     text-align: center;
@@ -858,22 +842,65 @@ footer{
         font-size: 18px;
       }
     }
+    header{
+      height: 70px;
+      .head-nav{
+        .pc-none{
+          display: block;
+        }
+        a{
+          font-size: 12px;
+        }
+      }
+      .headmenu-logo{
+        margin-top: 14px;
+        margin-left: 10px;
+      }
+      .top-btn{
+        margin: 20px 70px 0 0;
+        img{
+          width: 140px
+        }
+        /*
+        width: 130px;
+        background-color: $bg-white;
+        a{
+          padding: 5px;
+          font-size: 12px;
+          letter-spacing: 0;
+          color: $base-color;
+        }
+        */
+
+      }
+      #nav-toggle{
+        width: 26px;
+        top: 22px;
+        right: 22px;
+      }
+    }
   }
 
-  /*===========================================
-   fixed設定
-  =============================================*/
+/*===========================================
+ fixed設定
+=============================================*/
   .fixed{
     .top-btn{
-      display: none;
+      //display: none;
+      .btn-white{
+        display: none;
+      }
+      .btn-blue{
+        display: block;
+      }
     }
     .headmenu-logo{
     }
   }
 
-  /*===========================================
-   .open-nav設定
-  =============================================*/
+/*===========================================
+  .open-nav設定
+=============================================*/
   .open-nav{
     nav{
       width: 40%;
@@ -881,9 +908,9 @@ footer{
     }
   }
 
-  /*===========================================
-  	.news設定
-  =============================================*/
+/*===========================================
+  .news設定
+=============================================*/
     .news-wrap{
         .news-list-box{
           width: 90vw;
@@ -907,10 +934,10 @@ footer{
       }
     }
 
-  /*===========================================
-  	.service設定
-  =============================================*/
-    .service-wrap{
+/*===========================================
+  .service設定
+=============================================*/
+  .service-wrap{
       .service-left{
         width: 90vw;
         margin: 0 auto;
@@ -929,75 +956,75 @@ footer{
     }
   }
 
-  /*===========================================
-  	.step設定
-  =============================================*/
-  .step-wrap{
-    height: auto;
-    background: url('../img/bg_sp_step.png') no-repeat;
-    background-size: cover;
-    .section-wrap{
-      width: 90vw;
-      margin: 0 auto;
-      .step-content-wrap{
-        .step{
-        float: left;
-          h3{
-            font-size: 20px;
-          }
-          p{
-            text-align: center;
-          }
-        }
-      }
-    }
-  }
-
-  /*===========================================
-  	.info設定
-  =============================================*/
-  .info-wrap{
-    .section-wrap{
-      width: 90vw;
-      margin: 0 auto;
-    }
-  }
-
-  /*===========================================
-    blog設定
-  =============================================*/
-  .qa-wrap{
-    .question{
-      .question-text{
-        font-size: 14px;
-      }
-      .question-title{
-        font-size: 16px;
-      }
-    }
-  }
-
-  /*===========================================
-    blog設定
-  =============================================*/
-    .blog-wrap{
-      .blog-contents-wrap{
-        .blog-content{
-          p{
-            font-size: 14px;
-          }
-        }
-      }
-    }
-
-  /*===========================================
-   sns設定
-  =============================================*/
-  .sns-wrpa{
-    width: 80vw;
+/*===========================================
+  .step設定
+=============================================*/
+.step-wrap{
+  height: auto;
+  background: url('../img/bg_sp_step.png') no-repeat;
+  background-size: cover;
+  .section-wrap{
+    width: 90vw;
     margin: 0 auto;
-    .section-wrap{
-      width: 100%;
+    .step-content-wrap{
+      .step{
+      float: left;
+        h3{
+          font-size: 20px;
+        }
+        p{
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/*===========================================
+	.info設定
+=============================================*/
+.info-wrap{
+  .section-wrap{
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+
+/*===========================================
+  blog設定
+=============================================*/
+.qa-wrap{
+  .question{
+    .question-text{
+      font-size: 14px;
+    }
+    .question-title{
+      font-size: 16px;
+    }
+  }
+}
+
+/*===========================================
+  blog設定
+=============================================*/
+  .blog-wrap{
+    .blog-contents-wrap{
+      .blog-content{
+        p{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+/*===========================================
+ sns設定
+=============================================*/
+.sns-wrpa{
+  width: 80vw;
+  margin: 0 auto;
+  .section-wrap{
+    width: 100%;
     .sns-contents-wrap{
       width: 100%;
       margin: 0 auto;
@@ -1023,57 +1050,57 @@ footer{
 /*===========================================
   footer設定
 =============================================*/
-      footer{
-          .section-wrap{
-            width: 90vw;
-            height: auto;
-          .footer-navapp-box{
-            float: none;
-            .footer-nav{
-              width: 33%;
-              a{
-                font-size: 13px;
-              }
-              li{
-                padding-right: 0;
-              }
-            }
-          .footer-app{
-            text-align: center;
-            display: inline-block;
-            width: 100%;
-            margin: 50px auto;
-            a{
-              img{
-                &:first-child{
-                  padding-bottom: 0;
-                }
-              }
-            }
-          .btn-app-footer{
-              display: inline-block;
-              width: 39%;
-              max-width: calc(200px - 5%);
-              margin: 5% 1%;
-              img{
-                width: 141px;
-                height: 42px;
+footer{
+    .section-wrap{
+      width: 90vw;
+      height: auto;
+    .footer-navapp-box{
+      float: none;
+    .footer-nav{
+      width: 33%;
+        a{
+          font-size: 13px;
+        }
+        li{
+          padding-right: 0;
+        }
+    }
+    .footer-app{
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      margin: 50px auto;
+        a{
+          img{
+            &:first-child{
+              padding-bottom: 0;
               }
             }
           }
-        }
-        .footer-logo{
-          margin: 0 auto;
-          clear: both;
+    .btn-app-footer{
+        display: inline-block;
+        width: 39%;
+        max-width: calc(200px - 5%);
+        margin: 5% 1%;
           img{
-            width: 80px;
-            height: 106px;
+            width: 141px;
+            height: 42px;
           }
         }
       }
     }
-
+    .footer-logo{
+      margin: 0 auto;
+      clear: both;
+        img{
+          width: 80px;
+          height: 106px;
+        }
+      }
+    }
   }
+
+}
 
 /*===========================================
  レスポンシブ(@media max-width:414px)設定
@@ -1084,96 +1111,134 @@ footer{
 /*===========================================
  共通設定
 =============================================*/
-    .title{
-      font-size: 22px;
-    }
+.title{
+  font-size: 22px;
+}
 
 /*===========================================
 	button設定
 =============================================*/
-    .btn-wrap{
-      .btn-more{
-        a{
-          font-size: 11px !important;
-        }
-      }
-      .button{
-        width: 70%;
-        a{
-          padding: 12px;
-          font-size: 14px;
-        }
-      }
-    }
-
-  /*===========================================
-    top設定
-  =============================================*/
-  .top{
-    header{
-      .headmenu-logo{
-        margin-left: 10px !important;
-        margin-top: 22px;
-        img{
-          height: 30px;
-        }
-      }
-    }
-    .top-head-content{
-      width: 90vw;
-      height: 70vh;
-      p{
-        font-size: 16px;
-      }
+.btn-wrap{
+  .btn-more{
+    a{
+      font-size: 11px !important;
     }
   }
+  .button{
+    width: 70%;
+    a{
+      padding: 12px;
+      font-size: 14px;
+    }
+  }
+}
 
-  /*===========================================
-   .news設定
-  =============================================*/
-  .news-wrap{
-    .news-list{
-      .news-item{
-        a{
-          span{
-            font-size: 16px;
-          }
-          .date{
-            font-size: 16px;
-          }
+/*===========================================
+  top設定
+=============================================*/
+.top{
+  header{
+    .headmenu-logo{
+      margin-left: 10px !important;
+      margin-top: 18px;
+      img{
+        height: 30px;
+      }
+    }
+    .top-btn{
+      margin-right: 60px;
+      img{
+        width: 130px;
+      }
+    }
+    #nav-toggle{
+      width: 22px;
+      top: 22px;
+      right: 20px;
+      span{
+        &:nth-child(1){
+          top: 4px;
+        }
+        &:nth-child(3){
+          top: 18px;
         }
       }
     }
   }
+  .top-head-content{
+    width: 90vw;
+    height: 70vh;
+    p{
+      font-size: 16px;
+    }
+  }
+}
 
-  /*===========================================
-    .service設定
-  =============================================*/
-    .service-wrap{
-      .service-left{
-        p{
+/*===========================================
+  .open-nav設定
+=============================================*/
+.open-nav{
+  #nav-toggle{
+    span{
+      &:nth-child(1){
+      top: 11px !important;
+      transform: rotate(-45deg);
+    }
+      &:nth-child(2),
+      &:nth-child(3){
+      top: 11px !important;
+      transform:rotate(45deg);
+      }
+    }
+  }
+}
+
+/*===========================================
+  .news設定
+=============================================*/
+.news-wrap{
+  .news-list{
+    .news-item{
+      a{
+        span{
+          font-size: 16px;
+        }
+        .date{
           font-size: 16px;
         }
       }
     }
+  }
+}
 
-  /*===========================================
-    step設定
-  =============================================*/
-  .step-wrap{
-    .step{
-      p{
-        font-size: 16px;
-      }
+/*===========================================
+  .service設定
+=============================================*/
+.service-wrap{
+  .service-left{
+    p{
+      font-size: 16px;
     }
   }
+}
 
-  /*===========================================
-   sns設定
-  =============================================*/
-  .sns-wrpa{
-    width: 80vw;
-    margin: 0 auto;
+/*===========================================
+  step設定
+=============================================*/
+.step-wrap{
+  .step{
+    p{
+      font-size: 16px;
+    }
+  }
+}
+
+/*===========================================
+ sns設定
+=============================================*/
+.sns-wrpa{
+  width: 80vw;
+  margin: 0 auto;
     .section-wrap{
       width: 100%;
     .sns-contents-wrap{
@@ -1200,24 +1265,24 @@ footer{
   }
 }
 
-  /*===========================================
-    footer設定
-  =============================================*/
-  footer{
-    .section-wrap{
-    .footer-navapp-box{
-    .footer-app{
-    .btn-app-footer{
-      width: 45%;
-      margin: 5% 2%;
+/*===========================================
+  footer設定
+=============================================*/
+footer{
+  .section-wrap{
+  .footer-navapp-box{
+  .footer-app{
+  .btn-app-footer{
+    width: 45%;
+    margin: 5% 2%;
       }
     }
   }
 }
-  .copyright{
-    p{
-      small{
-        font-size: 12px;
+.copyright{
+  p{
+    small{
+      font-size: 12px;
       }
     }
   }
@@ -1232,13 +1297,47 @@ footer{
 @media screen and (max-width: 360px){
 
 /*===========================================
+ top設定
+=============================================*/
+.top{
+  header{
+    height: 60px;
+    .headmenu-logo{
+      margin-left: 10px !important;
+      margin-top: 12px;
+      img{
+        height: 30px;
+      }
+    }
+    .top-btn{
+      margin: 17px 50px 0 0;
+      img{
+        width: 110px;
+      }
+    }
+    #nav-toggle{
+      width: 20px;
+      top: 16px;
+      right: 16px;
+    }
+  }
+  .top-head-content{
+    width: 90vw;
+    height: 70vh;
+    p{
+      font-size: 14px;
+    }
+  }
+}
+
+/*===========================================
   footer設定
 =============================================*/
-  footer{
-    .section-wrap{
+footer{
+  .section-wrap{
     .footer-navapp-box{
-    .footer-app{
-    .btn-app-footer{
+      .footer-app{
+        .btn-app-footer{
         width: 44%;
         margin: 5% 2%;
       }
@@ -1248,9 +1347,10 @@ footer{
   .copyright{
     p{
       small{
-        font-size: 12px;
+      font-size: 12px;
       }
     }
   }
 }
+
 }
