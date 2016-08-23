@@ -3,10 +3,10 @@
 	共通設定
 =============================================*/
 body {
-  font-family: 'M+ C Type-1 (basic latin) Thin', 'M+ Type-1 (general-j) Thin', sans-serif; }
+  font-family: 'M+ C Type-1 (basic latin) Thin', 'M+ Type-1 (general-j) Thin', sans-serif; }
 
 a {
-  font-family: 'M+ C Type-1 (basic latin) Light', 'M+ Type-1 (general-j) Light', sans-serif;
+  font-family: 'M+ C Type-1 (basic latin) Light', 'M+ Type-1 (general-j) Light', sans-serif;
   text-decoration: none; }
 
 li {
@@ -16,10 +16,10 @@ img {
   max-width: 100%; }
 
 .font-L {
-  font-family: 'M+ C Type-1 (basic latin) Light', 'M+ Type-1 (general-j) Light', sans-serif; }
+  font-family: 'M+ C Type-1 (basic latin) Light', 'M+ Type-1 (general-j) Light', sans-serif; }
 
 .font-T {
-  font-family: 'M+ C Type-1 (basic latin) Thin', 'M+ Type-1 (general-j) Thin', sans-serif; }
+  font-family: 'M+ C Type-1 (basic latin) Thin', 'M+ Type-1 (general-j) Thin', sans-serif; }
 
 .contents-wrapper {
   width: 100%;
@@ -33,7 +33,7 @@ img {
   margin: 0 auto; }
 
 .title {
-  font-family: 'M+ C Type-1 (basic latin) Light', 'M+ Type-1 (general-j) Light', sans-serif;
+  font-family: 'M+ C Type-1 (basic latin) Light', 'M+ Type-1 (general-j) Light', sans-serif;
   text-align: center;
   font-size: 32px;
   padding-top: 60px; }
@@ -196,12 +196,15 @@ header {
 =============================================*/
 .top {
   height: 100vh;
-  text-align: center;
-  position: relative; }
+  text-align: center; }
+  .top .top-bgv-wrap {
+    height: 100vh;
+    overflow: hidden;
+    position: relative; }
   .top #player {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -15%;
     bottom: 0;
     margin: auto;
     overflow: hidden;

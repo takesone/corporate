@@ -196,11 +196,15 @@ header{
   //background-image: url(../../dist/img/bg_sp_top.png);
   height: 100vh;
 	text-align: center;
-  position: relative;
+  .top-bgv-wrap {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
   #player{
     position: absolute;
     top: 0;
-    left: 0;
+    left: -15%;;
     bottom: 0;
     margin: auto;
     overflow: hidden;
