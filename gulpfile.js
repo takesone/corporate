@@ -10,7 +10,7 @@ var paths = {
 }
 
 gulp.task('watch', function() {
-  return gulp.watch(paths.scss + '**/*.scss', ['scss']);
+  return gulp.watch(paths.scss + '**/*.scss', ['scss','bs-reload']);
 });
 
 gulp.task('scss', function() {
@@ -35,6 +35,10 @@ gulp.task('serve', function() {
     logPrefix: 'IDI',
     server: './'
   });
-})
+});
+
+gulp.task('bs-reload', function () {
+    browserSync.reload();
+});
 
 gulp.task('default', ['watch', 'serve']);
