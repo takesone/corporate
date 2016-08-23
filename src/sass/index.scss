@@ -200,6 +200,11 @@ header{
     height: 100vh;
     overflow: hidden;
     position: relative;
+    &:before {
+      // ここに薄暗くする背景を入れる
+      content: ' ';
+      height: 100%;
+    }
   }
   #player{
     position: absolute;
@@ -210,6 +215,7 @@ header{
     overflow: hidden;
     height: 130%;
     width: 130%;
+    pointer-events: none;
   }
   .video-wrap{
     width: 100%;
