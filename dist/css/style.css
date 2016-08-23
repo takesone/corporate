@@ -73,7 +73,7 @@ header {
   width: 100%;
   height: 80px;
   position: fixed;
-  z-index: 999; }
+  z-index: 10; }
   header .head-nav {
     position: absolute;
     float: left;
@@ -198,15 +198,21 @@ header {
   height: 100vh;
   text-align: center;
   position: relative; }
+  .top #player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+    height: 130%;
+    width: 130%; }
   .top .video-wrap {
     width: 100%;
     position: absolute;
     right: 0;
     bottom: 0;
     z-index: -2; }
-    .top .video-wrap .yt-video {
-      height: 100vh;
-      width: 100vw; }
   .top .top-head-content {
     width: 37vw;
     height: 37vw;
@@ -376,6 +382,7 @@ header {
       display: table-cell;
       vertical-align: middle; }
     .qa-wrap .question .question-text {
+      display: none;
       font-size: 16px;
       color: #555;
       margin-top: 10px;
@@ -429,12 +436,11 @@ header {
 
 .fb-page {
   width: 350px;
-  float: left; }
+  float: left;
+  padding: 60px 0; }
 
 .twitter {
-  float: right; }
-
-.p60 {
+  float: right;
   padding: 60px 0; }
 
 /*===========================================
@@ -503,7 +509,10 @@ footer {
     header .head-nav a {
       color: #333; }
   .top {
-    background-image: url(../../dist/img/bg_sp_top.png); }
+    background-image: url(../../dist/img/bg_sp_top.png);
+    background-size: cover; }
+    .top #player {
+      display: none; }
     .top .top-head-content {
       height: 60vh; }
     .top .headmenu-logo {
@@ -592,6 +601,8 @@ footer {
   .info-wrap .section-wrap {
     width: 90vw;
     margin: 0 auto; }
+  .swiper-content-wrap {
+    overflow: hidden; }
   /*===========================================
   q&a設定
 =============================================*/
@@ -746,9 +757,27 @@ footer {
   /*===========================================
 	.info設定
 =============================================*/
-  .info-wrap .section-wrap {
-    width: 90vw;
-    margin: 0 auto; }
+  .info-wrap {
+    margin-right: 0; }
+    .info-wrap img {
+      display: block;
+      max-width: 130%;
+      overflow: hidden;
+      margin-right: 30px; }
+    .info-wrap .section-wrap {
+      width: 90vw;
+      margin: 0 auto; }
+    .info-wrap .bg-iphone {
+      width: 270px;
+      display: block;
+      position: relative;
+      left: 50%;
+      -webkit-transform: translate(-50%);
+              transform: translate(-50%);
+      z-index: 10; }
+    .info-wrap .swiper-slide img, .info-wrap .swiper-slide-active img {
+      width: 414px;
+      height: 350px; }
   /*===========================================
   blog設定
 =============================================*/
@@ -779,11 +808,10 @@ footer {
           display: block;
           margin: 0 auto; }
         .sns-wrpa .section-wrap .sns-contents-wrap .twitter {
+          padding-top: 0 !important;
           float: none;
           width: 100%;
           margin: 0  auto; }
-          .sns-wrpa .section-wrap .sns-contents-wrap .twitter .p60 {
-            padding: 60px 0; }
   /*===========================================
   footer設定
 =============================================*/
@@ -914,8 +942,6 @@ footer {
           float: none;
           width: 100%;
           margin: 0  auto; }
-          .sns-wrpa .section-wrap .sns-contents-wrap .twitter .p60 {
-            padding: 60px 0; }
   /*===========================================
   footer設定
 =============================================*/

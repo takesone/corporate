@@ -33,5 +33,14 @@
       });
     });
 
+    $(".question").on("click", function() {
+
+  		var drop = $(this).find('.question-text');
+
+  		drop.slideToggle()
+  		.toggleClass("active");
+
+	 });
+
 
 })(jQuery);
