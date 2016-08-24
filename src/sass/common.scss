@@ -3,6 +3,22 @@
 	共通設定
 =============================================*/
 
+$sp: 480;
+$tablet: 960;
+
+@mixin media($size){
+  @if $size == $sp{
+    @media all and (max-width: $sp + 'px') {
+      @content;
+    }
+  }
+  @if $size == $tablet{
+    @media all and (max-width: $tablet + 'px') {
+      @content;
+    }
+  }
+}
+
 body {
   font-family:
     'M+ C Type-1 (basic latin) Thin',
