@@ -19,3 +19,7 @@ Icon
 
 ### Node.js ###
 node_modules
+
+
+### Compiled CSS ###
+dist/css/style.css
