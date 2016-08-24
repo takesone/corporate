@@ -1,100 +1,26 @@
-@charset "UTF-8";
-
-// color設定
-$base-color:#1b5688;
-$text-black:#333;
-$text-white:#fff;
-$text-eee:#eee;
-$text-555:#555;
-$bg-eee:#eee;
-$bg-white:#fff;
-$bg-footer:#393939;
-$bg-copyright:#212121;
-
-//max-width設定
-$max-w:1280px;
-$min-w:1280px;
-$padding60:60px 0;
-
-//opacity設定
-$opacity:0.7;
-
-// mixin設定
-@mixin border($color:#1b5688) {
-  border-bottom: 1px solid $color;
-}
-@mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	-ms-border-radius: $radius;
-	-o-border-radius: $radius;
-	border-radius: $radius;
-}
-@mixin transition($transition) {
-	-webkit-transition: $transition;
-	-moz-transition: $transition;
-	-ms-transition: $transition;
-	-o-transition: $transition;
-	transition: $transition;
-}
-
-
-/*===========================================
-	共通設定
-=============================================*/
-
-a{
-  text-decoration: none
-}
-li{
-  list-style: none;
-}
-.videowrap{
-  width: 100%;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -2;
-}
-.contents-wrapper{
-  width: 100%;
-  margin: 0 auto;
-}
-.sectionwrap{
-	width: 1000px;
-  max-width:$max-w;
-	margin: 0 auto;
-}
-.title{
-	text-align: center;
-	font-size: 32px;
-  padding-top: 60px;
-}
-
 /*===========================================
 	button設定
 =============================================*/
-.btnwrap{
+.btn-wrap{
   padding: 60px 0;
   clear: both;
   .button{
     display: block;
-    width: 782px;
+    width: 50%;
     background-color: $base-color;
     border: none;
     @include border-radius(5px);
     margin: 0 auto;
-      a{
-        display: block;
-        color: $text-white;
-        padding: 27px;
-        font-size: 24px;
-        letter-spacing: 1.4px;
-
-        &:hover{
-          opacity: $opacity;
-        }
+    a{
+      display: block;
+      color: $text-white;
+      padding: 27px;
+      font-size: 24px;
+      letter-spacing: 1.4px;
+      &:hover{
+        opacity: $opacity;
       }
+    }
   }
 }
 /*===========================================
@@ -111,67 +37,69 @@ section{
 =============================================*/
 header{
 	width: 100%;
-	height: 76px;
+	height: 80px;
 	position: fixed;
-	z-index: 999;
-
-		.sp-head-nav{
-			display: none;
-		}
-
-		.head-nav{
-			position: absolute;
+	z-index: 10;
+	.head-nav{
+		position: absolute;
+		float: left;
+		transform: translate(-50%,-50%);
+		left: 50%;
+		top: 50%;
+		box-sizing: border-box;
+		ul li{
 			float: left;
-			transform: translate(-50%,-50%);
-			left: 50%;
-			top: 50%;
-			box-sizing: border-box;
-
-				ul li{
-					padding: 25px;
-					float: left;
-				}
-
-				a{
-					color: $text-white;
-					&:hover{
-						@include border;
-						opacity: 0.7;
-						padding-bottom: 8px;
-						transition: all 0.3s ease-out;
-					}
-					&:hover::after{
-						opacity: 1;
-						top: 100%;
-						height: 4px;
-					}
-				}
 		}
-		.top-btn{
-			text-align: center;
-			float: right;
-			width: 200px;
-			background-color: $base-color;
-			border: none;
-			@include border-radius(3px);
-			margin: 16px 60px 0 0;
-			a{
-				display: block;
-				color: $text-white;
-				padding: 7px;
-				font-size: 14px;
-				letter-spacing: 1.4px;
-				&:hover{
-					opacity: $opacity;
-				}
-			}
-		}
-		.headmenu-logo{
-			float: left;
-			display: inline-block;
-			padding: 16px 0 0 120px;
-			display: none;
-		}
+		a{
+      display: block;
+      padding: 25px;
+			color: $text-white;
+			&:hover{
+			  opacity: 0.7;
+		  }
+  		&:hover::after{
+  		  opacity: 1;
+  		  top: 100%;
+  		  height: 4px;
+  		}
+	  }
+    .pc-none{
+      display: none;
+    }
+	}
+	.top-btn{
+		text-align: center;
+    float: right;
+    margin: 18px 90px 0 0;
+    .btn-blue{
+      display: none;
+    }
+    .btn-white{
+      display: block;
+    }
+    img{
+      width: 200px;
+    &:hover{
+      opacity: $opacity;
+    }
+    }
+  	a{
+  	  display: block;
+  		color: $base-color;
+  		padding: 10px;
+  		font-size: 14px;
+  		letter-spacing: 1.4px;
+  		&:hover{
+  			opacity: $opacity;
+  		}
+  	}
+  }
+	.headmenu-logo{
+		display: inline-block;
+    float: left;
+    margin: 16px 0 0 90px;
+		display: none;
+	}
 }
 /*===========================================
 	transition設定
@@ -186,303 +114,374 @@ header{
 /*===========================================
 	Fixed設定
 =============================================*/
-	.fixed{
-		background-color: $bg-white;
-		&::after{
-			width: 100%;
-			margin-top: 20px;
-		}
-		.head-nav{
-			ul li a{
-				color: $base-color;
-			}
-		}
-		.headmenu-logo{
-			display: block;
-		}
+.fixed{
+	background-color: $bg-white;
+	&::after{
+		width: 100%;
+		margin-top: 20px;
 	}
+	.head-nav{
+  	ul li a{
+  		color: $text-555;
+    &:hover{
+      color: $base-color;
+      }
+  	}
+	}
+  .top-btn{
+    .btn-white{
+      display: none;
+    }
+    .btn-blue{
+      display: block;
+    }
+  }
+	.headmenu-logo{
+		display: block;
+	}
+}
+
+/*===========================================
+  navToggle設定
+=============================================*/
+#nav-toggle{
+  display: none;
+  position: absolute;
+  top: 26px;
+  right: 30px;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  div{
+    position: relative;
+  }
+  span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    border-bottom:solid 2px $text-white;
+    transition: .35s ease-in-out;
+    &:nth-child(1){
+      top: 2px;
+    }
+    &:nth-child(2){
+      top: 11px;
+    }
+    &:nth-child(3){
+      top: 20px;
+    }
+  }
+}
 
 /*===========================================
 	.top設定
 =============================================*/
-
 .top{
-  width: 100%;
+  height: 100vh;
 	text-align: center;
-	height: 680px;
-		h1 img{
-			position: absolute;
-			transform: translate(-50%,-50%);
-			left: 50%;
-			top:250px;
-	}
-
-	.playBtn{
-		position: absolute;
-		top: 470px;
-		left: 50%;
-		transform: translate(-50%,-50%);
-  		a{
-  			border: 1px solid #fff;
-  			color: $text-white;
-  			@include border-radius(50px);
-  			padding: 26px 80px;
+  .top-bgv-wrap {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    &:before {
+      // ここに薄暗くする背景を入れる
+      content: ' ';
+      height: 100%;
+    }
+  }
+  #player{
+    position: absolute;
+    top: 0;
+    left: -15%;;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+    height: 130%;
+    width: 130%;
+    pointer-events: none;
+  }
+  .video-wrap{
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+  }
+  .top-head-content{
+    width: 37vw;
+    height: calc(37vw * 1.0);
+    position: absolute; /* 3 */
+    top: 0;             /* 4 */
+    left: 0;            /* 5 */
+    right: 0;           /* 6 */
+    bottom: 0;           /* 7 */
+    margin: auto;        /* 8 */
+    .top-logo{
+      margin-bottom: 20px;
+    }
+    p{
+      color: $text-white;
+      font-size: 20px;
+    }
+    .btn-play-wrap{
+      .btn-play{
+        display: inline-block;
+        border: 1px solid #fff;
+        color: $text-white;
+        @include border-radius(50px);
+        padding: 26px 80px;
+        margin: 60px 0;
         &:hover{
           opacity: $opacity;
         }
-  		}
-	}
-	.appBtn{
-    position: absolute;
-    top: 580px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-		  li{
-			display: inline-block;
-		}
-		.google{
-			padding-left: 44px;
-		}
-	}
+      }
+    }
+    .btn-app-wrap{
+      display: inline-block;
+      width: 100%;
+      .btn-app{
+        display: inline-block;
+        width: 39%;
+        max-width: calc(200px - 5%);
+        margin: 0 5%;
+      }
+    }
+  }
 }
 
 /*===========================================
 	.news設定
 =============================================*/
-.newswrap{
+.news-wrap{
 	background-color: $bg-eee;
 	height: 330px;
-    .news-list-box{
-      width: 700px;
-      min-width: 800px;
-      height: 150px;
-      margin: 40px auto;
-      overflow-y: scroll;
-    }
-    .news-list{
-      .news-item{
-        a{
-          display: block;
-          padding: 15px;
-          color: $text-black;
-          font-size: 0;
-          transition: background-color 0.1s;
-
-          &:hover{
-            background-color: $bg-white;
-          }
-          span{
-            width: 73%;
-            font-size: 20px;
-            padding-left: 18px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
+  .news-list-box{
+    text-align: center;
+    width: 700px;
+    min-width: 800px;
+    height: 150px;
+    margin: 40px auto;
+    overflow-y: scroll;
+  }
+  .news-list{
+    .news-item{
+      a{
+        display: block;
+        padding: 15px;
+        color: $text-black;
+        font-size: 0;
+        transition: background-color 0.1s;
+        &:hover{
+          background-color: $bg-white;
+        }
+        span{
+          font-size: 20px;
+          padding-left: 18px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
       }
-      .date{
-        font-size: 20px;
-        letter-spacing: 1px;
-      }
     }
+    .date{
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+  }
 }
 
 /*===========================================
 	.service設定
 =============================================*/
-
 .service-wrap{
-  height: 500px;
+  height: auto;
   background-color: $bg-white;
-    .service-left{
-      width: 50%;
-      float: left;
-        h2{
-          text-align: left;
-          color: $text-555;
-          padding-bottom: 46px;
-        }
-        p{
-          line-height: 2;
-          font-size: 18px;
-          color: #555;
-        }
+  .service-left{
+    width: 50%;
+    float: left;
+    margin-left: 20px;
+    .title{
+      text-align: left;
+      color: $text-555;
+      padding-bottom: 46px;
     }
-    .service-img{
-      padding-top: 60px;
-      float: right;
-        img:first-child{
-          padding-right: 30px;
-        }
+    p{
+      line-height: 2;
+      font-size: 18px;
+      color: $text-555;
     }
+  }
+  .service-img{
+    margin-right: 20px;
+    padding: 60px 0;
+    float: right;
+    img:first-child{
+      padding-right: 30px;
+    }
+  }
 }
 
 /*===========================================
 	.step設定
 =============================================*/
-
 .step-wrap{
   clear: both;
-  background: url('../img/step_bg.png') no-repeat center;
+  background: url('../img/bg_step.png');
+  background-size: cover;
   color: $text-white;
+  .step-content-wrap{
     .step{
-      width: 22%;
-      margin-right: 30px;
-      padding-top: 60px;
-      float: left;
+      display: table-cell;
+      padding: 60px 20px 0 20px;
       text-align: center;
       box-sizing: border-box;
-        h3{
-          padding: 35px 0;
-          font-size: 22px;
-        }
-        p{
-          opacity: 0.9;
-          text-align: left;
-          font-size: 18px;
-          line-height: 1.8;
-        }
-        img{
-          @include border-radius(50px)
-        }
+      h3{
+        padding: 35px 0;
+        font-size: 20px;
+      }
+      p{
+        text-align: justify;
+        font-size: 18px;
+        line-height: 1.8;
+      }
+      img{
+        @include border-radius(50px)
+      }
     }
+  }
 }
 
 /*===========================================
 	.info設定
 =============================================*/
-
 .info-wrap{
   background-color: $bg-eee;
   text-align: center;
-    .bg-iphone{
-      display: block;
-      position: relative;
-      left: 50%;
-      transform: translate(-50%);
-      z-index: 10;
-    }
-    h2{
-      color: $text-black;
-    }
-    p{
-      font-size: 16px;
-      padding: 40px 0 60px 0;
-      line-height: 2;
-      color: $text-black;
-    }
+  .bg-iphone{
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10;
+  }
+  .title{
+    color: $text-black;
+  }
+  p{
+    font-size: 16px;
+    padding: 40px 0 60px 0;
+    line-height: 2;
+    color: $text-black;
+  }
 }
 
 /*===========================================
 	q&a設定
 =============================================*/
-
 .qa-wrap{
   background-color: $bg-white;
-    .question{
-      margin-bottom: 20px;
-      padding: 10px 0;
-      width: 1000px;
-      border: 1px solid $base-color;
-      box-sizing: border-box;
-      @include border-radius(3px);
-
-      &:first-child{
-        margin-top: 60px;
-      }
-      &:last-child{
-        margin-bottom: 0;
-      }
-      span{
-        color: $base-color;
-        display: table-cell;
-        padding: 10px 20px;
-        font-size: 30px;
-        font-weight: normal;
-      }
-      .question-title{
-        font-size: 18px;
-        color: $text-black;
-        border-left: 1px solid $base-color;
-        padding: 10px 10px 10px 20px;
-        display: table-cell;
-        vertical-align: middle;
-      }
-      .question-text{
-        font-size: 16px;
-        color: $text-555;
-        margin-top: 10px;
-        line-height: 1.8;
-        padding: 10px 20px 0 20px;
-        border-top: 1px dotted $base-color;
-      }
+  .question{
+    margin-bottom: 20px;
+    padding: 10px 0;
+    width: 960px;
+    border: 1px solid $base-color;
+    box-sizing: border-box;
+    @include border-radius(3px);
+    &:first-child{
+      margin-top: 60px;
     }
+    &:last-child{
+      margin-bottom: 0;
+    }
+    span{
+      color: $base-color;
+      display: table-cell;
+      padding: 10px 20px;
+      font-size: 30px;
+      font-weight: normal;
+    }
+    .question-title{
+      font-size: 18px;
+      color: $text-black;
+      border-left: 1px solid $base-color;
+      padding: 10px 10px 10px 20px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .question-text{
+      display: none;
+      font-size: 16px;
+      color: $text-555;
+      margin-top: 10px;
+      line-height: 1.8;
+      padding: 10px 20px 0 20px;
+      border-top: 1px dotted $base-color;
+    }
+  }
 }
 
 /*===========================================
 	blog設定
 =============================================*/
-
 .blog-wrap{
   width: 100%;
-  background: url('../img/bg_blog.png') no-repeat center;
+  background: url('../img/bg_blog.png');
   background-size: cover;
   h2{
     color: $text-eee;
   }
   .blog-contents-wrap{
+    width: 100%;
+    margin: 0 auto;
+    height: 311px;
     padding-top: 60px;
-      .blog-content{
-        display: block;
-        background-color: $bg-white;
-        width: 320px;
-        overflow: hidden;
-        margin-right: 20px;
-        text-align: left;
-        float: left;
-
-        &:last-child{
-          margin-right: 0px;
-        }
-          p{
-            width: 320px;
-            font-size: 16px;
-            margin: 0 auto;
-            background-color: $bg-white;
-            padding: 10px 20px;
-            box-sizing: border-box;
-            color: $text-555;
-            line-height: 1.6;
-          }
-          time{
-            font-weight: bold;
-          }
-          img{
-            &:hover{
-              opacity: $opacity;
-            }
-          }
+    .blog-content{
+      display: block;
+      width: 300px;
+      overflow: hidden;
+      margin-right: 30px;
+      text-align: left;
+      float: left;
+      &:last-child{
+        margin-right: 0px;
       }
+      p{
+        width: 320px;
+        font-size: 16px;
+        margin: -5px auto 0 auto;
+        background-color: $bg-white;
+        padding: 15px 20px 10px 20px;
+        box-sizing: border-box;
+        color: $text-555;
+        line-height: 1.6;
+      }
+      time{
+        font-weight: bold;
+      }
+      img{
+        &:hover{
+        opacity: $opacity;
+        }
+      }
+    }
   }
 }
 
 /*===========================================
 	sns設定
 =============================================*/
-
 .sns-contents-wrap{
     width: 800px;
     margin: 0 auto;
-  }
-.facebook{
+}
+.fb-page{
+  width: 350px;
   float: left;
+  padding: 60px 0;
 }
 .twitter{
   float: right;
-}
-.p60{
-  padding: $padding60;
+  padding: 60px 0;
 }
 
 /*===========================================
@@ -491,57 +490,879 @@ header{
 footer{
   clear: both;
   background-color:$bg-footer;
-    .sectionwrap{
-      height: 220px;
-      padding-top: 70px;
-    .footer-logo{
-      float: left;
-      padding-right: 120px;
-    }
-    .footer-navbox{
+  .section-wrap{
+    height: 154px;
+    padding: 60px 0;
+    .footer-navapp-box{
+      width: 80%;
+      float: right;
       .footer-nav{
+        width: 20%;
         float: left;
-        li{
-          padding-bottom: 30px;
-          padding-right: 110px;
-
-          &:last-child{
-            padding-right: 0;
-          }
-        }
-        a{
-          font-size: 14px;
-          color: $text-white;
-
-          &:hover{
-            opacity: $opacity;
-            color: $text-eee;
+        nav{
+          ul{
+            li{
+              padding-bottom: 30px;
+              &:nth-last-child(1){
+                padding-bottom: 0;
+              }
+              a{
+                font-size: 14px;
+                color: $text-white;
+                &:hover{
+                  opacity: $opacity;
+                  color: $text-eee;
+                }
+              }
+            }
           }
         }
       }
     }
     .footer-app{
       float: right;
-        a{
-          img{
-            &:first-child{
-              padding-bottom: 10px;
+      a{
+        display: block;
+        img{
+          &:first-child{
+            padding-bottom: 10px;
             &:hover{
               opacity: $opacity;
             }
-            }
           }
         }
+      }
     }
+  }
+  .footer-logo{
+    display: table;
   }
   .copyright{
     clear: both;
     background-color: $bg-copyright;
-      p{
+    p{
+      text-align: center;
+      padding: 26px;
+      color: $text-white;
+      font-size: 14px;
+    }
+  }
+}
+
+/*===========================================
+ レスポンシブ(@media max-width:960px)設定
+=============================================*/
+
+@media screen and (max-width: 960px){
+
+/*===========================================
+	button設定
+=============================================*/
+  .btn-wrap{
+  .button{
+    a{
+      padding: 20px;
+      font-size: 20px;
+    }
+  }
+  }
+
+/*===========================================
+  top設定
+=============================================*/
+  #nav-toggle{
+    display: block;
+  }
+  header{
+    .head-nav{
+    display: none;
+    ul{
+    li{
+      border-bottom: 1px solid $base-color;
+      &:last-child{
+      }
+    }
+    }
+    a{
+      color: $text-black;
+    }
+    }
+  }
+  .top{
+    background-image: url(../../dist/img/bg_sp_top.png);
+    background-size: cover;
+    #player{
+      display: none;
+    }
+    .top-head-content{
+      height: 60vh;
+    }
+    .headmenu-logo{
+      margin-left: 30px;
+    }
+  }
+
+/*===========================================
+ fixed設定
+=============================================*/
+.fixed{
+  background-color: $bg-white;
+  .headmenu-logo{
+    display: block;
+  }
+  &::after{
+    width: 100%;
+    margin-top: 20px;
+  }
+  #nav-toggle{
+    span{
+      border-bottom: solid 2px $text-555;
+    }
+  }
+  .head-nav{
+    background-color: $bg-white;
+    ul{
+      li{
+        a{
+          color: $text-555;
+          &:hover{
+            color: $text-white;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*===========================================
+ open-nav設定
+=============================================*/
+  .open-nav{
+    nav{
+      text-align: left;
+      background: rgba(255, 255, 255, 0.7);
+      display: block;
+      transform: translateY(351px);
+      position: absolute;
+      width: 20%;
+      top: -272px;
+      left: 80%;
+      transition:.5s ease-in-out;
+      ul{
+        li{
+          float: none;
+          &:hover{
+            background: $base-color;
+          }
+          a{
+          &:hover{
+            color: $text-white;
+          }
+          }
+        }
+      }
+    }
+    #nav-toggle{
+      span{
+        &:nth-child(1){
+          top: 11px;
+          transform: rotate(-45deg);
+        }
+        &:nth-child(2),
+        &:nth-child(3){
+          top: 11px;
+          transform:rotate(45deg);
+        }
+      }
+    }
+  }
+
+/*===========================================
+ .news設定
+=============================================*/
+.news-wrap{
+    .news-list-box{
+      width: 60vw;
+      margin: 40px auto 0 auto;
+      min-width: 0;
+    }
+    .news-list{
+      .news-item{
+        a{
+          text-align: left;
+          line-height: 1.6;
+          span{
+            font-size: 18px;
+            padding-left: 0;
+          }
+        }
+      }
+      .date{
+        font-size: 18px;
+      }
+    }
+  }
+
+/*===========================================
+	.service設定
+=============================================*/
+  .service-wrap{
+    .service-left{
+      width: 90vw;
+      float: none;
+      margin: 0 auto;
+      .title{
         text-align: center;
-        padding: 26px;
-        color: $text-white;
+      }
+    }
+    .service-img{
+      text-align: center;
+      margin-right: 0;
+      padding: 60px 0;
+      float: none;
+        img:first-child{
+          padding-right: 30px;
+        }
+      }
+    }
+
+/*===========================================
+  info設定
+=============================================*/
+  .info-wrap{
+  .section-wrap{
+    width: 90vw;
+    margin: 0 auto;
+    }
+  }
+  .swiper-content-wrap{
+    overflow: hidden;
+  }
+
+/*===========================================
+  q&a設定
+=============================================*/
+.qa-wrap{
+    .question{
+      margin: 0 auto 20px auto;
+      width: 90vw;
+    }
+  }
+
+/*===========================================
+  blog設定
+=============================================*/
+  .blog-wrap{
+    .blog-contents-wrap{
+      width: 80vw;
+      margin: 0 auto;
+      .blog-content{
+        margin-right: 0;
+        margin-bottom: 40px;
+        width: 100%;
+        a{
+          float: none;
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+        p{
+          width: 100%;
+          height: auto;
+        }
+        img{
+          width: 100%;
+          height: auto;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+/*===========================================
+	footer設定
+=============================================*/
+  footer{
+      .section-wrap{
+        width: 90vw;
+      .footer-navapp-box{
+        width: 80%;
+        margin: 0 auto;
+        .footer-nav{
+          width: 20%;
+          li{
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/*===========================================
+ レスポンシブ(@media max-width:600px)設定
+=============================================*/
+
+@media screen and (max-width: 600px){
+
+/*===========================================
+ 共通設定
+=============================================*/
+  .title{
+    font-size: 26px;
+  }
+/*===========================================
+ button設定
+=============================================*/
+  .btn-wrap{
+    .button{
+      a{
+        padding: 12px;
         font-size: 14px;
       }
+    }
   }
+
+/*===========================================
+ header設定
+=============================================*/
+  .top{
+    height: 100vh;
+    text-align: center;
+    .top-head-content{
+      width: 60vw;
+      height: 70vh;
+      p{
+        font-size: 18px;
+      }
+    }
+    header{
+      height: 70px;
+      .head-nav{
+        .pc-none{
+          display: block;
+        }
+        a{
+          font-size: 12px;
+        }
+      }
+      .headmenu-logo{
+        margin-top: 14px;
+        margin-left: 10px;
+      }
+      .top-btn{
+        margin: 20px 70px 0 0;
+        img{
+          width: 140px
+        }
+        /*
+        width: 130px;
+        background-color: $bg-white;
+        a{
+          padding: 5px;
+          font-size: 12px;
+          letter-spacing: 0;
+          color: $base-color;
+        }
+        */
+
+      }
+      #nav-toggle{
+        width: 26px;
+        top: 22px;
+        right: 22px;
+      }
+    }
+  }
+
+/*===========================================
+ fixed設定
+=============================================*/
+  .fixed{
+    .top-btn{
+      //display: none;
+      .btn-white{
+        display: none;
+      }
+      .btn-blue{
+        display: block;
+      }
+    }
+    .headmenu-logo{
+    }
+  }
+
+/*===========================================
+  .open-nav設定
+=============================================*/
+  .open-nav{
+    nav{
+      width: 40%;
+      left: 60%;
+    }
+  }
+
+/*===========================================
+  .news設定
+=============================================*/
+    .news-wrap{
+        .news-list-box{
+          width: 90vw;
+          margin: 40px auto 0 auto;
+          min-width: 0;
+        }
+        .news-list{
+          .news-item{
+            a{
+            text-align: left;
+            line-height: 1.6;
+            span{
+              font-size: 18px;
+              padding-left: 0;
+            }
+          }
+        }
+        .date{
+          font-size: 18px;
+        }
+      }
+    }
+
+/*===========================================
+  .service設定
+=============================================*/
+  .service-wrap{
+      .service-left{
+        width: 90vw;
+        margin: 0 auto;
+        .title{
+          text-align: center;
+        }
+        p{
+          text-align: justify;
+        }
+      }
+      .service-img{
+        img{
+          width: 125px;
+          height: 255px;
+      }
+    }
+  }
+
+/*===========================================
+  .step設定
+=============================================*/
+.step-wrap{
+  height: auto;
+  background: url('../img/bg_sp_step.png') no-repeat;
+  background-size: cover;
+  .section-wrap{
+    width: 90vw;
+    margin: 0 auto;
+    .step-content-wrap{
+      .step{
+      float: left;
+        h3{
+          font-size: 20px;
+        }
+        p{
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/*===========================================
+	.info設定
+=============================================*/
+.info-wrap{
+  margin-right: 0;
+  img{
+    display: block;
+    max-width: 130%;
+    overflow: hidden;
+    margin-right: 30px;
+  }
+  .section-wrap{
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .bg-iphone{
+    width: 270px;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10;
+  }
+  .swiper-slide,.swiper-slide-active{
+    img{
+      width: 414px;
+      height: 350px;
+    }
+  }
+}
+
+/*===========================================
+  blog設定
+=============================================*/
+.qa-wrap{
+  .question{
+    .question-text{
+      font-size: 14px;
+    }
+    .question-title{
+      font-size: 16px;
+    }
+  }
+}
+
+/*===========================================
+  blog設定
+=============================================*/
+  .blog-wrap{
+    .blog-contents-wrap{
+      .blog-content{
+        p{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+/*===========================================
+ sns設定
+=============================================*/
+.sns-wrpa{
+  width: 80vw;
+  margin: 0 auto;
+  .section-wrap{
+    width: 100%;
+    .sns-contents-wrap{
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      .fb-page{
+        float: none;
+        width: 350px;
+        display: block;
+        margin: 0 auto;
+      }
+      .twitter{
+        padding-top: 0 !important;
+        float: none;
+        width: 100%;
+        margin: 0  auto;
+      }
+    }
+  }
+}
+
+/*===========================================
+  footer設定
+=============================================*/
+footer{
+    .section-wrap{
+      width: 90vw;
+      height: auto;
+    .footer-navapp-box{
+      float: none;
+    .footer-nav{
+      width: 33%;
+        a{
+          font-size: 13px;
+        }
+        li{
+          padding-right: 0;
+        }
+    }
+    .footer-app{
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      margin: 50px auto;
+        a{
+          img{
+            &:first-child{
+              padding-bottom: 0;
+              }
+            }
+          }
+    .btn-app-footer{
+        display: inline-block;
+        width: 39%;
+        max-width: calc(200px - 5%);
+        margin: 5% 1%;
+          img{
+            width: 141px;
+            height: 42px;
+          }
+        }
+      }
+    }
+    .footer-logo{
+      margin: 0 auto;
+      clear: both;
+        img{
+          width: 80px;
+          height: 106px;
+        }
+      }
+    }
+  }
+
+}
+
+/*===========================================
+ レスポンシブ(@media max-width:414px)設定
+=============================================*/
+
+@media screen and (max-width: 414px){
+
+/*===========================================
+ 共通設定
+=============================================*/
+.title{
+  font-size: 22px;
+}
+
+/*===========================================
+	button設定
+=============================================*/
+.btn-wrap{
+  .btn-more{
+    a{
+      font-size: 11px !important;
+    }
+  }
+  .button{
+    width: 70%;
+    a{
+      padding: 12px;
+      font-size: 14px;
+    }
+  }
+}
+
+/*===========================================
+  top設定
+=============================================*/
+.top{
+  header{
+    .headmenu-logo{
+      margin-left: 10px !important;
+      margin-top: 18px;
+      img{
+        height: 30px;
+      }
+    }
+    .top-btn{
+      margin-right: 60px;
+      img{
+        width: 130px;
+      }
+    }
+    #nav-toggle{
+      width: 22px;
+      top: 22px;
+      right: 20px;
+      span{
+        &:nth-child(1){
+          top: 4px;
+        }
+        &:nth-child(3){
+          top: 18px;
+        }
+      }
+    }
+  }
+  .top-head-content{
+    width: 90vw;
+    height: 70vh;
+    p{
+      font-size: 16px;
+    }
+  }
+}
+
+/*===========================================
+  .open-nav設定
+=============================================*/
+.open-nav{
+  #nav-toggle{
+    span{
+      &:nth-child(1){
+      top: 11px !important;
+      transform: rotate(-45deg);
+    }
+      &:nth-child(2),
+      &:nth-child(3){
+      top: 11px !important;
+      transform:rotate(45deg);
+      }
+    }
+  }
+}
+
+/*===========================================
+  .news設定
+=============================================*/
+.news-wrap{
+  .news-list{
+    .news-item{
+      a{
+        span{
+          font-size: 16px;
+        }
+        .date{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+/*===========================================
+  .service設定
+=============================================*/
+.service-wrap{
+  .service-left{
+    p{
+      font-size: 16px;
+    }
+  }
+}
+
+/*===========================================
+  step設定
+=============================================*/
+.step-wrap{
+  .step{
+    p{
+      font-size: 16px;
+    }
+  }
+}
+
+/*===========================================
+ sns設定
+=============================================*/
+.sns-wrpa{
+  width: 80vw;
+  margin: 0 auto;
+    .section-wrap{
+      width: 100%;
+    .sns-contents-wrap{
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      .fb-page{
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        iframe{
+          width: 100%;
+        }
+      }
+      .twitter{
+        float: none;
+        width: 100%;
+        margin: 0  auto;
+      }
+    }
+  }
+}
+
+/*===========================================
+  footer設定
+=============================================*/
+footer{
+  .section-wrap{
+  .footer-navapp-box{
+  .footer-app{
+  .btn-app-footer{
+    width: 45%;
+    margin: 5% 2%;
+      }
+    }
+  }
+}
+.copyright{
+  p{
+    small{
+      font-size: 12px;
+      }
+    }
+  }
+}
+
+}
+
+/*===========================================
+ レスポンシブ(@media max-width:360px)設定
+=============================================*/
+
+@media screen and (max-width: 360px){
+
+/*===========================================
+ top設定
+=============================================*/
+.top{
+  header{
+    height: 60px;
+    .headmenu-logo{
+      margin-left: 10px !important;
+      margin-top: 12px;
+      img{
+        height: 30px;
+      }
+    }
+    .top-btn{
+      margin: 17px 50px 0 0;
+      img{
+        width: 110px;
+      }
+    }
+    #nav-toggle{
+      width: 20px;
+      top: 16px;
+      right: 16px;
+    }
+  }
+  .top-head-content{
+    width: 90vw;
+    height: 70vh;
+    p{
+      font-size: 14px;
+    }
+  }
+}
+
+/*===========================================
+  footer設定
+=============================================*/
+footer{
+  .section-wrap{
+    .footer-navapp-box{
+      .footer-app{
+        .btn-app-footer{
+        width: 44%;
+        margin: 5% 2%;
+      }
+    }
+  }
+}
+  .copyright{
+    p{
+      small{
+      font-size: 12px;
+      }
+    }
+  }
+}
+
 }
