@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+body{
+  background-color: $bg-eee;
+}
+
+.bg-dashed-left{
+  position: absolute;
+  top: 100px;
+  left: 240px;
+  content: "";
+  border-left: 1px dashed $bg-555;
+  height: 90%;
+  z-index: -2;
+}
+.bg-dashed-right{
+  position: absolute;
+  top: 100px;
+  right: 240px;
+  content: "";
+  border-left: 1px dashed $bg-555;
+  height: 90%;
+  z-index: -2;
+}
+
+/*===========================================
+transition設定
+=============================================*/
+#top-head,
+#top-head:after,
+#top-head .logo,
+.head-nav ul li,
+.head-nav ul li a {
+  @include transition(all 0.3s ease);
+}
+
+/*===========================================
+Fixed設定
+=============================================*/
+.fixed{
+  background-color: $bg-white;
+  &::after{
+    width: 100%;
+    margin-top: 20px;
+  }
+  .head-nav{
+    ul li a{
+      color: $text-555;
+      &:hover{
+        color: $base-color;
+      }
+    }
+  }
+  .top-btn{
+    .btn-white{
+      display: none;
+    }
+    .btn-blue{
+      display: block;
+    }
+  }
+  .headmenu-logo{
+    display: block;
+  }
+}
+
+/*===========================================
+navToggle設定
+=============================================*/
+#nav-toggle{
+  display: none;
+  //float: right;
+  //margin: 26px 30px 0 0;
+  position: absolute;
+  top: 26px;
+  right: 30px;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  div{
+    position: relative;
+  }
+  span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    border-bottom:solid 2px $text-white;
+    transition: .35s ease-in-out;
+    &:nth-child(1){
+      top: 2px;
+    }
+    &:nth-child(2){
+      top: 11px;
+    }
+    &:nth-child(3){
+      top: 20px;
+    }
+  }
+}
+
+/*===========================================
+use-content-wrap設定
+=============================================*/
+.use-content-wrap{
+  .section-wrap{
+    position: relative;
+    /*===========================================
+    use-visual設定
+    =============================================*/
+    .title{
+      padding-top: 0;
+      color: $text-555;
+      font-weight: normal;
+    }
+    .use-content-box{
+      position: relative;
+      .use-visual{
+        position: relative;
+        padding: 60px 0;
+        width: 710px;
+        height: 235px;
+        margin: 0 auto;
+        text-align: center;
+        @include media($tablet) {
+          display: none;
+        };
+        .take{
+          float: left;
+          p{
+            position: absolute;
+            top: 30px;
+            left: 48px;
+            color: $text-white;
+            background-color: $bg-accent;
+          }
+        }
+        .lend{
+          float: right;
+          p{
+            position: absolute;
+            top: 30px;
+            right: 48px;
+            color: $text-white;
+            background-color: $base-color;
+          }
+        }
+        img{
+          width: 218px;
+          height: 218px;
+          display: inline-block;
+          border: 7px solid $text-555;
+          @include border-radius(50%);
+          z-index: -2;
+        }
+        p{
+          width: 120px;
+          color: $text-555;
+          font-size: 20px;
+          display: inline-block;
+          vertical-align: middle;
+          padding: 5px 5px 5px 5px;
+          font-size: 20px;
+        }
+      }
+      /*===========================================
+      step-box設定
+      =============================================*/
+      .use-step-wrap{
+        width: 100%;
+        clear: both;
+        margin: auto;
+        .step-box{
+          text-align: center;
+          clear: both;
+          &:last-child{
+            padding-bottom: 60px;
+          }
+          span{
+            width: 100%;
+            color: $text-black;
+            font-size: 24px;
+            padding: 20px 0;
+            display: inline-block;
+          }
+          h2{
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 26px;
+            width: 100%;
+            background-color: $base-color;
+            color: $text-white;
+            padding: 20px 0;
+          }
+          p{
+            margin-top: 0;
+            color: $text-555;
+            font-size: 18px;
+            padding: 30px 40px;
+            width: 100%;
+            line-height: 2;
+            background-color: $bg-white;
+            box-sizing: border-box;
+          }
+          .step-division{
+            width: 50%;
+            float: left;
+            .bg-accent{
+              background-color: $bg-accent;
+            }
+            p{
+              text-align: justify;
+            }
+          }
+        }
+      }
+    }
+  }
+}
