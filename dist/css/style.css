@@ -100,13 +100,7 @@ header {
   header .top-btn {
     text-align: center;
     float: right;
-    margin: 18px 90px 0 0;
-    /*
-		width: 200px;
-		background-color: $bg-white;
-		border: none;
-		@include border-radius(3px);
-    */ }
+    margin: 18px 90px 0 0; }
     header .top-btn .btn-blue {
       display: none; }
     header .top-btn .btn-white {
