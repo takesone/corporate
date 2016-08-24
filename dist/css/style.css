@@ -3,7 +3,8 @@
 	共通設定
 =============================================*/
 body {
-  font-family: 'M+ C Type-1 (basic latin) Thin', 'M+ Type-1 (general-j) Thin', sans-serif; }
+  font-family: 'M+ C Type-1 (basic latin) Thin', 'M+ Type-1 (general-j) Thin', sans-serif;
+  -webkit-text-stroke: 0.2px #000; }
 
 a {
   font-family: 'M+ C Type-1 (basic latin) Light', 'M+ Type-1 (general-j) Light', sans-serif;
@@ -151,16 +152,10 @@ header {
     color: #555; }
     .fixed .head-nav ul li a:hover {
       color: #1b5688; }
-  .fixed .top-btn {
-    /*background-color: $base-color;
-      a{
-        color: $text-white;
-      }
-      */ }
-    .fixed .top-btn .btn-white {
-      display: none; }
-    .fixed .top-btn .btn-blue {
-      display: block; }
+  .fixed .top-btn .btn-white {
+    display: none; }
+  .fixed .top-btn .btn-blue {
+    display: block; }
   .fixed .headmenu-logo {
     display: block; }
 
