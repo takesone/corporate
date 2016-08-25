@@ -247,8 +247,8 @@ use-content-wrap設定
                 margin-bottom: 0;
                 width: 50%;
                 float: left;
-                cursor: pointer;
                 @include media($sp) {
+                  cursor: pointer;
                   font-size: 18px;
                   padding: 10px 0;
                 };
