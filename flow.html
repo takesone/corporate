@@ -2,6 +2,7 @@
 <html>
 <head lang="ja">
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;">
   <link rel="stylesheet" type="text/css" href="src/css/html5reset-1.6.1.css">
   <link rel="stylesheet" type="text/css" href="https://mplus-fonts.sourceforge.jp/webfonts/basic_latin/mplus_webfonts.css">
   <link rel="stylesheet" type="text/css" href="https://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
@@ -10,13 +11,17 @@
 </head>
 <body>
 
+  <!-- use-content-wrap -->
   <div class="use-content-wrap">
     <div class="section-wrap">
-      <!-- use-visual -->
       <h1 class="title">ご利用の流れ</h1>
+      <!-- use-content-box-->
       <div class="use-content-box">
+        <!-- bg-dashed -->
         <div class="bg-dashed-left"></div>
+        <div class="bg-dashed-center"></div>
         <div class="bg-dashed-right"></div>
+        <!-- use-visual -->
         <div class="use-visual">
           <div class="take">
             <img src="dist/img/205.png" alt="">
@@ -35,9 +40,27 @@
               <h2>会員登録</h2>
               <p>スペースを使う方も貸す方も会員登録が必要です。本人確認書類を提出いただきます。スペースを使う方は出店書類が必要な場合があります。</p>
             </div>
-            <div class="step-box">
+
+
+            <div class="divition-box">
               <span class="font-L">STEP2</span>
-              <div class="step-division">
+              <div class="box-divition">
+                <div class="tab">
+                  <h2 class="bg-accent select">商品登録</h2>
+                  <div class="triangle-accent hide"></div>
+                  <h2>商品選択</h2>
+                  <div class="triangle-base hide"></div>
+                </div>
+                <div class="content-p">
+                  <p class="divition-text">aaテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                  <p class="hide">bbテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="step-box">
+              <span class="font-L">STEP3</span>
+              <div class="step-division sp-h-size">
                 <h2 class="bg-accent">予約&決算</h2>
                 <p>機材を選択して、予約を行います。ここで、借りたい日程や保険等の設定やを行い決済まで行います。あとは申請の承認を待ちましょう。</p>
               </div>
@@ -46,25 +69,28 @@
                 <p>機材の予約申請がくると、申請者のユーザー評価や、貸し出し日数などを確認の上承認を行ってください。</p>
               </div>
             </div>
+
             <div class="step-box">
-              <span class="font-L">STEP3</span>
+              <span class="font-L">STEP4</span>
               <h2>やりとり</h2>
               <p>審査の許可が出ると、取引相手とやり取りすることが可能です。質問や、実際のやり取りなどをここで話し合って決めてください。</p>
             </div>
+
             <div class="step-box">
-              <span class="font-L">STEP4</span>
-              <div class="step-division">
+              <span class="font-L">STEP5</span>
+              <div class="step-division sp-h-size">
                 <h2 class="bg-accent">利用開始</h2>
                 <p>利用の1日前に、機材が届きますのでその日から、終了日まで機材をご利用いただけます。機材が届かない場合は24時間以内にご連絡ください。</p>
               </div>
-              <div class="step-division">
+              <div class="step-division sp-h-size">
                 <h2>発送</h2>
                 <p>予約の四日前に、機材を梱包して送り先に日時指定で前日に到着するように発送してください。発送方法は自由です。</p>
               </div>
             </div>
+
             <div class="step-box">
-              <span>STEP5</span>
-              <div class="step-division">
+              <span>STEP6</span>
+              <div class="step-division sp-h-size">
                 <h2 class="bg-accent">返却</h2>
                 <p>機材利用の最終日の24時までに、お近くの宅配営業所または、コンビニエンスストアより貸し手にご返却ください。</p>
               </div>
@@ -73,16 +99,19 @@
                 <p>返却された機材に傷や故障がないかお調べしてください。何かあった際は、4日以内にご連絡ください。</p>
               </div>
             </div>
+
             <div class="step-box">
-              <span>STEP6</span>
+              <span>STEP7</span>
               <h2>完了</h2>
               <p>機材の返却後4日以内に何も申請がない場合、 自動で取引が完了になります。<br>
                 完了後はレビューをお願いします。</p>
-            </div>
+            </div><!-- step-boxここまで -->
           </div><!-- use-step-wrapここまで -->
-        </div><!-- bg-flowここまで -->
+        </div><!-- use-content-boxここまで -->
       </div><!-- section-wrapここまで -->
-    </div><!-- use-content-wrap -->
+    </div><!-- use-content-wrapここまで -->
 
+    <script src="dist/js/jquery-2.2.3.js"></script>
+    <script src="dist/js/top.js"></script>
   </body>
   </html>

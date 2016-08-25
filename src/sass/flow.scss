@@ -3,28 +3,47 @@
 body{
   background-color: $bg-eee;
 }
-
+/*===========================================
+ bg-dashed設定
+=============================================*/
 .bg-dashed-left{
   position: absolute;
   top: 100px;
-  left: 240px;
+  left: 25%;
   content: "";
   border-left: 1px dashed $bg-555;
   height: 90%;
   z-index: -2;
+  // @include media($tablet) {
+  //   display: none;
+  // }
 }
+// .bg-dashed-center{
+//   @include media($tablet) {
+//     position: absolute;
+//     top: 100px;
+//     left: 50%;
+//     content: "";
+//     border-left: 1px dashed $bg-555;
+//     height: 90%;
+//     z-index: -2;
+//   };
+// }
 .bg-dashed-right{
   position: absolute;
   top: 100px;
-  right: 240px;
+  right: 25%;
   content: "";
   border-left: 1px dashed $bg-555;
   height: 90%;
   z-index: -2;
+  // @include media($tablet) {
+  //   display: none;
+  // }
 }
 
 /*===========================================
-transition設定
+ transition設定
 =============================================*/
 #top-head,
 #top-head:after,
@@ -35,7 +54,7 @@ transition設定
 }
 
 /*===========================================
-Fixed設定
+ Fixed設定
 =============================================*/
 .fixed{
   background-color: $bg-white;
@@ -44,10 +63,14 @@ Fixed設定
     margin-top: 20px;
   }
   .head-nav{
-    ul li a{
-      color: $text-555;
-      &:hover{
-        color: $base-color;
+    ul{
+      li{
+        a{
+          color: $text-555;
+          &:hover{
+            color: $base-color;
+          }
+        }
       }
     }
   }
@@ -65,12 +88,10 @@ Fixed設定
 }
 
 /*===========================================
-navToggle設定
+ navToggle設定
 =============================================*/
 #nav-toggle{
   display: none;
-  //float: right;
-  //margin: 26px 30px 0 0;
   position: absolute;
   top: 26px;
   right: 30px;
@@ -117,12 +138,16 @@ use-content-wrap設定
       .use-visual{
         position: relative;
         padding: 60px 0;
-        width: 710px;
+        width: 74%;
         height: 235px;
         margin: 0 auto;
         text-align: center;
-        @include media($tablet) {
-          display: none;
+        // @include media($tablet) {
+        //   display: none;
+        // };
+        @include media($sp) {
+          width: 77%;
+          height: 115px;
         };
         .take{
           float: left;
@@ -132,6 +157,10 @@ use-content-wrap設定
             left: 48px;
             color: $text-white;
             background-color: $bg-accent;
+            @include media($sp) {
+              top: 40px;
+              left: 18px;
+            };
           }
         }
         .lend{
@@ -142,6 +171,10 @@ use-content-wrap設定
             right: 48px;
             color: $text-white;
             background-color: $base-color;
+            @include media($sp) {
+              top: 40px;
+              right: 18px;
+            };
           }
         }
         img{
@@ -151,6 +184,10 @@ use-content-wrap設定
           border: 7px solid $text-555;
           @include border-radius(50%);
           z-index: -2;
+          @include media($sp) {
+            width: 100px;
+            height: 100px;
+          };
         }
         p{
           width: 120px;
@@ -158,8 +195,13 @@ use-content-wrap設定
           font-size: 20px;
           display: inline-block;
           vertical-align: middle;
-          padding: 5px 5px 5px 5px;
+          padding: 5px;
           font-size: 20px;
+          @include media($sp) {
+            padding: 3px;
+            font-size: 14px;
+            width: 70px;
+          };
         }
       }
       /*===========================================
@@ -169,6 +211,93 @@ use-content-wrap設定
         width: 100%;
         clear: both;
         margin: auto;
+
+        .divition-box{
+          text-align: center;
+          clear: both;
+          &:last-child{
+            padding-bottom: 60px;
+          }
+          span{
+            width: 100%;
+            color: $text-black;
+            font-size: 24px;
+            padding: 20px 0;
+            display: inline-block;
+            @include media($sp) {
+              font-size: 20px;
+            };
+          }
+          .box-divition{
+            position: relative;
+            .tab{
+              .bg-accent{
+                background-color: $bg-accent;
+              }
+              h2{
+                background-color: $base-color;
+                color: $text-white;
+                padding: 20px 0;
+                margin-top: 0;
+                margin-bottom: 0;
+                width: 50%;
+                float: left;
+                @include media($sp) {
+                  font-size: 18px;
+                  padding: 10px 0;
+                };
+              }
+              .triangle-accent{
+                display: none;
+                position: absolute;
+                top: 45px;
+                left: 90px;
+              	width: 0;
+              	height: 0;
+              	border: 10px solid transparent;
+              	border-top: 10px solid $bg-accent;
+                @include media($sp) {
+                  display: inline-block;
+                };
+              }
+              .triangle-base{
+                display: none;
+                position: absolute;
+                top: 45px;
+                right: 90px;
+              	width: 0;
+              	height: 0;
+              	border: 10px solid transparent;
+              	border-top: 10px solid $base-color;
+              }
+            }
+            .content-p{
+              clear: both;
+              @include media($sp) {
+                .hide{
+                  display: none;
+                }
+              };
+              p{
+                background-color: $bg-white;
+                width: 50%;
+                float: left;
+                margin-top: 0;
+                margin-bottom: 0;
+                box-sizing: border-box;
+                padding: 30px;
+                line-height: 2;
+                text-align: justify;
+                @include media($sp) {
+                  font-size: 14px;
+                  float: none;
+                  width: 100%;
+                };
+              }
+            }
+          }
+        }
+
         .step-box{
           text-align: center;
           clear: both;
@@ -181,6 +310,9 @@ use-content-wrap設定
             font-size: 24px;
             padding: 20px 0;
             display: inline-block;
+            @include media($sp) {
+              font-size: 20px;
+            };
           }
           h2{
             margin-top: 0;
@@ -190,16 +322,23 @@ use-content-wrap設定
             background-color: $base-color;
             color: $text-white;
             padding: 20px 0;
+            @include media($sp) {
+              font-size: 18px;
+              padding: 10px 0;
+            };
           }
           p{
             margin-top: 0;
             color: $text-555;
             font-size: 18px;
-            padding: 30px 40px;
+            padding: 30px 30px;
             width: 100%;
             line-height: 2;
             background-color: $bg-white;
             box-sizing: border-box;
+            @include media($sp) {
+              font-size: 14px;
+            };
           }
           .step-division{
             width: 50%;
@@ -209,6 +348,14 @@ use-content-wrap設定
             }
             p{
               text-align: justify;
+            }
+          }
+          .sp-h-size{
+            p{
+              // @include media($sp) {
+              //   height: 200px;
+              //   overflow: auto;
+              // };
             }
           }
         }

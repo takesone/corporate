@@ -46,6 +46,39 @@
 
 	 });
 
+   //sp-400以下タブ切り替え
+   $(function() {
+    var w = $(window).width();
+    var x = 400;
+    if (w <= x) {
+      $(function(){
+
+        $('.tab h2').click(function() {
+
+          var index = $('.tab h2').index(this);
+
+          $('.triangle-accent').css('display','none');
+
+          $('.triangle-accent').eq(index).css('display','block');
+
+          $('.triangle-base').css('display','block');
+
+          $('.triangle-base').eq(index).css('display','none');
+
+          $('.content-p p').css('display','none');
+
+          $('.content-p p').eq(index).css('display','block');
+
+          $('.tab h2').removeClass('select');
+
+          $(this).addClass('select');
+        });
+
+      });
+    }
+});
+
+
 })(jQuery);
 
 //top動画部分
