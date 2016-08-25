@@ -387,6 +387,10 @@ header{
     border: 1px solid $base-color;
     box-sizing: border-box;
     @include border-radius(3px);
+    @include media($sp) {
+      margin: 0 auto 20px auto;
+      width: 90vw;
+    };
     &:first-child{
       margin-top: 60px;
     }
@@ -407,6 +411,9 @@ header{
       padding: 10px 10px 10px 20px;
       display: table-cell;
       vertical-align: middle;
+      @include media($sp) {
+        font-size: 16px;
+      };
     }
     .question-text{
       display: none;
