@@ -41,32 +41,35 @@
               <p>スペースを使う方も貸す方も会員登録が必要です。本人確認書類を提出いただきます。スペースを使う方は出店書類が必要な場合があります。</p>
             </div>
 
-
             <div class="divition-box">
               <span class="font-L">STEP2</span>
-              <div class="box-divition">
-                <div class="tab">
-                  <h2 class="bg-accent select">商品登録</h2>
-                  <div class="triangle-accent hide"></div>
+              <div class="divition-content">
+                <div class="tab" id="step2-tab">
+                  <h2 class="bg-accent">商品登録</h2>
+                  <div class="triangle-accent hide" id="triangle-a2"></div>
                   <h2>商品選択</h2>
-                  <div class="triangle-base hide"></div>
+                  <div class="triangle-base hide" id="triangle-b2"></div>
                 </div>
-                <div class="content-p">
-                  <p class="divition-text">aaテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                  <p class="hide">bbテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                <div class="content-p" id="step-text-2">
+                  <p class="sp-border-accent">aaテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                  <p class="sp-border-base hide">bbテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                 </div>
               </div>
             </div>
 
-            <div class="step-box">
+            <div class="divition-box">
               <span class="font-L">STEP3</span>
-              <div class="step-division sp-h-size">
-                <h2 class="bg-accent">予約&決算</h2>
-                <p>機材を選択して、予約を行います。ここで、借りたい日程や保険等の設定やを行い決済まで行います。あとは申請の承認を待ちましょう。</p>
-              </div>
-              <div class="step-division">
-                <h2>予約審査</h2>
-                <p>機材の予約申請がくると、申請者のユーザー評価や、貸し出し日数などを確認の上承認を行ってください。</p>
+              <div class="divition-content">
+                <div class="tab" id="step3-tab">
+                  <h2 class="bg-accent">予約&決算</h2>
+                  <div class="triangle-accent hide" id="triangle-a3"></div>
+                  <h2>予約審査</h2>
+                  <div class="triangle-base hide" id="triangle-b3"></div>
+                </div>
+                <div class="content-p" id="step-text-3">
+                  <p class="sp-border-accent">機材を選択して、予約を行います。ここで、借りたい日程や保険等の設定やを行い決済まで行います。あとは申請の承認を待ちましょう。</p>
+                  <p class="sp-border-base hide">機材の予約申請がくると、申請者のユーザー評価や、貸し出し日数などを確認の上承認を行ってください。</p>
+                </div>
               </div>
             </div>
 
@@ -76,7 +79,7 @@
               <p>審査の許可が出ると、取引相手とやり取りすることが可能です。質問や、実際のやり取りなどをここで話し合って決めてください。</p>
             </div>
 
-            <div class="step-box">
+            <!-- <div class="step-box">
               <span class="font-L">STEP5</span>
               <div class="step-division sp-h-size">
                 <h2 class="bg-accent">利用開始</h2>
@@ -86,20 +89,39 @@
                 <h2>発送</h2>
                 <p>予約の四日前に、機材を梱包して送り先に日時指定で前日に到着するように発送してください。発送方法は自由です。</p>
               </div>
+            </div> -->
+
+            <div class="divition-box">
+              <span class="font-L">STEP5</span>
+              <div class="divition-content">
+                <div class="tab" id="step5-tab">
+                  <h2 class="bg-accent">利用開始</h2>
+                  <div class="triangle-accent hide" id="triangle-a5"></div>
+                  <h2>発送</h2>
+                  <div class="triangle-base hide" id="triangle-b5"></div>
+                </div>
+                <div class="content-p" id="step-text-5">
+                  <p class="sp-border-accent">利用の1日前に、機材が届きますのでその日から、終了日まで機材をご利用いただけます。機材が届かない場合は24時間以内にご連絡ください。</p>
+                  <p class="sp-border-base hide">予約の四日前に、機材を梱包して送り先に日時指定で前日に到着するように発送してください。発送方法は自由です。</p>
+                </div>
+              </div>
             </div>
 
-            <div class="step-box">
-              <span>STEP6</span>
-              <div class="step-division sp-h-size">
-                <h2 class="bg-accent">返却</h2>
-                <p>機材利用の最終日の24時までに、お近くの宅配営業所または、コンビニエンスストアより貸し手にご返却ください。</p>
-              </div>
-              <div class="step-division">
-                <h2>検収</h2>
-                <p>返却された機材に傷や故障がないかお調べしてください。何かあった際は、4日以内にご連絡ください。</p>
+            <div class="divition-box">
+              <span class="font-L">STEP6</span>
+              <div class="divition-content">
+                <div class="tab" id="step6-tab">
+                  <h2 class="bg-accent">返却</h2>
+                  <div class="triangle-accent hide" id="triangle-a6"></div>
+                  <h2>検収</h2>
+                  <div class="triangle-base hide" id="triangle-b6"></div>
+                </div>
+                <div class="content-p" id="step-text-6">
+                  <p class="sp-border-accent">機材利用の最終日の24時までに、お近くの宅配営業所または、コンビニエンスストアより貸し手にご返却ください。</p>
+                  <p class="sp-border-base hide">返却された機材に傷や故障がないかお調べしてください。何かあった際は、4日以内にご連絡ください。</p>
+                </div>
               </div>
             </div>
-
             <div class="step-box">
               <span>STEP7</span>
               <h2>完了</h2>

@@ -228,7 +228,7 @@ use-content-wrap設定
               font-size: 20px;
             };
           }
-          .box-divition{
+          .divition-content{
             position: relative;
             .tab{
               .bg-accent{
@@ -242,6 +242,7 @@ use-content-wrap設定
                 margin-bottom: 0;
                 width: 50%;
                 float: left;
+                cursor: pointer;
                 @include media($sp) {
                   font-size: 18px;
                   padding: 10px 0;
@@ -250,12 +251,12 @@ use-content-wrap設定
               .triangle-accent{
                 display: none;
                 position: absolute;
-                top: 45px;
-                left: 90px;
+                top: 50px;
+                left: 23%;
               	width: 0;
               	height: 0;
-              	border: 10px solid transparent;
-              	border-top: 10px solid $bg-accent;
+              	border: 8px solid transparent;
+              	border-top: 8px solid $bg-accent;
                 @include media($sp) {
                   display: inline-block;
                 };
@@ -263,12 +264,12 @@ use-content-wrap設定
               .triangle-base{
                 display: none;
                 position: absolute;
-                top: 45px;
-                right: 90px;
+                top: 50px;
+                right: 23%;
               	width: 0;
               	height: 0;
-              	border: 10px solid transparent;
-              	border-top: 10px solid $base-color;
+              	border: 8px solid transparent;
+              	border-top: 8px solid $base-color;
               }
             }
             .content-p{
@@ -276,6 +277,12 @@ use-content-wrap設定
               @include media($sp) {
                 .hide{
                   display: none;
+                }
+                .sp-border-accent{
+                  border: 3px solid $bg-accent;
+                }
+                .sp-border-base{
+                  border: 3px solid $base-color;
                 }
               };
               p{
@@ -297,7 +304,6 @@ use-content-wrap設定
             }
           }
         }
-
         .step-box{
           text-align: center;
           clear: both;
@@ -350,14 +356,14 @@ use-content-wrap設定
               text-align: justify;
             }
           }
-          .sp-h-size{
-            p{
-              // @include media($sp) {
-              //   height: 200px;
-              //   overflow: auto;
-              // };
-            }
-          }
+          // .sp-h-size{
+          //   p{
+          //     // @include media($sp) {
+          //     //   height: 200px;
+          //     //   overflow: auto;
+          //     // };
+          //   }
+          // }
         }
       }
     }
