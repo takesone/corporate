@@ -299,13 +299,16 @@ header{
   .service-left{
     width: 50%;
     float: left;
-    margin-left: 20px;
     .title{
       text-align: left;
       color: $text-555;
       padding-bottom: 46px;
     }
     p{
+      font-family:
+      'M+ C Type-1 (basic latin) Thin',
+      'M+ Type-1 (general-j) Thin', sans-serif;
+      -webkit-text-stroke: 0.2px #000;
       line-height: 2;
       font-size: 18px;
       color: $text-555;
@@ -343,6 +346,10 @@ header{
         text-align: justify;
         font-size: 18px;
         line-height: 1.8;
+        font-family:
+        'M+ C Type-1 (basic latin) Thin',
+        'M+ Type-1 (general-j) Thin', sans-serif;
+        -webkit-text-stroke: 0.2px #fff;
       }
       img{
         @include border-radius(50px)
