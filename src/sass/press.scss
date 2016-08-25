@@ -1,0 +1,214 @@
+/* Scss Document */
+
+/*===========================================
+	全体の設定
+=============================================*/
+
+.main_title {
+	margin: 85px 0 80px 0;
+	font-size: 32px;
+	font-family:
+	'M+ C Type-1 (basic latin) Light',
+	'M+ Type-1 (general-j) Light', sans-serif;
+	text-align: center;
+  @include media ($sp) {
+    font-size: 24px;
+  }
+}
+
+/*===========================================
+	wrapperの設定
+=============================================*/
+
+.press_wrapper {
+	width: 1124px;
+	margin: 0 auto;
+  background-color: #F7F7F7;
+	text-align: justify;
+	line-height: 1.9;
+	color: #333333;
+  @include media ($sp) {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+/*===========================================
+	メニューの設定
+=============================================*/
+
+  .press_menu {
+    float: left;
+    width: 23%;
+    @include media ($tablet) {
+    	width: 232px;
+	    float: none;
+	    margin-bottom: 20px;
+	    position: absolute;
+	    z-index: 2;
+	    top: 192px;
+    }
+
+    .press_menu_text {
+      display: block;
+      padding: 15px 15px 15px 20px;
+      background-color: #fff;
+      margin-bottom: 5px;
+      box-sizing: border-box;
+      margin-right: 12px;
+      color: #333;
+      text-decoration: none;
+      font-family:
+      'M+ C Type-1 (basic latin) Thin',
+      'M+ Type-1 (general-j) Thin', sans-serif;
+      font-size: 16px;
+      @include media ($tablet) {
+        margin-bottom: 0px;
+    		border-bottom: 1px solid #1b5688;
+      }
+
+      img {
+        float: right;
+        width: 7px;
+        height: 13px;
+        padding-top: 8px;
+        transform: rotate(90deg);
+        padding-left: 10px;
+        display: none;
+        @include media ($tablet) {
+          display: block;
+        }
+
+      }
+
+    }
+
+  }
+
+/*===========================================
+	記事一覧の設定
+=============================================*/
+  .press {
+    width: 77%;
+    float: left;
+    @include media ($tablet) {
+      width: 100%;
+      float: none;
+      margin-top: 120px;
+    }
+    @include media ($sp) {
+      margin-top:  127px;
+    }
+
+    .press_content {
+    	background-color: #fff;
+    	margin-bottom: 11px;
+    	padding: 19px 22px;
+    	box-sizing: border-box;
+
+      img {
+      	float: left;
+      	margin-right: 24px;
+      	height: 117px;
+      	width: 208px;
+      }
+
+      .press_text_box {
+      	height: 117px;
+
+        .press_text {
+        	height: 100px;
+        }
+
+        .press_day {
+        	line-height: 18px;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 1124px){
+
+/*===========================================
+	wrapperの設定
+=============================================*/
+
+  .press_wrapper {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+}
+
+@media screen and (max-width: 700px){
+
+
+/*===========================================
+	wrapperの設定
+=============================================*/
+	.press_wrapper {
+		width: 480px;
+		position: relative;
+
+
+/*===========================================
+	メニューの設定
+=============================================*/
+
+  	.press_menu {
+  		top: 100px;
+  	}
+
+/*===========================================
+	記事一覧の設定
+=============================================*/
+
+  	.press {
+  	  margin-top: 110px;
+
+    	.press_content {
+    		width: 100%;
+    		margin: 0 auto 20px auto;
+
+      	img {
+      		width: 100%;
+      		height: auto;
+      		float: none;
+      	}
+
+      	.press_text_box {
+      		height: auto;
+
+        	.press_text {
+        		position: static;
+        		height: auto;
+        	}
+
+        	.press_day {
+        		position: static;
+        		margin-top: 10px;
+        	}
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+/* clearfix */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear:both;
+  visibility: hidden;
+}
