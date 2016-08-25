@@ -125,16 +125,22 @@ use-content-wrap設定
 .use-content-wrap{
   .section-wrap{
     position: relative;
+    @include media($sp) {
+      width: 100%;
+    };
     /*===========================================
     use-visual設定
     =============================================*/
     .title{
-      padding-top: 0;
       color: $text-555;
       font-weight: normal;
     }
     .use-content-box{
       position: relative;
+      @include media($sp) {
+        width: 90vw;
+        margin:  0 auto;
+      };
       .use-visual{
         position: relative;
         padding: 60px 0;
@@ -146,7 +152,7 @@ use-content-wrap設定
         //   display: none;
         // };
         @include media($sp) {
-          width: 77%;
+          width: 80%;
           height: 115px;
         };
         .take{
@@ -251,7 +257,7 @@ use-content-wrap設定
               .triangle-accent{
                 display: none;
                 position: absolute;
-                top: 50px;
+                top: 57px;
                 left: 23%;
               	width: 0;
               	height: 0;
@@ -264,7 +270,7 @@ use-content-wrap設定
               .triangle-base{
                 display: none;
                 position: absolute;
-                top: 50px;
+                top: 57px;
                 right: 23%;
               	width: 0;
               	height: 0;

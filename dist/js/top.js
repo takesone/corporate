@@ -46,7 +46,7 @@
    //sp-400以下タブ切り替え
    $(function() {
     var w = $(window).width();
-    var x = 400;
+    var x = 414;
     if (w <= x) {
       $(function(){
         $('#step2-tab h2').click(function() {
