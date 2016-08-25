@@ -202,7 +202,6 @@ use-content-wrap設定
           display: inline-block;
           vertical-align: middle;
           padding: 5px;
-          font-size: 20px;
           @include media($sp) {
             padding: 3px;
             font-size: 14px;
@@ -217,6 +216,9 @@ use-content-wrap設定
         width: 100%;
         clear: both;
         margin: auto;
+        p{
+          font-size: 16px;
+        }
         span{
           width: 100%;
           color: $text-black;
@@ -293,6 +295,7 @@ use-content-wrap設定
               p{
                 background-color: $bg-white;
                 width: 50%;
+                min-height: 10em;
                 float: left;
                 margin-top: 0;
                 margin-bottom: 0;
@@ -300,6 +303,9 @@ use-content-wrap設定
                 padding: 30px;
                 line-height: 2;
                 text-align: justify;
+                @include media($tablet) {
+                  min-height: 12em;
+                };
                 @include media($sp) {
                   font-size: 14px;
                   float: none;
@@ -332,7 +338,6 @@ use-content-wrap設定
             margin-top: 0;
             margin-bottom: 0;
             color: $text-555;
-            font-size: 18px;
             padding: 30px 30px;
             width: 100%;
             line-height: 2;
