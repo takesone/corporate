@@ -11,21 +11,35 @@
     border: none;
     @include border-radius(5px);
     margin: 0 auto;
+    @include media($sp) {
+      width: 70%;
+    };
     a{
       display: block;
       color: $text-white;
       padding: 27px;
       font-size: 24px;
       letter-spacing: 1.4px;
-      &:hover{
-        opacity: $opacity;
-      }
       @include media($tablet) {
         padding: 20px;
         font-size: 20px;
       };
+      @include media($sp) {
+        font-size: 14px;
+        padding: 12px;
+      };
+      &:hover{
+        opacity: $opacity;
+      }
     }
   }
+  @include media($sp) {
+    .btn-more{
+      a{
+        font-size: 11px;
+      }
+    }
+  };
 }
 /*===========================================
 	section設定
@@ -44,6 +58,14 @@ header{
 	height: 80px;
 	position: fixed;
 	z-index: 10;
+  @include media($tablet) {
+    height: 70px;
+  };
+  img{
+    @include media($sp) {
+      height: 30px;
+    };
+  }
 	.head-nav{
 		position: absolute;
 		float: left;
@@ -86,6 +108,9 @@ header{
 		text-align: center;
     float: right;
     margin: 18px 90px 0 0;
+    @include media($sp) {
+      margin-right: 60px;
+    };
     .btn-blue{
       display: none;
     }
@@ -94,6 +119,9 @@ header{
     }
     img{
       width: 200px;
+      @include media($sp) {
+        width: 130px;
+      };
     &:hover{
       opacity: $opacity;
     }
@@ -116,6 +144,10 @@ header{
 		display: none;
     @include media($tablet) {
       margin-left: 30px;
+    };
+    @include media($sp) {
+      margin-left: 10px;
+      margin-top: 18px;
     };
 	}
 }
@@ -179,6 +211,11 @@ header{
   @include media($tablet) {
     display: block;
   };
+  @include media($sp) {
+    width: 22px !important;
+    top: 20px !important;
+    right: 20px !important;
+  };
   div{
     position: relative;
   }
@@ -190,12 +227,18 @@ header{
     transition: .35s ease-in-out;
     &:nth-child(1){
       top: 2px;
+      @include media($sp) {
+        top: 4px;
+      };
     }
     &:nth-child(2){
       top: 11px;
     }
     &:nth-child(3){
       top: 20px;
+      @include media($sp) {
+        top: 18px;
+      };
     }
   }
 }
@@ -215,6 +258,10 @@ header{
       top: -272px;
       left: 80%;
       transition:.5s ease-in-out;
+      @include media($sp) {
+        width: 40%;
+        left: 60%;
+      };
       ul{
         li{
           float: none;
@@ -251,7 +298,7 @@ header{
 .top{
   height: 100vh;
 	text-align: center;
-  @include media ($tablet) {
+  @include media($tablet) {
     background-image: url(../../dist/img/bg_sp_top.png);
     background-size: cover;
   };
@@ -298,12 +345,19 @@ header{
     @include media($tablet) {
       height: 60vh;
     };
+    @include media($sp) {
+      width: 90vw;
+      height: 70vh;
+    };
     .top-logo{
       margin-bottom: 20px;
     }
     p{
       color: $text-white;
       font-size: 20px;
+      @include media($sp) {
+        font-size: 16px;
+      };
     }
     .btn-play-wrap{
       .btn-play{
@@ -375,6 +429,9 @@ header{
             font-size: 18px;
             padding-left: 0;
           };
+          @include media($sp) {
+            font-size: 16px;
+          };
         }
       }
     }
@@ -383,6 +440,9 @@ header{
       letter-spacing: 1px;
       @include media($tablet) {
         font-size: 18px;
+      };
+      @include media($sp) {
+        font-size: 16px;
       };
     }
   }
@@ -418,6 +478,10 @@ header{
       line-height: 2;
       font-size: 18px;
       color: $text-555;
+      @include media($sp) {
+        text-align: justify;
+        font-size: 16px;
+      };
     }
   }
   .service-img{
@@ -429,11 +493,14 @@ header{
       margin-right: 0;
       float: none;
     };
-    img:first-child{
-      padding-right: 30px;
+    img{
       @include media($tablet) {
-        padding-right: 30px;
+        width: 125px;
+        height: 255px;
       };
+      &:first-child{
+        padding-right: 30px;
+      }
     }
   }
 }
@@ -446,15 +513,30 @@ header{
   background: url('../img/bg_step.png');
   background-size: cover;
   color: $text-white;
+  @include media($sp) {
+    height: auto;
+    background: url('../img/bg_sp_step.png') no-repeat;
+    background: url('../img/bg_sp_step.png') no-repeat;
+  };
   .step-content-wrap{
+    @include media($sp) {
+      width: 90vw;
+      margin: 0 auto;
+    };
     .step{
       display: table-cell;
       padding: 60px 20px 0 20px;
       text-align: center;
       box-sizing: border-box;
+      @include media($sp) {
+        float: left;
+      };
       h3{
         padding: 35px 0;
         font-size: 20px;
+        @include media($sp) {
+          font-size: 20px;
+        };
       }
       p{
         text-align: justify;
@@ -464,6 +546,10 @@ header{
         'M+ C Type-1 (basic latin) Thin',
         'M+ Type-1 (general-j) Thin', sans-serif;
         -webkit-text-stroke: 0.2px #fff;
+        @include media($sp) {
+          font-size: 16px;
+          text-align: center;
+        };
       }
       img{
         @include border-radius(50px)
@@ -505,6 +591,9 @@ header{
       display: block !important;
       padding: 20px !important;
       box-sizing: border-box;
+      @include media($sp) {
+        padding: 20px 100px 20px 100px !important;
+      };
     }
   }
 }
@@ -545,6 +634,9 @@ header{
       padding: 10px 10px 10px 20px;
       display: table-cell;
       vertical-align: middle;
+      @include media($sp) {
+        font-size: 16px;
+      };
     }
     .question-text{
       display: none;
@@ -613,6 +705,9 @@ header{
           padding: 25px 20px 15px 20px;
           width: 100%;
           height: auto;
+        };
+        @include media($sp) {
+          font-size: 14px;
         };
       }
       time{
@@ -691,21 +786,29 @@ footer{
     padding: 60px 0;
     @include media($tablet) {
       width: 90vw;
+      height: auto;
     };
     .footer-navapp-box{
       width: 80%;
       float: right;
       @include media($tablet) {
         margin: 0 auto;
+        float: none;
       };
       .footer-nav{
         width: 20%;
         float: left;
+        @include media($tablet) {
+          width: 33%;
+        };
         nav{
           ul{
             li{
               padding-bottom: 30px;
-              @include media($tablet) {
+              @include media($sp) {
+                padding-right: 0;
+              };
+              @include media($sp) {
                 padding-right: 0;
               };
               &:nth-last-child(1){
@@ -714,6 +817,9 @@ footer{
               a{
                 font-size: 14px;
                 color: $text-white;
+                @include media($tablet) {
+                  font-size: 13px;
+                };
                 &:hover{
                   opacity: $opacity;
                   color: $text-eee;
@@ -726,14 +832,36 @@ footer{
     }
     .footer-app{
       float: right;
+      @include media($tablet) {
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        margin: 50px auto;
+      };
       a{
         display: block;
         img{
           &:first-child{
             padding-bottom: 10px;
+            @include media($tablet) {
+              margin-bottom: 0;
+            };
             &:hover{
               opacity: $opacity;
             }
+          }
+        }
+        .btn-app-footer{
+          @include media($tablet) {
+            display: inline-block;
+            width: 39%;
+            margin: 5% 1%;
+          };
+          img{
+            @include media($tablet) {
+              width: 141px;
+              height: 42px;
+            };
           }
         }
       }
@@ -741,6 +869,17 @@ footer{
   }
   .footer-logo{
     display: table;
+    @include media($tablet) {
+      margin: 0 auto;
+      clear: both;
+      text-align: center;
+    };
+    img{
+      @include media($tablet) {
+        width: 80px;
+        height: 106px;
+      };
+    }
   }
   .copyright{
     clear: both;
@@ -974,568 +1113,568 @@ footer{
 
 }
 
+// /*===========================================
+//  レスポンシブ(@media max-width:600px)設定
+// =============================================*/
+//
+// @media screen and (max-width: 600px){
+//
+// /*===========================================
+//  共通設定
+// =============================================*/
+//   .title{
+//     font-size: 26px;
+//   }
+// /*===========================================
+//  button設定
+// =============================================*/
+//   .btn-wrap{
+//     .button{
+//       a{
+//         padding: 12px;
+//         font-size: 14px;
+//       }
+//     }
+//   }
+//
+// /*===========================================
+//  header設定
+// =============================================*/
+//   .top{
+//     height: 100vh;
+//     text-align: center;
+//     .top-head-content{
+//       width: 60vw;
+//       height: 70vh;
+//       p{
+//         font-size: 18px;
+//       }
+//     }
+//     header{
+//       height: 70px;
+//       .head-nav{
+//         .pc-none{
+//           display: block;
+//         }
+//         a{
+//           font-size: 12px;
+//         }
+//       }
+//       .headmenu-logo{
+//         margin-top: 14px;
+//         margin-left: 10px;
+//       }
+//       .top-btn{
+//         margin: 20px 70px 0 0;
+//         img{
+//           width: 140px
+//         }
+//         /*
+//         width: 130px;
+//         background-color: $bg-white;
+//         a{
+//           padding: 5px;
+//           font-size: 12px;
+//           letter-spacing: 0;
+//           color: $base-color;
+//         }
+//         */
+//
+//       }
+//       #nav-toggle{
+//         width: 26px;
+//         top: 22px;
+//         right: 22px;
+//       }
+//     }
+//   }
+//
+// /*===========================================
+//  fixed設定
+// =============================================*/
+//   .fixed{
+//     .top-btn{
+//       //display: none;
+//       .btn-white{
+//         display: none;
+//       }
+//       .btn-blue{
+//         display: block;
+//       }
+//     }
+//     .headmenu-logo{
+//     }
+//   }
+//
+// /*===========================================
+//   .open-nav設定
+// =============================================*/
+//   .open-nav{
+//     nav{
+//       width: 40%;
+//       left: 60%;
+//     }
+//   }
+//
+// /*===========================================
+//   .news設定
+// =============================================*/
+//     .news-wrap{
+//         .news-list-box{
+//           width: 90vw;
+//           margin: 40px auto 0 auto;
+//           min-width: 0;
+//         }
+//         .news-list{
+//           .news-item{
+//             a{
+//             text-align: left;
+//             line-height: 1.6;
+//             span{
+//               font-size: 18px;
+//               padding-left: 0;
+//             }
+//           }
+//         }
+//         .date{
+//           font-size: 18px;
+//         }
+//       }
+//     }
+//
+// /*===========================================
+//   .service設定
+// =============================================*/
+//   .service-wrap{
+//       .service-left{
+//         width: 90vw;
+//         margin: 0 auto;
+//         .title{
+//           text-align: center;
+//         }
+//         p{
+//           text-align: justify;
+//         }
+//       }
+//       .service-img{
+//         img{
+//           width: 125px;
+//           height: 255px;
+//       }
+//     }
+//   }
+//
+// /*===========================================
+//   .step設定
+// =============================================*/
+// .step-wrap{
+//   height: auto;
+//   background: url('../img/bg_sp_step.png') no-repeat;
+//   background-size: cover;
+//   .section-wrap{
+//     width: 90vw;
+//     margin: 0 auto;
+//     .step-content-wrap{
+//       .step{
+//       float: left;
+//         h3{
+//           font-size: 20px;
+//         }
+//         p{
+//           text-align: center;
+//         }
+//       }
+//     }
+//   }
+// }
+//
+// /*===========================================
+// 	.info設定
+// =============================================*/
+// .info-wrap{
+//   margin-right: 0;
+//   img{
+//     display: block;
+//     max-width: 130%;
+//     overflow: hidden;
+//     margin-right: 30px;
+//   }
+//   .section-wrap{
+//     width: 90vw;
+//     margin: 0 auto;
+//   }
+//   .bg-iphone{
+//     width: 270px;
+//     display: block;
+//     position: relative;
+//     left: 50%;
+//     transform: translate(-50%);
+//     z-index: 10;
+//   }
+//   .swiper-slide,.swiper-slide-active{
+//     img{
+//       width: 414px;
+//       height: 350px;
+//     }
+//   }
+// }
+//
+// /*===========================================
+//   blog設定
+// =============================================*/
+// .qa-wrap{
+//   .question{
+//     .question-text{
+//       font-size: 14px;
+//     }
+//     .question-title{
+//       font-size: 16px;
+//     }
+//   }
+// }
+//
+// /*===========================================
+//   blog設定
+// =============================================*/
+//   .blog-wrap{
+//     .blog-contents-wrap{
+//       .blog-content{
+//         p{
+//           font-size: 14px;
+//         }
+//       }
+//     }
+//   }
+//
+// /*===========================================
+//  sns設定
+// =============================================*/
+// .sns-wrpa{
+//   width: 80vw;
+//   margin: 0 auto;
+//   .section-wrap{
+//     width: 100%;
+//     .sns-contents-wrap{
+//       width: 100%;
+//       margin: 0 auto;
+//       text-align: center;
+//       .fb-page{
+//         float: none;
+//         width: 350px;
+//         display: block;
+//         margin: 0 auto;
+//       }
+//       .twitter{
+//         padding-top: 0 !important;
+//         float: none;
+//         width: 100%;
+//         margin: 0  auto;
+//       }
+//     }
+//   }
+// }
+//
+// /*===========================================
+//   footer設定
+// =============================================*/
+// footer{
+//     .section-wrap{
+//       width: 90vw;
+//       height: auto;
+//     .footer-navapp-box{
+//       float: none;
+//     .footer-nav{
+//       width: 33%;
+//         a{
+//           font-size: 13px;
+//         }
+//         li{
+//           padding-right: 0;
+//         }
+//     }
+//     .footer-app{
+//       text-align: center;
+//       display: inline-block;
+//       width: 100%;
+//       margin: 50px auto;
+//         a{
+//           img{
+//             &:first-child{
+//               padding-bottom: 0;
+//               }
+//             }
+//           }
+//     .btn-app-footer{
+//         display: inline-block;
+//         width: 39%;
+//         max-width: calc(200px - 5%);
+//         margin: 5% 1%;
+//           img{
+//             width: 141px;
+//             height: 42px;
+//           }
+//         }
+//       }
+//     }
+//     .footer-logo{
+//       margin: 0 auto;
+//       clear: both;
+//         img{
+//           width: 80px;
+//           height: 106px;
+//         }
+//       }
+//     }
+//   }
+//
+// }
+
 /*===========================================
- レスポンシブ(@media max-width:600px)設定
+ レスポンシブ(@media max-width:480px)設定
 =============================================*/
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 480px){
 
 /*===========================================
  共通設定
 =============================================*/
-  .title{
-    font-size: 26px;
-  }
-/*===========================================
- button設定
-=============================================*/
-  .btn-wrap{
-    .button{
-      a{
-        padding: 12px;
-        font-size: 14px;
-      }
-    }
-  }
-
-/*===========================================
- header設定
-=============================================*/
-  .top{
-    height: 100vh;
-    text-align: center;
-    .top-head-content{
-      width: 60vw;
-      height: 70vh;
-      p{
-        font-size: 18px;
-      }
-    }
-    header{
-      height: 70px;
-      .head-nav{
-        .pc-none{
-          display: block;
-        }
-        a{
-          font-size: 12px;
-        }
-      }
-      .headmenu-logo{
-        margin-top: 14px;
-        margin-left: 10px;
-      }
-      .top-btn{
-        margin: 20px 70px 0 0;
-        img{
-          width: 140px
-        }
-        /*
-        width: 130px;
-        background-color: $bg-white;
-        a{
-          padding: 5px;
-          font-size: 12px;
-          letter-spacing: 0;
-          color: $base-color;
-        }
-        */
-
-      }
-      #nav-toggle{
-        width: 26px;
-        top: 22px;
-        right: 22px;
-      }
-    }
-  }
-
-/*===========================================
- fixed設定
-=============================================*/
-  .fixed{
-    .top-btn{
-      //display: none;
-      .btn-white{
-        display: none;
-      }
-      .btn-blue{
-        display: block;
-      }
-    }
-    .headmenu-logo{
-    }
-  }
-
-/*===========================================
-  .open-nav設定
-=============================================*/
-  .open-nav{
-    nav{
-      width: 40%;
-      left: 60%;
-    }
-  }
-
-/*===========================================
-  .news設定
-=============================================*/
-    .news-wrap{
-        .news-list-box{
-          width: 90vw;
-          margin: 40px auto 0 auto;
-          min-width: 0;
-        }
-        .news-list{
-          .news-item{
-            a{
-            text-align: left;
-            line-height: 1.6;
-            span{
-              font-size: 18px;
-              padding-left: 0;
-            }
-          }
-        }
-        .date{
-          font-size: 18px;
-        }
-      }
-    }
-
-/*===========================================
-  .service設定
-=============================================*/
-  .service-wrap{
-      .service-left{
-        width: 90vw;
-        margin: 0 auto;
-        .title{
-          text-align: center;
-        }
-        p{
-          text-align: justify;
-        }
-      }
-      .service-img{
-        img{
-          width: 125px;
-          height: 255px;
-      }
-    }
-  }
-
-/*===========================================
-  .step設定
-=============================================*/
-.step-wrap{
-  height: auto;
-  background: url('../img/bg_sp_step.png') no-repeat;
-  background-size: cover;
-  .section-wrap{
-    width: 90vw;
-    margin: 0 auto;
-    .step-content-wrap{
-      .step{
-      float: left;
-        h3{
-          font-size: 20px;
-        }
-        p{
-          text-align: center;
-        }
-      }
-    }
-  }
-}
-
-/*===========================================
-	.info設定
-=============================================*/
-.info-wrap{
-  margin-right: 0;
-  img{
-    display: block;
-    max-width: 130%;
-    overflow: hidden;
-    margin-right: 30px;
-  }
-  .section-wrap{
-    width: 90vw;
-    margin: 0 auto;
-  }
-  .bg-iphone{
-    width: 270px;
-    display: block;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: 10;
-  }
-  .swiper-slide,.swiper-slide-active{
-    img{
-      width: 414px;
-      height: 350px;
-    }
-  }
-}
-
-/*===========================================
-  blog設定
-=============================================*/
-.qa-wrap{
-  .question{
-    .question-text{
-      font-size: 14px;
-    }
-    .question-title{
-      font-size: 16px;
-    }
-  }
-}
-
-/*===========================================
-  blog設定
-=============================================*/
-  .blog-wrap{
-    .blog-contents-wrap{
-      .blog-content{
-        p{
-          font-size: 14px;
-        }
-      }
-    }
-  }
-
-/*===========================================
- sns設定
-=============================================*/
-.sns-wrpa{
-  width: 80vw;
-  margin: 0 auto;
-  .section-wrap{
-    width: 100%;
-    .sns-contents-wrap{
-      width: 100%;
-      margin: 0 auto;
-      text-align: center;
-      .fb-page{
-        float: none;
-        width: 350px;
-        display: block;
-        margin: 0 auto;
-      }
-      .twitter{
-        padding-top: 0 !important;
-        float: none;
-        width: 100%;
-        margin: 0  auto;
-      }
-    }
-  }
-}
-
-/*===========================================
-  footer設定
-=============================================*/
-footer{
-    .section-wrap{
-      width: 90vw;
-      height: auto;
-    .footer-navapp-box{
-      float: none;
-    .footer-nav{
-      width: 33%;
-        a{
-          font-size: 13px;
-        }
-        li{
-          padding-right: 0;
-        }
-    }
-    .footer-app{
-      text-align: center;
-      display: inline-block;
-      width: 100%;
-      margin: 50px auto;
-        a{
-          img{
-            &:first-child{
-              padding-bottom: 0;
-              }
-            }
-          }
-    .btn-app-footer{
-        display: inline-block;
-        width: 39%;
-        max-width: calc(200px - 5%);
-        margin: 5% 1%;
-          img{
-            width: 141px;
-            height: 42px;
-          }
-        }
-      }
-    }
-    .footer-logo{
-      margin: 0 auto;
-      clear: both;
-        img{
-          width: 80px;
-          height: 106px;
-        }
-      }
-    }
-  }
-
-}
-
-/*===========================================
- レスポンシブ(@media max-width:414px)設定
-=============================================*/
-
-@media screen and (max-width: 414px){
-
-/*===========================================
- 共通設定
-=============================================*/
-.title{
-  font-size: 22px;
-}
+// .title{
+//   font-size: 22px;
+// }
 
 /*===========================================
 	button設定
 =============================================*/
-.btn-wrap{
-  .btn-more{
-    a{
-      font-size: 11px !important;
-    }
-  }
-  .button{
-    width: 70%;
-    a{
-      padding: 12px;
-      font-size: 14px;
-    }
-  }
-}
+// .btn-wrap{
+//   .btn-more{
+//     a{
+//       font-size: 11px !important;
+//     }
+//   }
+//   .button{
+//     width: 70%;
+//     a{
+//       padding: 12px;
+//       font-size: 14px;
+//     }
+//   }
+// }
 
 /*===========================================
   top設定
 =============================================*/
-.top{
-  header{
-    .headmenu-logo{
-      margin-left: 10px !important;
-      margin-top: 18px;
-      img{
-        height: 30px;
-      }
-    }
-    .top-btn{
-      margin-right: 60px;
-      img{
-        width: 130px;
-      }
-    }
-    #nav-toggle{
-      width: 22px;
-      top: 22px;
-      right: 20px;
-      span{
-        &:nth-child(1){
-          top: 4px;
-        }
-        &:nth-child(3){
-          top: 18px;
-        }
-      }
-    }
-  }
-  .top-head-content{
-    width: 90vw;
-    height: 70vh;
-    p{
-      font-size: 16px;
-    }
-  }
-}
+// .top{
+//   header{
+//     .headmenu-logo{
+//       margin-left: 10px !important;
+//       margin-top: 18px;
+//       img{
+//         height: 30px;
+//       }
+//     }
+//     .top-btn{
+//       margin-right: 60px;
+//       img{
+//         width: 130px;
+//       }
+//     }
+//     #nav-toggle{
+//       width: 22px;
+//       top: 22px;
+//       right: 20px;
+//       span{
+//         &:nth-child(1){
+//           top: 4px;
+//         }
+//         &:nth-child(3){
+//           top: 18px;
+//         }
+//       }
+//     }
+//   }
+//   .top-head-content{
+//     width: 90vw;
+//     height: 70vh;
+//     p{
+//       font-size: 16px;
+//     }
+//   }
+// }
 
 /*===========================================
   .open-nav設定
 =============================================*/
-.open-nav{
-  #nav-toggle{
-    span{
-      &:nth-child(1){
-      top: 11px !important;
-      transform: rotate(-45deg);
-    }
-      &:nth-child(2),
-      &:nth-child(3){
-      top: 11px !important;
-      transform:rotate(45deg);
-      }
-    }
-  }
-}
+// .open-nav{
+//   #nav-toggle{
+//     span{
+//       &:nth-child(1){
+//       top: 11px !important;
+//       transform: rotate(-45deg);
+//     }
+//       &:nth-child(2),
+//       &:nth-child(3){
+//       top: 11px !important;
+//       transform:rotate(45deg);
+//       }
+//     }
+//   }
+// }
 
-/*===========================================
-  .news設定
-=============================================*/
-.news-wrap{
-  .news-list{
-    .news-item{
-      a{
-        span{
-          font-size: 16px;
-        }
-        .date{
-          font-size: 16px;
-        }
-      }
-    }
-  }
-}
+// /*===========================================
+//   .news設定
+// =============================================*/
+// .news-wrap{
+//   .news-list{
+//     .news-item{
+//       a{
+//         span{
+//           font-size: 16px;
+//         }
+//         .date{
+//           font-size: 16px;
+//         }
+//       }
+//     }
+//   }
+// }
 
-/*===========================================
-  .service設定
-=============================================*/
-.service-wrap{
-  .service-left{
-    p{
-      font-size: 16px;
-    }
-  }
-}
+// /*===========================================
+//   .service設定
+// =============================================*/
+// .service-wrap{
+//   .service-left{
+//     p{
+//       font-size: 16px;
+//     }
+//   }
+// }
+//
+// /*===========================================
+//   step設定
+// =============================================*/
+// .step-wrap{
+//   .step{
+//     p{
+//       font-size: 16px;
+//     }
+//   }
+// }
 
-/*===========================================
-  step設定
-=============================================*/
-.step-wrap{
-  .step{
-    p{
-      font-size: 16px;
-    }
-  }
-}
+// /*===========================================
+//  sns設定
+// =============================================*/
+// .sns-wrpa{
+//   width: 80vw;
+//   margin: 0 auto;
+//     .section-wrap{
+//       width: 100%;
+//     .sns-contents-wrap{
+//       width: 100%;
+//       margin: 0 auto;
+//       text-align: center;
+//       .fb-page{
+//         width: 100%;
+//         display: block;
+//         margin: 0 auto;
+//         iframe{
+//           width: 100%;
+//         }
+//       }
+//       .twitter{
+//         float: none;
+//         width: 100%;
+//         margin: 0  auto;
+//       }
+//     }
+//   }
+// }
 
-/*===========================================
- sns設定
-=============================================*/
-.sns-wrpa{
-  width: 80vw;
-  margin: 0 auto;
-    .section-wrap{
-      width: 100%;
-    .sns-contents-wrap{
-      width: 100%;
-      margin: 0 auto;
-      text-align: center;
-      .fb-page{
-        width: 100%;
-        display: block;
-        margin: 0 auto;
-        iframe{
-          width: 100%;
-        }
-      }
-      .twitter{
-        float: none;
-        width: 100%;
-        margin: 0  auto;
-      }
-    }
-  }
-}
+// /*===========================================
+//   footer設定
+// =============================================*/
+// footer{
+//   .section-wrap{
+//   .footer-navapp-box{
+//   .footer-app{
+//   .btn-app-footer{
+//     width: 45%;
+//     margin: 5% 2%;
+//       }
+//     }
+//   }
+// }
+// .copyright{
+//   p{
+//     small{
+//       font-size: 12px;
+//       }
+//     }
+//   }
+// }
+//
+ }
 
-/*===========================================
-  footer設定
-=============================================*/
-footer{
-  .section-wrap{
-  .footer-navapp-box{
-  .footer-app{
-  .btn-app-footer{
-    width: 45%;
-    margin: 5% 2%;
-      }
-    }
-  }
-}
-.copyright{
-  p{
-    small{
-      font-size: 12px;
-      }
-    }
-  }
-}
-
-}
-
-/*===========================================
- レスポンシブ(@media max-width:360px)設定
-=============================================*/
-
-@media screen and (max-width: 360px){
-
-/*===========================================
- top設定
-=============================================*/
-.top{
-  header{
-    height: 60px;
-    .headmenu-logo{
-      margin-left: 10px !important;
-      margin-top: 12px;
-      img{
-        height: 30px;
-      }
-    }
-    .top-btn{
-      margin: 17px 50px 0 0;
-      img{
-        width: 110px;
-      }
-    }
-    #nav-toggle{
-      width: 20px;
-      top: 16px;
-      right: 16px;
-    }
-  }
-  .top-head-content{
-    width: 90vw;
-    height: 70vh;
-    p{
-      font-size: 14px;
-    }
-  }
-}
-
-/*===========================================
-  footer設定
-=============================================*/
-footer{
-  .section-wrap{
-    .footer-navapp-box{
-      .footer-app{
-        .btn-app-footer{
-        width: 44%;
-        margin: 5% 2%;
-      }
-    }
-  }
-}
-  .copyright{
-    p{
-      small{
-      font-size: 12px;
-      }
-    }
-  }
-}
-
-}
+// /*===========================================
+//  レスポンシブ(@media max-width:360px)設定
+// =============================================*/
+//
+// @media screen and (max-width: 360px){
+//
+// /*===========================================
+//  top設定
+// =============================================*/
+// .top{
+//   header{
+//     height: 60px;
+//     .headmenu-logo{
+//       margin-left: 10px !important;
+//       margin-top: 12px;
+//       img{
+//         height: 30px;
+//       }
+//     }
+//     .top-btn{
+//       margin: 17px 50px 0 0;
+//       img{
+//         width: 110px;
+//       }
+//     }
+//     #nav-toggle{
+//       width: 20px;
+//       top: 16px;
+//       right: 16px;
+//     }
+//   }
+//   .top-head-content{
+//     width: 90vw;
+//     height: 70vh;
+//     p{
+//       font-size: 14px;
+//     }
+//   }
+// }
+//
+// /*===========================================
+//   footer設定
+// =============================================*/
+// footer{
+//   .section-wrap{
+//     .footer-navapp-box{
+//       .footer-app{
+//         .btn-app-footer{
+//         width: 44%;
+//         margin: 5% 2%;
+//       }
+//     }
+//   }
+// }
+//   .copyright{
+//     p{
+//       small{
+//       font-size: 12px;
+//       }
+//     }
+//   }
+// }
+//
+// }

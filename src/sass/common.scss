@@ -61,4 +61,7 @@ img{
 	text-align: center;
 	font-size: 32px;
   padding-top: 60px;
+  @include media($sp) {
+    font-size: 22px;
+  }
 }

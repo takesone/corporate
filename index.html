@@ -350,6 +350,7 @@ var swiper = new Swiper('.swiper-container', {
 $(window).resize(function(){
   var ww = $(window).width()
   if (ww<=960) swiper.params.slidesPerView = 3;
+  if (ww<=480) swiper.params.slidesPerView = 1;
   if (swiper) {
     swiper.update()
   }
