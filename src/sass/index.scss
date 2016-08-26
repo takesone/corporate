@@ -139,10 +139,11 @@ header{
 		margin-top: 20px;
 	}
 	.head-nav{
+    background-color: $bg-white;
   	ul li a{
   		color: $text-555;
     &:hover{
-      color: $base-color;
+      color: $text-white;
       }
   	}
 	}
@@ -156,10 +157,12 @@ header{
   }
 	.headmenu-logo{
 		display: block;
-    @include media($sp) {
-      margin-left: 30px;
-    };
 	}
+  #nav-toggle{
+    span{
+      border-bottom: solid 2px $text-555;
+    }
+  }
 }
 
 /*===========================================
@@ -196,6 +199,51 @@ header{
     }
   }
 }
+
+/*===========================================
+ open-nav設定
+=============================================*/
+@include media($tablet) {
+  .open-nav{
+    nav{
+      text-align: left;
+      background: rgba(255, 255, 255, 0.7);
+      display: block;
+      transform: translateY(351px);
+      position: absolute;
+      width: 20%;
+      top: -272px;
+      left: 80%;
+      transition:.5s ease-in-out;
+      ul{
+        li{
+          float: none;
+          &:hover{
+            background: $base-color;
+          }
+          a{
+          &:hover{
+            color: $text-white;
+          }
+          }
+        }
+      }
+    }
+    #nav-toggle{
+      span{
+        &:nth-child(1){
+          top: 11px;
+          transform: rotate(-45deg);
+        }
+        &:nth-child(2),
+        &:nth-child(3){
+          top: 11px;
+          transform:rotate(45deg);
+        }
+      }
+    }
+  }
+};
 
 /*===========================================
 	.top設定
@@ -296,6 +344,11 @@ header{
     height: 150px;
     margin: 40px auto;
     overflow-y: scroll;
+    @include media ($tablet) {
+      width: 60vw;
+      margin: 40px auto 0 auto;
+      min-width: 0;
+    };
   }
   .news-list{
     .news-item{
@@ -305,6 +358,10 @@ header{
         color: $text-black;
         font-size: 0;
         transition: background-color 0.1s;
+        @include media ($tablet) {
+          text-align: left;
+          line-height: 1.6;
+        };
         &:hover{
           background-color: $bg-white;
         }
@@ -314,6 +371,10 @@ header{
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
+          @include media($tablet) {
+            font-size: 18px;
+            padding-left: 0;
+          };
         }
       }
     }
@@ -615,138 +676,106 @@ footer{
 /*===========================================
   top設定
 =============================================*/
-  #nav-toggle{
-    display: block;
-  }
-  header{
-    .head-nav{
-    display: none;
-    ul{
-    li{
-      border-bottom: 1px solid $base-color;
-      &:last-child{
-      }
-    }
-    }
-    a{
-      color: $text-black;
-    }
-    }
-  }
-  .top{
-    background-image: url(../../dist/img/bg_sp_top.png);
-    background-size: cover;
-    #player{
-      display: none;
-    }
-    .top-head-content{
-      height: 60vh;
-    }
-    .headmenu-logo{
-      margin-left: 30px;
-    }
-  }
-
-/*===========================================
- fixed設定
-=============================================*/
-.fixed{
-  background-color: $bg-white;
-  .headmenu-logo{
-    display: block;
-  }
-  &::after{
-    width: 100%;
-    margin-top: 20px;
-  }
-  #nav-toggle{
-    span{
-      border-bottom: solid 2px $text-555;
-    }
-  }
-  .head-nav{
-    background-color: $bg-white;
-    ul{
-      li{
-        a{
-          color: $text-555;
-          &:hover{
-            color: $text-white;
-          }
-        }
-      }
-    }
-  }
-}
-
-/*===========================================
- open-nav設定
-=============================================*/
-  .open-nav{
-    nav{
-      text-align: left;
-      background: rgba(255, 255, 255, 0.7);
-      display: block;
-      transform: translateY(351px);
-      position: absolute;
-      width: 20%;
-      top: -272px;
-      left: 80%;
-      transition:.5s ease-in-out;
-      ul{
-        li{
-          float: none;
-          &:hover{
-            background: $base-color;
-          }
-          a{
-          &:hover{
-            color: $text-white;
-          }
-          }
-        }
-      }
-    }
-    #nav-toggle{
-      span{
-        &:nth-child(1){
-          top: 11px;
-          transform: rotate(-45deg);
-        }
-        &:nth-child(2),
-        &:nth-child(3){
-          top: 11px;
-          transform:rotate(45deg);
-        }
-      }
-    }
-  }
+//   #nav-toggle{
+//     display: block;
+//   }
+//   header{
+//     .head-nav{
+//     display: none;
+//     ul{
+//     li{
+//       border-bottom: 1px solid $base-color;
+//       &:last-child{
+//       }
+//     }
+//     }
+//     a{
+//       color: $text-black;
+//     }
+//     }
+//   }
+//   .top{
+//     background-image: url(../../dist/img/bg_sp_top.png);
+//     background-size: cover;
+//     #player{
+//       display: none;
+//     }
+//     .top-head-content{
+//       height: 60vh;
+//     }
+//     .headmenu-logo{
+//       margin-left: 30px;
+//     }
+//   }
+//
+// /*===========================================
+//  open-nav設定
+// =============================================*/
+//   .open-nav{
+//     nav{
+//       text-align: left;
+//       background: rgba(255, 255, 255, 0.7);
+//       display: block;
+//       transform: translateY(351px);
+//       position: absolute;
+//       width: 20%;
+//       top: -272px;
+//       left: 80%;
+//       transition:.5s ease-in-out;
+//       ul{
+//         li{
+//           float: none;
+//           &:hover{
+//             background: $base-color;
+//           }
+//           a{
+//           &:hover{
+//             color: $text-white;
+//           }
+//           }
+//         }
+//       }
+//     }
+//     #nav-toggle{
+//       span{
+//         &:nth-child(1){
+//           top: 11px;
+//           transform: rotate(-45deg);
+//         }
+//         &:nth-child(2),
+//         &:nth-child(3){
+//           top: 11px;
+//           transform:rotate(45deg);
+//         }
+//       }
+//     }
+//   }
 
 /*===========================================
  .news設定
 =============================================*/
-.news-wrap{
-    .news-list-box{
-      width: 60vw;
-      margin: 40px auto 0 auto;
-      min-width: 0;
-    }
-    .news-list{
-      .news-item{
-        a{
-          text-align: left;
-          line-height: 1.6;
-          span{
-            font-size: 18px;
-            padding-left: 0;
-          }
-        }
-      }
-      .date{
-        font-size: 18px;
-      }
-    }
-  }
+// .news-wrap{
+//     .news-list-box{
+//       width: 60vw;
+//       margin: 40px auto 0 auto;
+//       min-width: 0;
+//     }
+//     .news-list{
+//       .news-item{
+//         a{
+//           text-align: left;
+//           line-height: 1.6;
+//           span{
+//             font-size: 18px;
+//             padding-left: 0;
+//           }
+//         }
+//       }
+//       .date{
+//         font-size: 18px;
+//       }
+//     }
+//   }
 
 /*===========================================
 	.service設定
