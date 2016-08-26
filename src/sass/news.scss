@@ -165,8 +165,6 @@
 
 .press {
 	margin: 0 auto;
-	float:  none;
-
 	.press_content {
 		@include media ($tablet) {
 			width: 100%;
