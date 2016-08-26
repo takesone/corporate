@@ -8,199 +8,199 @@
 /*===========================================
  fixed設定
 =============================================*/
-.fixed{
-  background-color: $bg-white;
-  .headmenu-logo{
-    display: block;
-  }
-  &::after{
-    width: 100%;
-    margin-top: 20px;
-  }
-  #nav-toggle{
-    span{
-      border-bottom: solid 2px $text-555;
-    }
-  }
-  .head-nav{
-    background-color: $bg-white;
-    ul{
-      li{
-        a{
-          color: $text-555;
-          &:hover{
-            color: $text-white;
-          }
-        }
-      }
-    }
-  }
-}
+// .fixed{
+//   background-color: $bg-white;
+//   .headmenu-logo{
+//     display: block;
+//   }
+//   &::after{
+//     width: 100%;
+//     margin-top: 20px;
+//   }
+//   #nav-toggle{
+//     span{
+//       border-bottom: solid 2px $text-555;
+//     }
+//   }
+//   .head-nav{
+//     background-color: $bg-white;
+//     ul{
+//       li{
+//         a{
+//           color: $text-555;
+//           &:hover{
+//             color: $text-white;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 /*===========================================
  open-nav設定
 =============================================*/
-  .open-nav{
-    nav{
-      text-align: left;
-      background: rgba(255, 255, 255, 0.7);
-      display: block;
-      transform: translateY(351px);
-      position: absolute;
-      width: 20%;
-      top: -272px;
-      left: 80%;
-      transition:.5s ease-in-out;
-      ul{
-        li{
-          float: none;
-          &:hover{
-            background: $base-color;
-          }
-          a{
-          &:hover{
-            color: $text-white;
-          }
-          }
-        }
-      }
-    }
-    #nav-toggle{
-      span{
-        &:nth-child(1){
-          top: 11px;
-          transform: rotate(-45deg);
-        }
-        &:nth-child(2),
-        &:nth-child(3){
-          top: 11px;
-          transform:rotate(45deg);
-        }
-      }
-    }
-  }
+  // .open-nav{
+  //   nav{
+  //     text-align: left;
+  //     background: rgba(255, 255, 255, 0.7);
+  //     display: block;
+  //     transform: translateY(351px);
+  //     position: absolute;
+  //     width: 20%;
+  //     top: -272px;
+  //     left: 80%;
+  //     transition:.5s ease-in-out;
+  //     ul{
+  //       li{
+  //         float: none;
+  //         &:hover{
+  //           background: $base-color;
+  //         }
+  //         a{
+  //         &:hover{
+  //           color: $text-white;
+  //         }
+  //         }
+  //       }
+  //     }
+  //   }
+  //   #nav-toggle{
+  //     span{
+  //       &:nth-child(1){
+  //         top: 11px;
+  //         transform: rotate(-45deg);
+  //       }
+  //       &:nth-child(2),
+  //       &:nth-child(3){
+  //         top: 11px;
+  //         transform:rotate(45deg);
+  //       }
+  //     }
+  //   }
+  // }
 
 /*===========================================
  .news設定
 =============================================*/
-.news-wrap{
-    .news-list-box{
-      width: 60vw;
-      margin: 40px auto 0 auto;
-      min-width: 0;
-    }
-    .news-list{
-      .news-item{
-        a{
-          text-align: left;
-          line-height: 1.6;
-          span{
-            font-size: 18px;
-            padding-left: 0;
-          }
-        }
-      }
-      .date{
-        font-size: 18px;
-      }
-    }
-  }
+// .news-wrap{
+//     .news-list-box{
+//       width: 60vw;
+//       margin: 40px auto 0 auto;
+//       min-width: 0;
+//     }
+//     .news-list{
+//       .news-item{
+//         a{
+//           text-align: left;
+//           line-height: 1.6;
+//           span{
+//             font-size: 18px;
+//             padding-left: 0;
+//           }
+//         }
+//       }
+//       .date{
+//         font-size: 18px;
+//       }
+//     }
+//   }
 
 /*===========================================
 	.service設定
 =============================================*/
-  .service-wrap{
-    .service-left{
-      width: 90vw;
-      float: none;
-      margin: 0 auto;
-      .title{
-        text-align: center;
-      }
-    }
-    .service-img{
-      text-align: center;
-      margin-right: 0;
-      padding: 60px 0;
-      float: none;
-        img:first-child{
-          padding-right: 30px;
-        }
-      }
-    }
+  // .service-wrap{
+  //   .service-left{
+  //     width: 90vw;
+  //     float: none;
+  //     margin: 0 auto;
+  //     .title{
+  //       text-align: center;
+  //     }
+  //   }
+  //   .service-img{
+  //     text-align: center;
+  //     margin-right: 0;
+  //     padding: 60px 0;
+  //     float: none;
+  //       img:first-child{
+  //         padding-right: 30px;
+  //       }
+  //     }
+  //   }
 
 /*===========================================
   info設定
 =============================================*/
-  .info-wrap{
-  .section-wrap{
-    width: 90vw;
-    margin: 0 auto;
-    }
-  }
-  .swiper-content-wrap{
-    overflow: hidden;
-  }
+  // .info-wrap{
+  // .section-wrap{
+  //   width: 90vw;
+  //   margin: 0 auto;
+  //   }
+  // }
+  // .swiper-content-wrap{
+  //   overflow: hidden;
+  // }
 
 /*===========================================
   q&a設定
 =============================================*/
-.qa-wrap{
-    .question{
-      margin: 0 auto 20px auto;
-      width: 90vw;
-    }
-  }
+// .qa-wrap{
+//     .question{
+//       margin: 0 auto 20px auto;
+//       width: 90vw;
+//     }
+//   }
 
 /*===========================================
   blog設定
 =============================================*/
-  .blog-wrap{
-    .blog-contents-wrap{
-      width: 80vw;
-      margin: 0 auto;
-      .blog-content{
-        margin-right: 0;
-        margin-bottom: 40px;
-        width: 100%;
-        a{
-          float: none;
-        }
-        &:last-child{
-          margin-bottom: 0;
-        }
-        p{
-          width: 100%;
-          height: auto;
-        }
-        img{
-          width: 100%;
-          height: auto;
-          display: block;
-          margin: 0 auto;
-        }
-      }
-    }
-  }
+  // .blog-wrap{
+  //   .blog-contents-wrap{
+  //     width: 80vw;
+  //     margin: 0 auto;
+  //     .blog-content{
+  //       margin-right: 0;
+  //       margin-bottom: 40px;
+  //       width: 100%;
+  //       a{
+  //         float: none;
+  //       }
+  //       &:last-child{
+  //         margin-bottom: 0;
+  //       }
+  //       p{
+  //         width: 100%;
+  //         height: auto;
+  //       }
+  //       img{
+  //         width: 100%;
+  //         height: auto;
+  //         display: block;
+  //         margin: 0 auto;
+  //       }
+  //     }
+  //   }
+  // }
 
 /*===========================================
 	footer設定
 =============================================*/
-  footer{
-      .section-wrap{
-        width: 90vw;
-      .footer-navapp-box{
-        width: 80%;
-        margin: 0 auto;
-        .footer-nav{
-          width: 20%;
-          li{
-            padding-right: 0;
-          }
-        }
-      }
-    }
-  }
+  // footer{
+  //     .section-wrap{
+  //       width: 90vw;
+  //     .footer-navapp-box{
+  //       width: 80%;
+  //       margin: 0 auto;
+  //       .footer-nav{
+  //         width: 20%;
+  //         li{
+  //           padding-right: 0;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
 }
 

@@ -381,6 +381,9 @@ header{
     .date{
       font-size: 20px;
       letter-spacing: 1px;
+      @include media($tablet) {
+        font-size: 18px;
+      };
     }
   }
 }
@@ -394,10 +397,18 @@ header{
   .service-left{
     width: 50%;
     float: left;
+    @include media($tablet) {
+      width: 90vw;
+      float: none;
+      margin: 0 auto;
+    };
     .title{
       text-align: left;
       color: $text-555;
       padding-bottom: 46px;
+      @include media($tablet) {
+        text-align: center;
+      };
     }
     p{
       font-family:
@@ -413,8 +424,16 @@ header{
     margin-right: 20px;
     padding: 60px 0;
     float: right;
+    @include media($tablet) {
+      text-align: center;
+      margin-right: 0;
+      float: none;
+    };
     img:first-child{
       padding-right: 30px;
+      @include media($tablet) {
+        padding-right: 30px;
+      };
     }
   }
 }
@@ -459,21 +478,34 @@ header{
 .info-wrap{
   background-color: $bg-eee;
   text-align: center;
-  .bg-iphone{
-    display: block;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: 10;
+  .section-wrap{
+    @include media($tablet) {
+      width: 90vw;
+      margin: 0 auto;
+    };
+    .bg-iphone{
+      display: block;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 10;
+    }
+    .title{
+      color: $text-black;
+    }
+    p{
+      font-size: 16px;
+      padding: 40px 0 60px 0;
+      line-height: 2;
+      color: $text-black;
+    }
   }
-  .title{
-    color: $text-black;
-  }
-  p{
-    font-size: 16px;
-    padding: 40px 0 60px 0;
-    line-height: 2;
-    color: $text-black;
+  .swiper-slide{
+    img{
+      display: block !important;
+      padding: 20px !important;
+      box-sizing: border-box;
+    }
   }
 }
 
@@ -488,6 +520,10 @@ header{
     width: 960px;
     border: 1px solid $base-color;
     box-sizing: border-box;
+    @include media($tablet) {
+      width: 90vw;
+      margin: 20px auto;
+    };
     @include border-radius(3px);
     &:first-child{
       margin-top: 60px;
@@ -495,10 +531,6 @@ header{
     &:last-child{
       margin-bottom: 0;
     }
-    @include media($tablet) {
-      width: 90vw;
-      margin: 20px auto;
-    };
     span{
       color: $base-color;
       display: table-cell;
@@ -541,6 +573,10 @@ header{
     margin: 0 auto;
     height: 311px;
     padding-top: 60px;
+    @include media($tablet) {
+      width: 80vw;
+      margin: 0 auto;
+    };
     .blog-content{
       display: block;
       width: 300px;
@@ -548,8 +584,21 @@ header{
       margin-right: 30px;
       text-align: left;
       float: left;
+      @include media($tablet) {
+        margin-right: 0;
+        margin-bottom: 40px;
+        width: 100%;
+      };
       &:last-child{
         margin-right: 0px;
+        @include media($tablet) {
+          margin-bottom: 0;
+        };
+      }
+      a{
+        @include media($tablet) {
+          float: none;
+        };
       }
       p{
         width: 320px;
@@ -560,14 +609,25 @@ header{
         box-sizing: border-box;
         color: $text-555;
         line-height: 1.6;
+        @include media($tablet) {
+          padding: 25px 20px 15px 20px;
+          width: 100%;
+          height: auto;
+        };
       }
       time{
         font-weight: bold;
       }
       img{
         &:hover{
-        opacity: $opacity;
+          opacity: $opacity;
         }
+        @include media($tablet) {
+          width: 100%;
+          height: auto;
+          display: block;
+          margin: 0 auto;
+        };
       }
     }
   }
@@ -576,18 +636,48 @@ header{
 /*===========================================
 	sns設定
 =============================================*/
-.sns-contents-wrap{
-    width: 800px;
+.sns-wrpa{
+  @include media($tablet) {
+    width: 90vw;
     margin: 0 auto;
-}
-.fb-page{
-  width: 350px;
-  float: left;
-  padding: 60px 0;
-}
-.twitter{
-  float: right;
-  padding: 60px 0;
+  };
+  .section-wrap{
+    width: 100%;
+    .sns-contents-wrap{
+      width: 800px;
+      margin: 0 auto;
+      @include media($tablet) {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+      };
+    }
+    .fb-page{
+      width: 350px;
+      float: left;
+      padding: 60px 0;
+      @include media($tablet) {
+        width: 100%;
+        float: none;
+        display: block;
+        margin: 0 auto;
+        iframe{
+          width: 100%;
+        }
+      };
+    }
+    .twitter{
+      width: 350px;
+      float: right;
+      padding: 60px 0;
+      @include media($tablet) {
+        padding-top: 0;
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+      };
+    }
+  }
 }
 
 /*===========================================
@@ -599,9 +689,15 @@ footer{
   .section-wrap{
     height: 154px;
     padding: 60px 0;
+    @include media($tablet) {
+      width: 90vw;
+    };
     .footer-navapp-box{
       width: 80%;
       float: right;
+      @include media($tablet) {
+        margin: 0 auto;
+      };
       .footer-nav{
         width: 20%;
         float: left;
@@ -609,6 +705,9 @@ footer{
           ul{
             li{
               padding-bottom: 30px;
+              @include media($tablet) {
+                padding-right: 0;
+              };
               &:nth-last-child(1){
                 padding-bottom: 0;
               }
@@ -780,98 +879,98 @@ footer{
 /*===========================================
 	.service設定
 =============================================*/
-  .service-wrap{
-    .service-left{
-      width: 90vw;
-      float: none;
-      margin: 0 auto;
-      .title{
-        text-align: center;
-      }
-    }
-    .service-img{
-      text-align: center;
-      margin-right: 0;
-      padding: 60px 0;
-      float: none;
-        img:first-child{
-          padding-right: 30px;
-        }
-      }
-    }
+  // .service-wrap{
+  //   .service-left{
+  //     width: 90vw;
+  //     float: none;
+  //     margin: 0 auto;
+  //     .title{
+  //       text-align: center;
+  //     }
+  //   }
+  //   .service-img{
+  //     text-align: center;
+  //     margin-right: 0;
+  //     padding: 60px 0;
+  //     float: none;
+  //       img:first-child{
+  //         padding-right: 30px;
+  //       }
+  //     }
+  //   }
 
 /*===========================================
   info設定
 =============================================*/
-  .info-wrap{
-  .section-wrap{
-    width: 90vw;
-    margin: 0 auto;
-    }
-  }
-  .swiper-content-wrap{
-    overflow: hidden;
-  }
+  // .info-wrap{
+  // .section-wrap{
+  //   width: 90vw;
+  //   margin: 0 auto;
+  //   }
+  // }
+  // .swiper-content-wrap{
+  //   overflow: hidden;
+  // }
 
 /*===========================================
   q&a設定
 =============================================*/
-.qa-wrap{
-    .question{
-      margin: 0 auto 20px auto;
-      width: 90vw;
-    }
-  }
+// .qa-wrap{
+//     .question{
+//       margin: 0 auto 20px auto;
+//       width: 90vw;
+//     }
+//   }
 
 /*===========================================
   blog設定
 =============================================*/
-  .blog-wrap{
-    .blog-contents-wrap{
-      width: 80vw;
-      margin: 0 auto;
-      .blog-content{
-        margin-right: 0;
-        margin-bottom: 40px;
-        width: 100%;
-        a{
-          float: none;
-        }
-        &:last-child{
-          margin-bottom: 0;
-        }
-        p{
-          width: 100%;
-          height: auto;
-        }
-        img{
-          width: 100%;
-          height: auto;
-          display: block;
-          margin: 0 auto;
-        }
-      }
-    }
-  }
+  // .blog-wrap{
+  //   .blog-contents-wrap{
+  //     width: 80vw;
+  //     margin: 0 auto;
+  //     .blog-content{
+  //       margin-right: 0;
+  //       margin-bottom: 40px;
+  //       width: 100%;
+  //       a{
+  //         float: none;
+  //       }
+  //       &:last-child{
+  //         margin-bottom: 0;
+  //       }
+  //       p{
+  //         width: 100%;
+  //         height: auto;
+  //       }
+  //       img{
+  //         width: 100%;
+  //         height: auto;
+  //         display: block;
+  //         margin: 0 auto;
+  //       }
+  //     }
+  //   }
+  // }
 
 /*===========================================
 	footer設定
 =============================================*/
-  footer{
-      .section-wrap{
-        width: 90vw;
-      .footer-navapp-box{
-        width: 80%;
-        margin: 0 auto;
-        .footer-nav{
-          width: 20%;
-          li{
-            padding-right: 0;
-          }
-        }
-      }
-    }
-  }
+  // footer{
+  //     .section-wrap{
+  //       width: 90vw;
+  //     .footer-navapp-box{
+  //       width: 80%;
+  //       margin: 0 auto;
+  //       .footer-nav{
+  //         width: 20%;
+  //         li{
+  //           padding-right: 0;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
 }
 
