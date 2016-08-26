@@ -1,0 +1,152 @@
+/* Scss Document */
+
+/*===========================================
+	全体の設定
+=============================================*/
+
+.title {
+	padding-top: 75px;
+	font-size: 32px;
+	font-family:
+	'M+ C Type-1 (basic latin) Light',
+	'M+ Type-1 (general-j) Light', sans-serif;
+  @include media ($sp) {
+    font-size: 24px;
+  }
+}
+
+.sabtitle {
+	margin: 39px 0 66px 0;
+	font-size: 26px;
+  text-align:  center;
+	font-family:
+	'M+ C Type-1 (basic latin) Light',
+	'M+ Type-1 (general-j) Light', sans-serif;
+  @include media ($tablet) {
+    margin: 39px 60px 66px 60px;
+  }
+  @include media ($sp) {
+    font-size: 21px;
+		margin: 39px 30px 66px 30px;
+  }
+
+}
+
+/*===========================================
+	中身の設定
+=============================================*/
+
+.about {
+	background-color: #f7f7f7;
+
+    .about_content {
+	    width: 100%;
+
+      .about_text_box {
+        width: 960px;
+        color: #fff;
+        margin: 0 auto;
+        @include media ($tablet) {
+          width: 100%;
+      		padding: 0 30px;
+      		box-sizing: border-box;
+        }
+
+        .about_text_title {
+          font-size: 26px;
+          padding: 70px 0 40px 0;
+          font-family:
+          'M+ C Type-1 (basic latin) Light',
+          'M+ Type-1 (general-j) Light', sans-serif;
+          @include media ($sp) {
+						font-size: 24px
+					}
+
+        }
+
+        .about_text {
+          font-size: 18px;
+          width: 800px;
+          padding-bottom: 90px;
+          line-height: 2;
+          letter-spacing: 1.2px;
+          text-align: justify;
+          @include media ($sp) {
+            font-size: 16px;
+          }
+        }
+
+        .about_text_right {
+          float: right;
+        }
+
+      }
+
+    }
+
+    .about_bg_1 {
+      background-image: url(../img/about_img/Take%27sOne_about_01.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .about_bg_2 {
+      background-image: url(../img/about_img/Take%27sOne_about_02.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .about_bg_3 {
+      background-image: url(../img/about_img/Take%27sOne_about_03.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 860px){
+
+/*===========================================
+	中身の設定
+=============================================*/
+
+  .about {
+
+    .about_content {
+
+      .about_text_box {
+
+        .about_text {
+          width: 100%;
+          padding-bottom: 75px;
+        }
+
+        .about_text_right {
+          float: none;
+        }
+
+        .about_text_title {
+          text-align: center;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear:both;
+  visibility: hidden;
+}

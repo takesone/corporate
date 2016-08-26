@@ -38,14 +38,11 @@
 
     //Q&Aドロップダウン
     $(".question").on("click", function() {
-
   		var drop = $(this).find('.question-text');
-
   		drop.slideToggle()
   		.toggleClass("active");
-
 	 });
-
+   
 })(jQuery);
 
 //top動画部分
