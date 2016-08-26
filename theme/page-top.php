@@ -80,39 +80,24 @@
   <div class="contents-wrapper">
     <!-- news設定 -->
     <section class="news-wrap">
-      <h2 class="title">タイトルタイトルタイトル</h2>
+      <h2 class="title">ニュース</h2>
       <div class="news-list-box">
         <ul class="news-list">
-          <li class="news-item">
-            <a href="#">
-              <time class="date" datetime="2016-07-21">2016年07月21日</time>
-              <span class="list-title">テキストテキストテキストテキストテキストテキストテキスト</span>
-            </a>
-          </li>
-          <li class="news-item">
-            <a href="#">
-              <time class="date" datetime="2016-07-21">2016年07月21日</time>
-              <span>テキストテキストテキストテキストテキストテキストテキスト</span>
-            </a>
-          </li>
-          <li class="news-item">
-            <a href="#">
-              <time class="date" datetime="2016-07-21">2016年07月21日</time>
-              <span>テキストテキストテキストテキストテキストテキストテキスト</span>
-            </a>
-          </li>
-          <li class="news-item">
-            <a href="#">
-              <time class="date" datetime="2016-07-21">2016年07月21日</time>
-              <span>テキストテキストテキストテキストテキストテキストテキスト</span>
-            </a>
-          </li>
-          <li class="news-item">
-            <a href="#">
-              <time class="date" datetime="2016-07-21">2016年07月21日</time>
-              <span class="list-title">テキストテキストテキストテキストテキストテキストテキスト</span>
-            </a>
-          </li>
+          <?php
+          $args = array( 'posts_per_page' => 10, 'order'=> 'ASC', 'orderby' => 'title', 'post_type' => 'news' );
+          $postslist = get_posts( $args );
+          foreach ( $postslist as $post ) :
+            setup_postdata( $post ); ?>
+            <li class="news-item">
+              <a href="#">
+                <time class="date" datetime="2016-07-21"><?php the_date(); ?></time>
+                <span class="list-title"><?php the_title(); ?>   </span>
+              </a>
+            </li>
+          <?php
+          endforeach;
+          wp_reset_postdata();
+          ?>
         </ul>
       </div>
     </section><!-- newsここまで -->
@@ -350,7 +335,7 @@ var swiper = new Swiper('.swiper-container', {
 });
 $(window).resize(function(){
   var ww = $(window).width()
-  if (ww<=600) swiper.params.slidesPerView = 3;
+  if (ww<=600) swiper.params.slidesPerView = 1;
   if (swiper) {
     swiper.update()
   }
