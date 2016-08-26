@@ -182,6 +182,11 @@
           <div class="swiper-slide"><img src="dist/img/sw1.png" alt=""/></div>
           <div class="swiper-slide"><img src="dist/img/sw4.jpg" alt=""/></div>
           <div class="swiper-slide"><img src="dist/img/sw5.png" alt=""/></div>
+          <div class="swiper-slide"><img src="dist/img/sw3.jpg" alt=""/></div>
+          <div class="swiper-slide"><img src="dist/img/sw2.jpg" alt=""/></div>
+          <div class="swiper-slide"><img src="dist/img/sw1.png" alt=""/></div>
+          <div class="swiper-slide"><img src="dist/img/sw4.jpg" alt=""/></div>
+          <div class="swiper-slide"><img src="dist/img/sw5.png" alt=""/></div>
         </div>
 
         <!-- Add Pagination -->
@@ -349,6 +354,7 @@ var swiper = new Swiper('.swiper-container', {
 });
 $(window).resize(function(){
   var ww = $(window).width()
+  if (ww>=1280) swiper.params.slidesPerView = 7;
   if (ww<=960) swiper.params.slidesPerView = 3;
   if (ww<=480) swiper.params.slidesPerView = 1;
   if (swiper) {
