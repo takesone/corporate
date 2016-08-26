@@ -1,0 +1,230 @@
+/* Scss Document */
+
+/*===========================================
+	記事の中身の設定
+=============================================*/
+
+.news_content {
+	width: 960px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 67px 30px 48px 30px;
+	box-sizing: border-box;
+	@include media ($tablet) {
+		width: 100%;
+	}
+
+  .news_content_title {
+  	font-size: 24px;
+  	font-family:
+  	'M+ C Type-1 (basic latin) Light',
+  	'M+ Type-1 (general-j) Light', sans-serif;
+  	margin-bottom: 36px;
+		@include  media ($sp) {
+			font-size: 18px;
+		}
+
+  }
+
+  .news_img {
+  	width: 100%;
+  	height: auto;
+		@include media ($tablet) {
+			width: 100%;
+			height: auto;
+		}
+
+  }
+
+}
+
+.takesone_img {
+	width: 900px;
+	height: auto;
+	@include media ($tablet){
+		width: 100%;
+		height: auto;
+		padding: 0 30px;
+		box-sizing: border-box;
+	}
+
+}
+
+.news_img, .takesone_img {
+	margin: 42px auto 60px auto;
+	display: block;
+}
+
+/*===========================================
+	ソーシャルアイコンの設定
+=============================================*/
+
+.social_icon {
+	margin-top: 42px;
+	display: -webkit-flex;
+	display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	-o-justify-content: center;
+  justify-content: center;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+
+  a {
+  	color: #fff;
+  	text-align: center;
+
+    .fa {
+    	width: 151px;
+    	padding: 10px 0;
+    	border-radius: 30px;
+    	margin: 8px;
+			@include media ($sp) {
+				width: 130px;
+				padding: 8px 0;
+				margin: 6px;
+			}
+
+    }
+
+    .fa-facebook {
+    	background-color: #3b5998;
+    }
+
+    .fa-twitter {
+    	background-color:#1da1f2;
+    }
+
+    .fa-google-plus {
+    	background-color: #dd4b39;
+    }
+
+    .fa-tumblr {
+    	background-color: #35465c;
+    }
+
+  }
+
+}
+
+/*===========================================
+	詳しく見るボタンの設定
+=============================================*/
+
+.button {
+	display: block;
+	width: 728px;
+	background-color: #1b5688;
+	border: none;
+	border-radius: 5px;
+	margin: 0 auto;
+	@include media ($tablet) {
+		width: 75%;
+	}
+	@include media ($sp) {
+		width: 80%;
+	}
+
+  a {
+  	display: block;
+  	color: #fff;
+  	padding: 27px;
+  	font-size: 24px;
+  	letter-spacing: 1.4px;
+  	text-decoration: none;
+  	font-family:
+  	'M+ C Type-1 (basic latin) Light',
+  	'M+ Type-1 (general-j) Light', sans-serif;
+		@include media ($tablet) {
+			padding: 20px;
+			font-size: 20px;
+		}
+		@include media ($sp) {
+			padding: 15px;
+			font-size: 16px;
+		}
+
+  }
+
+  a:hover {
+  	opacity: 0.7;
+  }
+
+}
+
+/*===========================================
+	関連記事の設定
+=============================================*/
+
+.press {
+	margin: 0 auto;
+	.press_content {
+		@include media ($tablet) {
+			width: 100%;
+		}
+		@include  media ($sp) {
+			width:  100%;
+		}
+
+		.press_day {
+			@include media ($sp) {
+				line-height: 16px;
+			}
+
+		}
+
+	}
+
+}
+
+
+@media screen and (max-width: 660px){
+
+/*===========================================
+	関連記事の設定
+=============================================*/
+
+	.press {
+
+		.press_content {
+			width: 480px;
+			margin: 0 auto 20px auto;
+			padding:20px;
+
+			img {
+				width: 100%;
+				height: auto;
+				float: none;
+			}
+
+			.press_text {
+				position: static;
+				height: auto;
+			}
+
+			.press_day {
+				position: static;
+				margin-top: 10px;
+			}
+
+		}
+
+	}
+
+}
+
+/* clearfix */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear:both;
+  visibility: hidden;
+}
