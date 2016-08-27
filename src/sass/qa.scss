@@ -4,24 +4,10 @@
 	全体の設定
 =============================================*/
 
-body {
-	background-color: #F7F7F7;
-	text-align: justify;
-	line-height: 1.9;
-	color: #333333;
-}
-
 .font_L {
 	font-family:
 	'M+ C Type-1 (basic latin) Light',
 	'M+ Type-1 (general-j) Light', sans-serif;
-}
-
-p {
-	font-size: 18px;
-	font-family:
-	'M+ C Type-1 (basic latin) Thin',
-	'M+ Type-1 (general-j) Thin', sans-serif;
 }
 
 /*===========================================
@@ -31,17 +17,25 @@ p {
 .qa_wrap {
   width: 1047px;
   margin: 0 auto;
-  
+	line-height: 1.3;
+	@include media ($sp) {
+		font-size: 14px;
+	}
+
   .main_title {
     margin: 85px 0 80px 0;
     font-size: 32px;
     text-align: center;
+		@include media ($sp) {
+			font-size: 24px
+		}
+
   }
 
 /*===========================================
 メニュー設定
 =============================================*/
-	
+
   .qa_menu {
 	   float: left;
     width: 23%;
@@ -53,7 +47,10 @@ p {
 		    z-index: 2;
 		    top: 192px;
     }
-    
+		@include media ($tablet) {
+			top: 175px;
+		}
+
     .qa_menu_text {
       display: block;
       padding: 15px 20px 15px 20px;
@@ -70,16 +67,16 @@ p {
       @include media($tablet) {
         width: 232px;
       }
-      
+
       img {
         float: right;
         width: 7px;
         height: 13px;
         padding-top: 8px;
       }
-      
+
     }
-    
+
   }
 
 /*===========================================
@@ -100,44 +97,158 @@ p {
       background-color: #1b5688;
       border: none;
       border-radius: 5px;
-      margin-bottom: 20px; 
+      margin-bottom: 20px;
 
       p {
         text-align: center;
         color: #fff;
         padding: 27px;
         font-size: 24px;
-        letter-spacing: 1.4px; 
+        letter-spacing: 1.4px;
+				@include  media ($sp) {
+					font-size: 21px;
+					padding: 21px;
+				}
+
       }
-      
+
     }
-    
+
     .question {
       margin-bottom: 20px;
-      padding: 10px 0;
+      padding: 12px 0 12px 0;
       width: 800px;
       border: 1px solid #1b5688;
       box-sizing: border-box;
       border-radius: 3px;
       cursor: pointer;
-      
-      span {
-        color: #1b5688;
-        display: table-cell;
-        padding: 10px 20px;
-        font-size: 30px;
-        font-weight: normal;
-      }
-      
-      .question_title {
-        font-size: 18px;
-        color: #333;
-        border-left: 1px solid #1b5688;
-        padding: 10px 10px 10px 20px;
-        display: table-cell;
-        vertical-align: middle;
-      }
-      
+
+			.question_title_box {
+				width:  100%;
+
+	      span {
+	        color: #1b5688;
+	        display: block;
+	        padding: 14px 20px 0 20px;
+	        font-size: 30px;
+	        font-weight: normal;
+					float: left;
+					@include media ($tablet) {
+						padding-top: 12px;
+					}
+					@include media ($sp) {
+						padding: 12px 15px 0 15px;
+					}
+	      }
+
+	      .question_title {
+	        font-size: 18px;
+	        color: #333;
+	        border-left: 1px solid #1b5688;
+	        padding: 12px 10px 12px 20px;
+	        display: block;
+	        vertical-align: middle;
+					float: left;
+					width: 70%;
+					margin-top: 7px;
+					@include media ($tablet) {
+						width: 65%;
+					}
+					@include media ($sp) {
+						font-size: 16px;
+						width: 63%;
+						padding: 12px 0 12px 10px;
+						margin-top: 0;
+					}
+
+	      }
+
+				.accordionbox{
+					float:  right;
+					height: 60px;
+					width:  50px;
+					@include media ($sp) {
+						width: 40px;
+					}
+
+					.accordion_icon {
+						position: relative;
+						top: 22px;
+						right: 15px;
+						width: 20px;
+						height: 20px;
+						float: right;
+						margin-right: 5px;
+						display: inline-block;
+						transition: all .4s;
+						box-sizing: border-box;
+						@include media ($sp) {
+							top: 24px;
+						}
+
+						span {
+							display: inline-block;
+							transition: all .4s;
+							box-sizing: border-box;
+							position: absolute;
+							height:  5px;
+							width:  25px;
+						  background-color: #1b5688;
+							border-radius: 2px;
+							-webkit-border-radius: 2px;
+							-ms-border-radius: 2px;
+							-moz-border-radius: 2px;
+							-o-border-radius: 2px;
+							padding: 0;
+
+							&:nth-of-type(1) {
+							  top: 5px;
+								transform: rotate(0deg);
+							  -webkit-transform: rotate(0deg);
+								-moz-transform: rotate(0deg);
+								-ms-transform: rotate(0deg);
+							  -o-transform: rotate(0deg);
+							}
+
+							&:nth-of-type(2) {
+							  top: 5px;
+								transform: rotate(90deg);
+							  -webkit-transform: rotate(90deg);
+								-moz-transform: rotate(90deg);
+								-ms-transform: rotate(90deg);
+							  -o-transform: rotate(90deg);
+							}
+
+						}
+
+					}
+
+				}
+
+					/*＋、－切り替え*/
+					.active{
+
+						span {
+
+							&:nth-of-type(2) {
+								display:none;
+							}
+
+							&:nth-of-type(1) {
+								top: 5px;
+								transform: rotate(180deg);
+							  -webkit-transform: rotate(180deg);
+								-moz-transform: rotate(180deg);
+								-ms-transform: rotate(180deg);
+							  -o-transform: rotate(180deg);
+							}
+
+						}
+
+					}
+
+				}
+
       .question_text {
         font-size: 16px;
         color: #555;
@@ -146,70 +257,74 @@ p {
         padding: 10px 20px 0 20px;
         border-top: 1px dotted #1b5688;
         display: none;
+				@include media ($sp) {
+					font-size: 14px;
+				}
+
       }
-      
+
     }
-    
+
   }
-  
+
 }
-  
+
 @media screen and (max-width: 1047px){
-	
+
 /*===========================================
 	コンテンツの設定
 =============================================*/
-    
+
   .qa_wrap {
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
-     
+
 /*===========================================
 コンテンツ中身設定
 =============================================*/
 
     .section_wrap {
-    
+
       .question, .menu_title {
 		      width: 100%;
       }
-    
+
     }
-  
+
   }
-  
+
 }
-  
+
 @media screen and (max-width: 960px){
-	
- 
+
+
 /*===========================================
 	ドロップダウンの設定
 =============================================*/
-    
+
   .drop_active img {
 		  transform: rotate(90deg);
 		  padding-left: 10px;
 	 }
-	
+
   .qa_menu_text {
 		  margin-bottom: 0px;
 		  border-bottom: 1px solid #1b5688;
 	 }
-	
+
 	 .response_drop {
 	   display:none;
   }
-  
+
 }
 
 @media screen and (max-width: 480px){
-	
+
 /*===========================================
 	全体のフォント設定
 =============================================*/
-    
+
   p {
    font-size: 14px;
   }
@@ -221,7 +336,7 @@ p {
       font-size: 21px;
       padding: 21px;
     }
-      
+
   }
 
   .question_title {
@@ -231,8 +346,8 @@ p {
   .question_text {
     font-size: 14px;
   }
-	
-	
+
+
 }
 
 /* clearfix */
@@ -243,4 +358,3 @@ p {
   clear:both;
   visibility: hidden;
 }
-    
