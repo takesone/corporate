@@ -1,4 +1,3 @@
-<?php /* Template Name: TOP PAGE */ ?>
 <!doctype html>
 <html lang="ja">
 <head>
@@ -80,7 +79,7 @@
   <div class="contents-wrapper">
     <!-- news設定 -->
     <section class="news-wrap">
-      <h2 class="title">ニュース</h2>
+      <h2 class="title">タイトルタイトルタイトル</h2>
       <div class="news-list-box">
         <ul class="news-list">
           <?php
@@ -163,6 +162,11 @@
         <img src="<?php bloginfo('template_directory'); ?>/dist/img/slide_show_iphone.png" alt="" class="bg-iphone">
 
         <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="<?php bloginfo('template_directory'); ?>/dist/img/sw3.jpg" alt=""/></div>
+          <div class="swiper-slide"><img src="<?php bloginfo('template_directory'); ?>/dist/img/sw2.jpg" alt=""/></div>
+          <div class="swiper-slide"><img src="<?php bloginfo('template_directory'); ?>/dist/img/sw1.png" alt=""/></div>
+          <div class="swiper-slide"><img src="<?php bloginfo('template_directory'); ?>/dist/img/sw4.jpg" alt=""/></div>
+          <div class="swiper-slide"><img src="<?php bloginfo('template_directory'); ?>/dist/img/sw5.png" alt=""/></div>
           <div class="swiper-slide"><img src="<?php bloginfo('template_directory'); ?>/dist/img/sw3.jpg" alt=""/></div>
           <div class="swiper-slide"><img src="<?php bloginfo('template_directory'); ?>/dist/img/sw2.jpg" alt=""/></div>
           <div class="swiper-slide"><img src="<?php bloginfo('template_directory'); ?>/dist/img/sw1.png" alt=""/></div>
@@ -265,7 +269,7 @@
         </div>
       -->
       <div class="twitter">
-        <a width="350" height="400" class="twitter-timeline" href="https://twitter.com/takes_one_">Tweets by takes_one_</a>
+        <a width="500" height="400" class="twitter-timeline" href="https://twitter.com/takes_one_">Tweets by takes_one_</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
@@ -335,7 +339,9 @@ var swiper = new Swiper('.swiper-container', {
 });
 $(window).resize(function(){
   var ww = $(window).width()
-  if (ww<=600) swiper.params.slidesPerView = 1;
+  if (ww>=1280) swiper.params.slidesPerView = 7;
+  if (ww<=960) swiper.params.slidesPerView = 3;
+  if (ww<=480) swiper.params.slidesPerView = 1;
   if (swiper) {
     swiper.update()
   }
