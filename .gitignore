@@ -23,4 +23,4 @@ node_modules
 
 ### Compiled CSS ###
 markup/dist/css/style.css
-theme/dist/
+theme/dist/css/style.css
