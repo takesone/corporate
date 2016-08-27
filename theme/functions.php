@@ -12,5 +12,18 @@ function create_post_type() {
       'menu_icon' => 'dashicons-megaphone'
     )
   );
+
+  register_post_type( 'interview',
+    array(
+      'labels' => array(
+        'name' => __( 'Interview' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'menu_position' => 5,
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'custom-fields' ),
+      'menu_icon' => 'dashicons-microphone'
+    )
+  );
 }
 ?>
