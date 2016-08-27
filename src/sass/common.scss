@@ -23,7 +23,7 @@ body {
   font-family:
     'M+ C Type-1 (basic latin) Thin',
 	  'M+ Type-1 (general-j) Thin', sans-serif;
-    -webkit-text-stroke: 0.2px #000;
+    //-webkit-text-stroke: 0.2px #000;
 }
 a {
   font-family:'M+ C Type-1 (basic latin) Light',
@@ -61,4 +61,7 @@ img{
 	text-align: center;
 	font-size: 32px;
   padding-top: 60px;
+  @include media($sp) {
+    font-size: 22px;
+  }
 }
