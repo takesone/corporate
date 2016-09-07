@@ -5,8 +5,9 @@ var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync');
 
 var paths = {
-  'scss': 'src/sass/',
-  'css': 'dist/css/'
+  'scss': 'markup/src/sass/',
+  'css': 'markup/dist/css/',
+  'wpcss': 'theme/dist/css/'
 }
 
 gulp.task('watch', function() {
@@ -27,6 +28,7 @@ gulp.task('scss', function() {
     })
     .pipe(cssnext())
     .pipe(gulp.dest(paths.css))
+    .pipe(gulp.dest(paths.wpcss))
 });
 
 gulp.task('serve', function() {
