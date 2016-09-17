@@ -1,0 +1,135 @@
+.blog-single-wrap {
+  padding-top: 80px;
+  margin: 0 90px;
+}
+
+.blog-title {
+  padding: 5px 0 20px;
+  font-size: 22px;
+  font-family: 'M+ C Type-1 (basic latin) Light', 'M+ Type-1 (general-j) Light', sans-serif;
+  line-height: 36px;
+}
+.subarea-title {
+  padding: 15px;
+}
+
+.blog-single-breadcrumb {
+  font-size: 16px;
+  padding: 20px 0;
+}
+
+.blog-single-content-wrap {
+  margin-bottom: 60px;
+}
+.blog-single-content {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.post-thumb-wrap {
+  margin-bottom: 30px;
+}
+.blog-single-content-text {
+  .post-img {
+    float: left;
+    margin: 15px 15px 15px 0;
+  }
+  p {
+    font-size: 18px;
+    line-height: 34px;
+    margin-bottom: 12px;
+  }
+}
+
+.blog-single-profile-wrap {
+  margin-bottom: 60px;
+}
+.blog-single-profile {
+  background-color: #fff;
+  padding: 20px;
+}
+.blog-profile-name-ja {
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 20px;
+  padding-left: 15px;
+  line-height: 1.1;
+}
+
+.blog-profile-name-en {
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 10px;
+  padding-left: 15px;
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+.blog-profile-text {
+  border-width: 1px;
+  border-color: rgb(220, 220, 220);
+  border-style: solid;
+  border-radius: 4px;
+  background-color: rgb(250, 250, 250);
+  font-size: 16px;
+  line-height: 28px;
+  padding: 40px 15px;
+  margin-bottom: 15px;
+}
+  
+.company-info {
+  padding: 20px;
+  
+  .company-info-img {
+    margin-bottom: 16px;
+  }
+  .company-info-text {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+  .company-info-btn {
+    border: 1px solid #535353;
+    color: #666666;
+    display: block;
+    padding: 14px;
+    text-align: center;
+    @include transition(all 0.3s ease);
+    &:hover {
+      background-color: #535353;
+      color: #eee;
+    }
+  }
+}
+
+.blog-single-share {
+  background-color: #ececec;
+  text-align: center;
+  padding: 8px 0;
+  ul {
+    display: inline-block;
+    li {
+      color: #fff;
+      border-radius: 16px;
+      float: left;
+      height: 32px;
+      margin-right: 10px;
+      line-height: 32px;
+      width: 148px;
+
+      &.blog-single-share-fb {
+        background-color: #3b5998;
+      }
+      &.blog-single-share-tw {
+        background-color: #55ACEE;
+      }
+      &.blog-single-share-hb {
+        background-color: #008fde;
+      }
+      &.blog-single-share-gp {
+        background-color: #dd4b39;
+      }
+      &.blog-single-share-tm {
+        background-color: #35465c;
+        margin-right: 0;
+      }
+    }
+  }
+}
