@@ -392,7 +392,7 @@ header{
 	.news設定
 =============================================*/
 .news-wrap{
-	background-color: $bg-eee;
+	background-color: #eeeeee;
 	height: 330px;
   .news-list-box{
     text-align: center;
@@ -536,7 +536,7 @@ header{
       };
       h3{
         padding: 35px 0;
-        font-size: 20px;
+        font-size: 19px;
         @include media($sp) {
           font-size: 20px;
         };
@@ -853,7 +853,7 @@ footer{
         width: 100%;
         margin: 50px auto;
       };
-      a{
+      a,span{
         display: block;
         img{
           &:first-child{

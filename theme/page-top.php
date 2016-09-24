@@ -3,7 +3,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/dist/css/html5reset-1.6.1.css">
   <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/basic_latin/mplus_webfonts.css">
   <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
@@ -20,7 +20,7 @@
     <!-- header -->
     <header id="top-head">
       <!-- webサイトメニュー -->
-      <p class="headmenu-logo"><img src="<?php bloginfo('template_directory'); ?>/dist/img/menu_logo.png" alt="Take's One" height="40"></p>
+      <p class="headmenu-logo"><a href="/"><img src="<?php bloginfo('template_directory'); ?>/dist/img/menu_logo.png" alt="Take's One" height="40"></a></p>
 
       <div id="nav-toggle">
         <div>
@@ -30,23 +30,23 @@
 
       <nav class="head-nav">
         <ul>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">Q&amp;A</a></li>
-          <li><a href="#">CAMPANY</a></li>
-          <li><a href="#">NEWS</a></li>
-          <li><a href="#">BLOG</a></li>
-          <li>
+          <li><a href="/about/">ABOUT</a></li>
+          <li><a href="/qa/">Q&amp;A</a></li>
+          <!--li><a href="#">CAMPANY</a></li-->
+          <!--li><a href="#">NEWS</a></li-->
+          <!--li><a href="#">BLOG</a></li-->
+          <!--li>
             <a href="#" class="pc-none">
               <p>カメラ掲載はこちら</p>
             </a>
-          </li>
+          </li-->
         </ul>
       </nav>
 
-      <a href="#" class="top-btn">
+      <!--a href="#" class="top-btn">
         <img src="<?php bloginfo('template_directory'); ?>/dist/img/btn-head.png" alt="" class="btn-white">
         <img src="<?php bloginfo('template_directory'); ?>/dist/img/btn-head-blue.png" alt="" class="btn-blue">
-      </a>
+      </a-->
 
     </header><!-- headerここまで -->
 
@@ -68,9 +68,13 @@
           <a href="//www.youtube.com/watch?v=7SN21Ma65hQ" class="btn-play" data-lity="data-lity">PLAY</a>
         </div>
         <!-- appBtn -->
-        <div class="btn-app-wrap">
+        <!--div class="btn-app-wrap">
           <a href="#" class="btn-app"><img src="<?php bloginfo('template_directory'); ?>/dist/img/appBtn.png" alt="app"></a>
           <a href="#" class="btn-app google"><img src="<?php bloginfo('template_directory'); ?>/dist/img/google-play-badge.png" alt="googleplay"></a>
+        </div-->
+        <div class="btn-app-wrap">
+          <span class="btn-app"><img src="<?php bloginfo('template_directory'); ?>/dist/img/comming.png" alt="app"></span>
+          <span class="btn-app google"><img src="<?php bloginfo('template_directory'); ?>/dist/img/comming2.png" alt="googleplay"></span>
         </div>
       </div>
     </div>
@@ -81,10 +85,10 @@
   <div class="contents-wrapper">
     <!-- news設定 -->
     <section class="news-wrap">
-      <h2 class="title">タイトルタイトルタイトル</h2>
+      <h2 class="title">NEWS</h2>
       <div class="news-list-box">
         <ul class="news-list">
-          <?php
+          <?php /*
           $args = array( 'posts_per_page' => 10, 'order'=> 'ASC', 'orderby' => 'title', 'post_type' => 'news' );
           $postslist = get_posts( $args );
           foreach ( $postslist as $post ) :
@@ -97,8 +101,14 @@
             </li>
           <?php
           endforeach;
-          wp_reset_postdata();
+          wp_reset_postdata();*/
           ?>
+          <li class="news-item">
+            <!--a href="#"-->
+              <time class="date" datetime="2016-09-24">2016年09月24日</time>
+              <span class="list-title">ランディングページを公開しました</span>
+            <!--/a-->
+          </li>
         </ul>
       </div>
     </section><!-- newsここまで -->
@@ -107,9 +117,10 @@
     <section class="service-wrap">
       <div class="section-wrap">
         <div class="service-left">
-          <h2 class="title">タイトルタイトルタイトル</h2>
+          <h2 class="title">Take’s Oneとは</h2>
           <p>
-            サービスの説明文がここに入ります。サービスの説明文がここに入ります。サービスの説明文がここに入ります。サービスの説明文がここに入ります。サービスの説明文がここに入ります。サービスの説明文がここに入ります。サービスの説明文がここに入ります。サービスの説明文がここに入ります。サービスの説明文がここに入ります。サービスの説明文がここに入ります。サービスの説明文がここに入ります。サービスの説明文がここに入ります。
+            機材を使わずに、家に置い他ままになってしまっている人や、いろんな機材を試してみたいけど撮影機材が高くて買えない、などの悩みを持つユーザーの為の、<br>
+            いつでも、どこでも、気軽に撮影機材を持つユーザー同士で、機材の貸し借りができるサービスです。
           </p>
         </div>
         <div class="service-img">
@@ -127,12 +138,12 @@
           <div class="step font-L">
             <img src="<?php bloginfo('template_directory'); ?>/dist/img/step1_icon.svg" alt="" width="160" height="160">
             <h3>誰でも貸し借り可能</h3>
-            <p>カメラの貸し借りを通してより多くの体験をあなたにお届けします。</p>
+            <p>誰でも、たった1分で簡単に機材の登録が可能です。</p>
           </div>
           <div class="step font-L">
             <img src="<?php bloginfo('template_directory'); ?>/dist/img/step2_icon.svg" alt="" width="160" height="160">
             <h3>シーンに合わせて</h3>
-            <p>カメラやレンズや、三脚などの機材を変えるだけで写真は大きく変わります。</p>
+            <p>撮りたいシーンからシーンによって機材をレコメンドします。</p>
           </div>
           <div class="step font-L">
             <img src="<?php bloginfo('template_directory'); ?>/dist/img/step3_icon.svg" alt="" width="160" height="160">
@@ -142,7 +153,7 @@
           <div class="step font-L">
             <img src="<?php bloginfo('template_directory'); ?>/dist/img/step4_icon.svg" alt="" width="160" height="160">
             <h3>安心安全の保証</h3>
-            <p>サービスの説明文がここに入ります。サービスの説明文がここに入ります。</p>
+            <p>もしも、機材が故障した際も保障制度を整備しています。</p>
           </div>
         </div>
       </div>
@@ -154,9 +165,10 @@
     <section class="info-wrap">
 
       <div class="section-wrap">
-        <h2 class="title">タイトルタイトルタイトル</h2>
+        <h2 class="title">画面イメージ</h2>
         <p>
-          サービスの説明文がここに入ります。サービスの説明文がここに入ります。サービスの説明文がここに入ります。サービスの説明文がここに入ります。
+          Take’s Oneのアプリのイメージを紹介します。<br>
+          アプリはIOS、Android両対応です。
         </p>
       </div>
       <!-- Swiper -->
@@ -228,7 +240,7 @@
 
     </section>
 
-    <section class="blog-wrap">
+    <!--section class="blog-wrap">
 
       <h2 class="title">タイトルタイトルタイトル</h2>
       <div class="section-wrap">
@@ -260,7 +272,7 @@
         <button class="button"><a href="#">もっと詳しく</a></button>
       </div>
 
-    </section>
+    </section-->
 
     <div class="sns-wrpa">
       <div class="section-wrap">
@@ -295,34 +307,36 @@
         <div class="footer-nav">
           <nav>
             <ul>
-              <li><a href="#">HOME</a></li>
-              <li><a href="#">ABOUT</a></li>
-              <li><a href="#">Q&amp;A</a></li>
-              <li><a href="#">COMPANY</a></li>
+              <li><a href="/">HOME</a></li>
+              <li><a href="/about/">ABOUT</a></li>
+              <li><a href="/qa/">Q&amp;A</a></li>
+              <!--li><a href="#">COMPANY</a></li-->
             </ul>
           </nav>
         </div>
         <div class="footer-nav">
           <nav>
             <ul>
-              <li><a href="#">NEW</a></li>
-              <li><a href="#">BLOG</a></li>
-              <li><a href="#">CONTACT</a></li>
-              <li><a href="#">転載はこちら</a></li>
+              <!--li><a href="#">NEWS</a></li-->
+              <!--li><a href="#">BLOG</a></li-->
+              <!--li><a href="#">CONTACT</a></li-->
+              <!--li><a href="#">転載はこちら</a></li-->
             </ul>
           </nav>
         </div>
         <div class="footer-nav">
           <nav>
             <ul>
-              <li><a href="#">特定商取引法について</a></li>
-              <li><a href="#">プライバシーポリシー</a></li>
+              <!--li><a href="#">特定商取引法について</a></li-->
+              <!--li><a href="#">プライバシーポリシー</a></li-->
             </ul>
           </nav>
         </div>
         <div class="footer-app">
-          <a href="#" class="btn-app-footer"><img src="<?php bloginfo('template_directory'); ?>/dist/img/appBtn.png" alt="" width="150" height="46"></a>
-          <a href="#" class="btn-app-footer"><img src="<?php bloginfo('template_directory'); ?>/dist/img/google-play-badge.png" alt="" width="150" height="46"></a>
+          <!--a href="#" class="btn-app-footer"><img src="<?php bloginfo('template_directory'); ?>/dist/img/appBtn.png" alt="" width="150" height="46"></a>
+          <a href="#" class="btn-app-footer"><img src="<?php bloginfo('template_directory'); ?>/dist/img/google-play-badge.png" alt="" width="150" height="46"></a-->
+          <span class="btn-app-footer"><img src="<?php bloginfo('template_directory'); ?>/dist/img/comming.png" alt="" width="150" height="46"></span>
+          <span class="btn-app-footer"><img src="<?php bloginfo('template_directory'); ?>/dist/img/comming2.png" alt="" width="150" height="46"></span>
         </div>
       </div>
       <h2 class="footer-logo"><a href="index.html"><img src="<?php bloginfo('template_directory'); ?>/dist/img/footer_logo.png" alt="tatesone" width="80" height="106"></a></h2>
