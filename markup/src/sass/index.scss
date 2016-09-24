@@ -619,6 +619,7 @@ header{
     width: 960px;
     border: 1px solid $base-color;
     box-sizing: border-box;
+    cursor: pointer;
     @include media($tablet) {
       width: 90vw;
       margin: 20px auto;
