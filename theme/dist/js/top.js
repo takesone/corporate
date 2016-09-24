@@ -54,13 +54,13 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
-    videoId: 'xvE7ztEbDjU',
+    videoId: '7SN21Ma65hQ',
     wmode: 'transparent',
     loop: '1',
     playerVars:{
       'loop': '1',
       'rel': '0',
-      'playlist': 'xvE7ztEbDjU',
+      'playlist': '7SN21Ma65hQ',
       'showinfo': '0',
       'controls': '0',
       'modestbranding':'0',
