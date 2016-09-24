@@ -324,6 +324,7 @@ header{
     overflow: hidden;
     height: 130%;
     width: 130%;
+    min-width: calc(100vh * 16 / 9);
     pointer-events: none;
     @include media ($tablet) {
       display: none;

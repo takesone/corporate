@@ -5,34 +5,36 @@
         <div class="footer-nav">
           <nav>
             <ul>
-              <li><a href="#">HOME</a></li>
-              <li><a href="#">ABOUT</a></li>
-              <li><a href="#">Q&amp;A</a></li>
-              <li><a href="#">COMPANY</a></li>
+              <li><a href="/">HOME</a></li>
+              <li><a href="/about/">ABOUT</a></li>
+              <li><a href="/qa/">Q&amp;A</a></li>
+              <!--li><a href="#">COMPANY</a></li-->
             </ul>
           </nav>
         </div>
         <div class="footer-nav">
           <nav>
             <ul>
-              <li><a href="#">NEW</a></li>
-              <li><a href="#">BLOG</a></li>
-              <li><a href="#">CONTACT</a></li>
-              <li><a href="#">転載はこちら</a></li>
+              <!--li><a href="#">NEWS</a></li-->
+              <!--li><a href="#">BLOG</a></li-->
+              <!--li><a href="#">CONTACT</a></li-->
+              <!--li><a href="#">転載はこちら</a></li-->
             </ul>
           </nav>
         </div>
         <div class="footer-nav">
           <nav>
             <ul>
-              <li><a href="#">特定商取引法について</a></li>
-              <li><a href="#">プライバシーポリシー</a></li>
+              <!--li><a href="#">特定商取引法について</a></li-->
+              <!--li><a href="#">プライバシーポリシー</a></li-->
             </ul>
           </nav>
         </div>
         <div class="footer-app">
-          <a href="#" class="btn-app-footer"><img src="<?php bloginfo('template_directory'); ?>/dist/img/appBtn.png" alt="" width="150" height="46"></a>
-          <a href="#" class="btn-app-footer"><img src="<?php bloginfo('template_directory'); ?>/dist/img/google-play-badge.png" alt="" width="150" height="46"></a>
+          <!--a href="#" class="btn-app-footer"><img src="<?php bloginfo('template_directory'); ?>/dist/img/appBtn.png" alt="" width="150" height="46"></a>
+          <a href="#" class="btn-app-footer"><img src="<?php bloginfo('template_directory'); ?>/dist/img/google-play-badge.png" alt="" width="150" height="46"></a-->
+          <span class="btn-app-footer"><img src="<?php bloginfo('template_directory'); ?>/dist/img/comming.png" alt="" width="150" height="46"></span>
+          <span class="btn-app-footer"><img src="<?php bloginfo('template_directory'); ?>/dist/img/comming2.png" alt="" width="150" height="46"></span>
         </div>
       </div>
       <h2 class="footer-logo"><a href="index.html"><img src="<?php bloginfo('template_directory'); ?>/dist/img/footer_logo.png" alt="tatesone" width="80" height="106"></a></h2>
@@ -42,6 +44,3 @@
     </div>
   </div>
 </footer>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/dist/js/swiper.min.js"></script>
