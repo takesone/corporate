@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/dist/css/lity.min.css">
   <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/dist/css/style.css">
-  <title>takesone</title>
+  <title>Take's One</title>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
     <!-- header -->
     <header id="top-head">
       <!-- webサイトメニュー -->
-      <p class="headmenu-logo"><img src="<?php bloginfo('template_directory'); ?>/dist/img/menu_logo.png" alt="takesone" height="40"></p>
+      <p class="headmenu-logo"><img src="<?php bloginfo('template_directory'); ?>/dist/img/menu_logo.png" alt="Take's One" height="40"></p>
 
       <div id="nav-toggle">
         <div>
@@ -60,8 +60,8 @@
     <div class="top-head-content">
       <div class="">
         <!-- Toplogo -->
-        <h1 class="top-logo"><img src="<?php bloginfo('template_directory'); ?>/dist/img/top_logo.png" alt="takesone"></h1>
-        <!--<h1 class="logo"><img src="<?php bloginfo('template_directory'); ?>/dist/img/top_logo.png" alt="takesone"></h1> -->
+        <h1 class="top-logo"><img src="<?php bloginfo('template_directory'); ?>/dist/img/top_logo.png" alt="Take's One"></h1>
+        <!--<h1 class="logo"><img src="<?php bloginfo('template_directory'); ?>/dist/img/top_logo.png" alt="Take's One"></h1> -->
         <p class="font-L">気軽に誰でも撮影機材をシェアできるサービス</p>
         <!-- playBtn -->
         <div class="btn-play-wrap">
@@ -198,8 +198,8 @@
         <div class="question">
           <span>Q</span><p class="question-title font-L">メールアドレスでの登録ができない？</p>
           <p class="question-text">
-            「このメールアドレスは登録済です」と表示される場合、ご利用のメールアドレスは、すでにTakesOneにご登録済となります。メールアドレスを登録されたアカウントへのログインをお願いいたします。<br>
-            ※TakesOneは、人同士の信頼関係を重視したサービスとなります。そのため、1人1アカウントの原則を掲げております。ご理解をいただけますと幸いです<br>
+            「このメールアドレスは登録済です」と表示される場合、ご利用のメールアドレスは、すでにTake's Oneにご登録済となります。メールアドレスを登録されたアカウントへのログインをお願いいたします。<br>
+            ※Take's Oneは、人同士の信頼関係を重視したサービスとなります。そのため、1人1アカウントの原則を掲げております。ご理解をいただけますと幸いです<br>
             なお、パスワードがご不明な場合には、以下の手順で再設定が可能となっております。<br><br>
             【パスワードの再設定方法】<br>
             1. ログイントップページから[ログイン]＞[メールアドレスでログイン]を選択<br>
@@ -210,15 +210,15 @@
         <div class="question">
           <span>Q</span><p class="question-title font-L">Facebookでの登録ができない？</p>
           <p class="question-text">
-            Facebookのアプリを最新版へアップデートしてから再度お試しください。なお、すでにTakesOneにご登録済のFacebookアカウントでは、新規にご登録いただくことはできません。ご登録済のアカウントへのログインをお願いいたします。<br>
-            ※TakesOneは、人同士の信頼関係を重視したサービスとなります。そのため、1人1アカウントの原則を掲げております。ご理解をいただけますと幸いです
+            Facebookのアプリを最新版へアップデートしてから再度お試しください。なお、すでにTake's Oneにご登録済のFacebookアカウントでは、新規にご登録いただくことはできません。ご登録済のアカウントへのログインをお願いいたします。<br>
+            ※Take's Oneは、人同士の信頼関係を重視したサービスとなります。そのため、1人1アカウントの原則を掲げております。ご理解をいただけますと幸いです
           </p>
         </div>
         <div class="question">
           <span>Q</span><p class="question-title font-L">メールが届かない？</p>
           <p class="question-text">
             メールの受信設定をご確認ください。ドメイン指定または、アドレスによる指定受信設定をされている場合には、お客様のもとにメールが届きません。<br>
-            TakesOneからお送りするメールは[takesone.co.jp]となっております。お手数ではございますが、上記のメールアドレスからのメールが受信できる設定になっているか、URL付きメールを受信できる設定になっているかをご確認ください。
+            Take's Oneからお送りするメールは[takesone.co.jp]となっております。お手数ではございますが、上記のメールアドレスからのメールが受信できる設定になっているか、URL付きメールを受信できる設定になっているかをご確認ください。
           </p>
         </div>
       </div>
