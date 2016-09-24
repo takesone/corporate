@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/basic_latin/mplus_webfonts.css">
   <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/dist/css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/dist/css/lity.min.css">
   <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/dist/css/style.css">
   <title>takesone</title>
@@ -64,7 +65,7 @@
         <p class="font-L">気軽に誰でも撮影機材をシェアできるサービス</p>
         <!-- playBtn -->
         <div class="btn-play-wrap">
-          <a href="#" class="btn-play">PLAY</a>
+          <a href="//www.youtube.com/watch?v=7SN21Ma65hQ" class="btn-play" data-lity="data-lity">PLAY</a>
         </div>
         <!-- appBtn -->
         <div class="btn-app-wrap">
@@ -325,6 +326,7 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/dist/js/swiper.min.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/dist/js/lity.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/dist/js/top.js"></script>
 <script>
 var swiper = new Swiper('.swiper-container', {
