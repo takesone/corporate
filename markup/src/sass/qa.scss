@@ -257,6 +257,9 @@
         padding: 10px 20px 0 20px;
         border-top: 1px dotted #1b5688;
         display: none;
+        p+p {
+          margin-bottom: 0.3em;
+        }
 				@include media ($sp) {
 					font-size: 14px;
 				}
