@@ -4,6 +4,16 @@
 	全体の設定
 =============================================*/
 
+.contents-wrapper {
+	padding-top: 80px;
+  @include media($tablet) {
+    padding-top: 70px;
+  };
+  @include media($sp) {
+    padding-top: 60px;
+  };
+}
+
 .title {
 	padding-top: 75px;
 	font-size: 32px;
@@ -15,10 +25,11 @@
   }
 }
 
-.sabtitle {
+.subtitle {
 	margin: 39px 0 66px 0;
 	font-size: 26px;
   text-align:  center;
+  line-height: 1.8;
 	font-family:
 	'M+ C Type-1 (basic latin) Light',
 	'M+ Type-1 (general-j) Light', sans-serif;
@@ -38,6 +49,12 @@
 
 .about {
 	background-color: #f7f7f7;
+
+    .about_header {
+      background-color: #1b5688;
+      color: #fff;
+      padding: 1px 0;
+    }
 
     .about_content {
 	    width: 100%;
