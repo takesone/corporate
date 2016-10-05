@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ja">
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   <meta charset="<?php bloginfo ('charset') ; ?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;">
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/dist/css/html5reset-1.6.1.css">
@@ -10,6 +10,16 @@
   <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/dist/css/style.css">
   <title><?php bloginfo('name'); ?></title>
+  <meta property="og:title" content="Take's One">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.takesone.jp/">
+  <meta property="og:image" content="<?php bloginfo('template_directory'); ?>/dist/img/takesone.png">
+  <meta property="og:site_name" content="Take's One">
+  <meta property="og:description" content="気軽に誰でも撮影機材をシェアできるサービス">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="fb:app_id" content="1186906494700728">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@takes_one_">
 </head>
 
 <body>
