@@ -854,6 +854,21 @@ footer{
         width: 100%;
         margin: 50px auto;
       };
+      .btn-app-share {
+        padding-bottom: 16px;
+        a {
+          display: inline;
+        }
+        i {
+          margin-right: 0.3em;
+          color: #eee;
+          font-size: 32px;
+          span {
+            display: none;
+          }
+        }
+      }
+
       a,span{
         display: block;
         img{
