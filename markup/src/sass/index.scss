@@ -302,7 +302,7 @@ header{
   height: 100vh;
 	text-align: center;
   @include media($tablet) {
-    background-image: url(../../dist/img/bg_sp_top.png);
+    background-image: url(../../dist/img/bg_sp_top.jpg);
     background-size: cover;
   };
   .top-bgv-wrap {
@@ -514,13 +514,12 @@ header{
 =============================================*/
 .step-wrap{
   clear: both;
-  background: url('../img/bg_step.png');
+  background: url('../img/bg_step.jpg');
   background-size: cover;
   color: $text-white;
   @include media($sp) {
     height: auto;
-    background: url('../img/bg_sp_step.png') no-repeat;
-    background: url('../img/bg_sp_step.png') no-repeat;
+    background: url('../img/bg_sp_step.jpg') no-repeat;
   };
   .step-content-wrap{
     @include media($sp) {
