@@ -1,3 +1,3 @@
 FROM wordpress:latest
 EXPOSE 80
-COPY ./theme /usr/src/takesone
+COPY ./theme /var/www/html/wp-content/themes/takesone

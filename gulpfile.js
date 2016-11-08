@@ -43,4 +43,11 @@ gulp.task('bs-reload', function () {
     browserSync.reload();
 });
 
+gulp.task('build', function() {
+  return gulp.src(paths.scss + 'style.scss')
+  .pipe(sass())
+  .pipe(gulp.dest(paths.css))
+  .pipe(gulp.dest(paths.wpcss))
+});
+
 gulp.task('default', ['watch', 'serve']);
