@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/dist/css/html5reset-1.6.1.css">
   <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/basic_latin/mplus_webfonts.css">
   <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/dist/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/dist/css/lity.min.css">
   <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
@@ -119,7 +120,7 @@
         <div class="service-left">
           <h2 class="title">Take’s Oneとは</h2>
           <p>
-            機材を使わずに、家に置い他ままになってしまっている人や、いろんな機材を試してみたいけど撮影機材が高くて買えない、などの悩みを持つユーザーの為の、<br>
+            機材を使わずに、家に置いたままになってしまっている人や、いろんな機材を試してみたいけど撮影機材が高くて買えない、などの悩みを持つユーザーの為の、<br>
             いつでも、どこでも、気軽に撮影機材を持つユーザー同士で、機材の貸し借りができるサービスです。
           </p>
         </div>
@@ -323,6 +324,23 @@ $(window).resize(function(){
   }
 })
 $(window).trigger('resize')
+</script>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1186906494700728',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 </script>
 </body>
 </html>
