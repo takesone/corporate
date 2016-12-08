@@ -666,6 +666,22 @@ header{
 }
 
 /*===========================================
+	協賛企業
+=============================================*/
+.sponsored-compony {
+  background-color: #fff;
+  padding: 0 0 50px 0;
+  .sponsered-list {
+    text-align: center;
+    li {
+      display: inline-block;
+      max-width: 125px;
+      padding: 20px;
+      vertical-align: middle;
+    }
+  }
+}
+/*===========================================
 	blog設定
 =============================================*/
 .blog-wrap{

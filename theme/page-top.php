@@ -286,14 +286,38 @@
           <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTakes-One-530999983768461%2F&tabs=timeline&width=350&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" data-width="200" width="350" height="400" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
         </div>
       -->
-      <div class="twitter">
+          <div class="twitter">
         <a width="500" height="400" class="twitter-timeline" href="https://twitter.com/takes_one_">Tweets by takes_one_</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+    <div class="sponsored-compony">
+      <div class="section-wrap">
+        <h2 class="title">協賛企業</h2>
+        <ul class="sponsered-list">
+          <li>
+            <a href="http://www.apex106.com/" target="_blank">
+              <img src="<?php bloginfo('template_directory'); ?>/dist/img/sponsored/apex.png" alt="Apex">
+            </a>
+          </li>
+          <li>
+            <a href="http://www.dhw.ac.jp/" target="_blank">
+              <img src="<?php bloginfo('template_directory'); ?>/dist/img/sponsored/dhu.png" alt="DHU">
+            </a>
+          </li>
+          <li>
+            <a href="http://www.fujiya-avic.jp/" target="_blank">
+              <img src="<?php bloginfo('template_directory'); ?>/dist/img/sponsored/fujiya.png" alt="FUJIYA AVIC">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
 </div>
 
 <?php get_footer(); ?>
